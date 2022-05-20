@@ -1,0 +1,272 @@
+@import "..//assets/mixin.scss";
+@import "..//assets/colors.scss";
+
+header {
+    #first {
+        .wrapper {
+            background-color: $mainColor;
+
+            .custom-container {
+                @include flex(center, space-between);
+                padding: 13px 0;
+
+                div {
+                    p {
+                        font-size: 14px;
+                        color: #fff;
+                        line-height: 1;
+                        margin: 0;
+                    }
+
+                    ul {
+                        @include flex();
+                        margin: 0;
+
+                        li {
+                            padding: 0 0 0 20px;
+
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                                font-size: 14px;
+
+                                i {
+                                    margin-left: 2px;
+                                }
+                            }
+                        }
+
+                        > :first-child {
+                            border-right: 1px solid #fff;
+                            padding: 0 20px 0 0;
+                            position: relative;
+
+                            .dropdown {
+                                transition: 300ms all linear;
+                                opacity: 0;
+                                visibility: hidden;
+                                background-color: #fff;
+                                width: 150px;
+                                height: 97.2px;
+                                border: 1px solid $borderColor;
+                                position: absolute;
+                                right: 15px;
+                                transform: translateY(20px);
+                                z-index: 1;
+
+                                ul {
+                                    display: block;
+                                    padding: 0;
+                                    padding: 15px 15px 20px;
+
+                                    li {
+                                        border: 0;
+                                        padding: 0;
+
+                                        a {
+                                            color: $black2;
+                                            font-size: 13px;
+                                            transition: 300ms all ease-in;
+                                        }
+
+                                        :hover {
+                                            color: $mainColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        :hover {
+                            .dropdown {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        >:last-child {
+                            .dropdown {
+                                transition: 300ms all linear;
+                                opacity: 0;
+                                visibility: hidden;
+                                background-color: #fff;
+                                width: 150px;
+                                height: 97.2px;
+                                border: 1px solid $borderColor;
+                                position: absolute;
+                                right: 165px;
+                                transform: translateY(20px);
+                                z-index: 1;
+
+                                ul {
+                                    display: block;
+                                    padding: 0;
+                                    padding: 15px 15px 20px;
+
+                                    li {
+                                        border: 0;
+                                        padding: 0;
+
+                                        a {
+                                            color: $black2;
+                                            font-size: 13px;
+                                            transition: 300ms all ease-in;
+                                        }
+
+                                        :hover {
+                                            color: $mainColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        :hover {
+                            .dropdown {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #second {
+        .wrapper {
+            .custom-container {
+                @include flex(center, space-between);
+
+                .navication {
+                    nav {
+                        ul {
+                            @include flex(center);
+                            margin-bottom: 0;
+
+                            li {
+                                margin-left: 20px;
+                                position: relative;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $black;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    transition: 300ms all ease-in;
+
+                                    i {
+                                        font-size: 12px;
+                                        text-align: center;
+                                        margin-left: 5px;
+                                        padding: 52px 0;
+                                    }
+                                }
+
+                                .dropdown {
+                                    // width: 220px;
+                                    // height: 110px;
+                                    padding: 30px 70px 30px 0;
+                                    width: max-content;
+                                    position: absolute;
+                                    border: 1px solid $borderColor;
+                                    @include flex();
+                                    align-items: center;
+                                    justify-content: start;
+                                    left: 0;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: 300ms all ease-in;
+                                    transform: translateY(20px);
+
+                                    ul {
+                                        @include flex(flex-start);
+                                        flex-direction: column;
+                                        padding: 0;
+
+                                        li {
+                                            margin: 0;
+                                            a {
+                                                font-size: 14px;
+                                                padding: 10px 15px;
+                                                font-weight: 400;
+                                                color: $black2;
+                                                transition: 300ms all ease-in;
+                                            }
+                                            :hover{
+                                                color: $mainColor;
+                                            }
+                                        }
+                                    }
+                                }
+                                .pages{
+                                    width: 1200px;
+                                    position: absolute;
+                                    left: -460px;
+                                    @include flex();
+                                    justify-content: space-between;
+                                    ul{
+                                        @include flex();
+                                        li{
+                                            a{
+                                                text-align: start;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            :hover {
+                                color: $mainColor;
+                                .dropdown{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            > :first-child {
+                                a {
+                                    color: $mainColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .search {
+                    button {
+                        border: 0;
+                        background-color: transparent;
+                        padding: 0 0 0 25px;
+                        color: $black;
+                        position: relative;
+
+                        i {
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+
+                        span {
+                            background-color: $mainColor;
+                            color: #fff;
+                            width: 18px;
+                            height: 18px;
+                            text-align: center;
+                            border-radius: 50%;
+                            padding: 4px;
+                            position: absolute;
+                            top: -10px;
+                            right: -10px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
