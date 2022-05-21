@@ -1,4 +1,6 @@
 @import "sections/header.scss";
+@import "sections/carusel.scss";
+@import "sections/shopping-about.scss";
 *{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -9,6 +11,6 @@
 }
 
 .custom-container{
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
 }

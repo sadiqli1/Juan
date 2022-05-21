@@ -23,7 +23,7 @@ header {
                         margin: 0;
 
                         li {
-                            padding: 0 0 0 20px;
+                            padding: 0 20px 0 0;
 
                             a {
                                 text-decoration: none;
@@ -86,6 +86,7 @@ header {
                         }
 
                         >:last-child {
+                            padding: 0 20px;
                             .dropdown {
                                 transition: 300ms all linear;
                                 opacity: 0;
@@ -133,10 +134,16 @@ header {
                 }
             }
         }
+        @media (max-width:1007px) {
+            display: none;
+        }
     }
 
     #second {
+        padding: 0;
         .wrapper {
+            position: relative;
+            background-color: #fff;
             .custom-container {
                 @include flex(center, space-between);
 
@@ -147,8 +154,8 @@ header {
                             margin-bottom: 0;
 
                             li {
-                                margin-left: 20px;
-                                position: relative;
+                                margin-left: 25px;
+                                position: static;
 
                                 a {
                                     text-decoration: none;
@@ -166,34 +173,38 @@ header {
                                 }
 
                                 .dropdown {
-                                    // width: 220px;
-                                    // height: 110px;
-                                    padding: 30px 70px 30px 0;
-                                    width: max-content;
+                                    // padding: 30px 70px 30px 0;
+                                    padding: 15px 0;
+                                    // width: max-content;
+                                    width: 220px;
                                     position: absolute;
                                     border: 1px solid $borderColor;
-                                    @include flex();
-                                    align-items: center;
-                                    justify-content: start;
-                                    left: 0;
+                                    @include flex(center, start);
                                     opacity: 0;
                                     visibility: hidden;
                                     transition: 300ms all ease-in;
                                     transform: translateY(20px);
+                                    z-index: 2;
+                                    background-color: #fff;
 
                                     ul {
                                         @include flex(flex-start);
                                         flex-direction: column;
                                         padding: 0;
+                                        width: 100%;
 
                                         li {
                                             margin: 0;
+                                            width: 100%;
                                             a {
+                                                width: 100%;
                                                 font-size: 14px;
                                                 padding: 10px 15px;
                                                 font-weight: 400;
                                                 color: $black2;
+                                                text-transform: capitalize;
                                                 transition: 300ms all ease-in;
+                                                @include flex(center, space-between);
                                             }
                                             :hover{
                                                 color: $mainColor;
@@ -202,17 +213,31 @@ header {
                                     }
                                 }
                                 .pages{
-                                    width: 1200px;
+                                    width: 80%;
                                     position: absolute;
-                                    left: -460px;
-                                    @include flex();
-                                    justify-content: space-between;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                    padding: 20px;
+                                    @include flex(flex-start, space-between);
                                     ul{
                                         @include flex();
                                         li{
+                                            margin-top: 8px;
                                             a{
                                                 text-align: start;
                                                 text-transform: capitalize;
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                                color: $black2;
+                                                padding: 10px 15px;
+                                            }
+                                        }
+                                        .title{
+                                            a{
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                                color: $black;
                                             }
                                         }
                                     }
@@ -235,13 +260,17 @@ header {
                             }
                         }
                     }
+                    @media (max-width:1007px) {
+                        display: none;
+                    }
                 }
 
                 .search {
+                    @include flex();
                     button {
+                        padding: 0 25px 0 0;
                         border: 0;
                         background-color: transparent;
-                        padding: 0 0 0 25px;
                         color: $black;
                         position: relative;
 
@@ -260,13 +289,129 @@ header {
                             padding: 4px;
                             position: absolute;
                             top: -10px;
-                            right: -10px;
+                            right: 14px;
                             font-size: 10px;
                         }
                     }
+                    .menu-bar{
+                        display: none;
+                        i{
+                            font-size: 20px;
+                        }
+                    }
+                    @media (max-width:1007px) {
+                        > :not(:nth-child(3)){
+                            display: none;
+                        }
+                        .menu-bar{
+                            display: block;
+                        }
+                    }   
                 }
 
             }
+            #menu-bar{
+                position: absolute;
+                width: 0;
+                height: 100vh;
+                background-color: #fff;
+                z-index: 1000;
+                padding: 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 300ms all ease-in;
+                filter: brightness(1) !important;
+                .cancel{
+                    position: absolute;
+                    top: 0;
+                    right: -40px;
+                    button{
+                        width: 40px;
+                        height: 40px;
+                        background-color: $mainColor;
+                        border: 0;
+                        color: #fff;
+                    }
+                }
+                .menu-bar-wrapper{
+                    .search{
+                        position: relative;
+                        input{
+                            border: 0;
+                            background-color: $inputColor;
+                            width: 100%;
+                            height: 40px;
+                            padding: 0 40px 0 10px;
+                            font-size: 13px;
+                            color: #666;
+                            outline: none;
+                            // filter: brightness(0.8);
+                        }
+                        button{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            height: 40px;
+                            width: 40px;
+                            border: 0;
+                        }
+                    }
+                    .links{
+                        ul{
+                            padding: 30px 0 15px 0;
+                            margin: 0;
+                            li{
+                                padding: 10px 0;
+                                @include flex(center, space-between);
+                                a{
+                                    width: 100%;
+                                    text-decoration: none;
+                                    color: $black;
+                                    text-transform: capitalize;
+                                    font-size: 15px;
+                                    line-height: 18px;
+                                    font-weight: 400;
+                                    transition: 300ms all ease-in;
+                                }
+                                button{
+                                    border: 0;
+                                    background-color: transparent;
+                                }
+                                > :hover{
+                                    color: $mainColor;
+                                }
+                            }
+                        }
+                    }
+                    .account{
+                        border-top: 1px solid black;
+                        ul{
+                            padding: 15px 0 0 0;
+                            li{
+                                a{
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    text-transform: capitalize;
+                                    color: $black2;
+                                    transition: 300ms all ease-in;
+                                    i{
+                                        font-size: 12px;
+                                    }
+                                }
+                                > :hover{
+                                    color: $mainColor;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (max-width:640px) {
+                    width: 260px;
+                }
+            }
+        }
+        @media (max-width:1007px) {
+            padding: 10px 0;
         }
     }
 }

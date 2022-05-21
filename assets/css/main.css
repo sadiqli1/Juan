@@ -14,7 +14,7 @@ header #first .wrapper {
       display: flex;
       margin: 0; }
       header #first .wrapper .custom-container div ul li {
-        padding: 0 0 0 20px; }
+        padding: 0 20px 0 0; }
         header #first .wrapper .custom-container div ul li a {
           text-decoration: none;
           color: #fff;
@@ -54,126 +54,388 @@ header #first .wrapper {
         opacity: 1;
         visibility: visible;
         transform: translateY(0); }
-      header #first .wrapper .custom-container div ul > :last-child .dropdown {
-        transition: 300ms all linear;
-        opacity: 0;
-        visibility: hidden;
-        background-color: #fff;
-        width: 150px;
-        height: 97.2px;
-        border: 1px solid #e5e5e5;
-        position: absolute;
-        right: 165px;
-        transform: translateY(20px);
-        z-index: 1; }
-        header #first .wrapper .custom-container div ul > :last-child .dropdown ul {
-          display: block;
-          padding: 0;
-          padding: 15px 15px 20px; }
-          header #first .wrapper .custom-container div ul > :last-child .dropdown ul li {
-            border: 0;
-            padding: 0; }
-            header #first .wrapper .custom-container div ul > :last-child .dropdown ul li a {
-              color: #666666;
-              font-size: 13px;
-              transition: 300ms all ease-in; }
-            header #first .wrapper .custom-container div ul > :last-child .dropdown ul li :hover {
-              color: #e3a51e; }
+      header #first .wrapper .custom-container div ul > :last-child {
+        padding: 0 20px; }
+        header #first .wrapper .custom-container div ul > :last-child .dropdown {
+          transition: 300ms all linear;
+          opacity: 0;
+          visibility: hidden;
+          background-color: #fff;
+          width: 150px;
+          height: 97.2px;
+          border: 1px solid #e5e5e5;
+          position: absolute;
+          right: 165px;
+          transform: translateY(20px);
+          z-index: 1; }
+          header #first .wrapper .custom-container div ul > :last-child .dropdown ul {
+            display: block;
+            padding: 0;
+            padding: 15px 15px 20px; }
+            header #first .wrapper .custom-container div ul > :last-child .dropdown ul li {
+              border: 0;
+              padding: 0; }
+              header #first .wrapper .custom-container div ul > :last-child .dropdown ul li a {
+                color: #666666;
+                font-size: 13px;
+                transition: 300ms all ease-in; }
+              header #first .wrapper .custom-container div ul > :last-child .dropdown ul li :hover {
+                color: #e3a51e; }
       header #first .wrapper .custom-container div ul :hover .dropdown {
         opacity: 1;
         visibility: visible;
         transform: translateY(0); }
 
-header #second .wrapper .custom-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  header #second .wrapper .custom-container .navication nav ul {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0; }
-    header #second .wrapper .custom-container .navication nav ul li {
-      margin-left: 20px;
-      position: relative; }
-      header #second .wrapper .custom-container .navication nav ul li a {
-        text-decoration: none;
-        color: #333333;
-        font-size: 16px;
-        font-weight: 500;
-        transition: 300ms all ease-in; }
-        header #second .wrapper .custom-container .navication nav ul li a i {
-          font-size: 12px;
-          text-align: center;
-          margin-left: 5px;
-          padding: 52px 0; }
-      header #second .wrapper .custom-container .navication nav ul li .dropdown {
-        padding: 30px 70px 30px 0;
-        width: max-content;
-        position: absolute;
-        border: 1px solid #e5e5e5;
+@media (max-width: 1007px) {
+  header #first {
+    display: none; } }
+
+header #second {
+  padding: 0; }
+  header #second .wrapper {
+    position: relative;
+    background-color: #fff; }
+    header #second .wrapper .custom-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      header #second .wrapper .custom-container .navication nav ul {
         display: flex;
         align-items: center;
-        justify-content: start;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: 300ms all ease-in;
-        transform: translateY(20px); }
-        header #second .wrapper .custom-container .navication nav ul li .dropdown ul {
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
-          padding: 0; }
-          header #second .wrapper .custom-container .navication nav ul li .dropdown ul li {
-            margin: 0; }
-            header #second .wrapper .custom-container .navication nav ul li .dropdown ul li a {
-              font-size: 14px;
-              padding: 10px 15px;
-              font-weight: 400;
-              color: #666666;
-              transition: 300ms all ease-in; }
-            header #second .wrapper .custom-container .navication nav ul li .dropdown ul li :hover {
-              color: #e3a51e; }
-      header #second .wrapper .custom-container .navication nav ul li .pages {
-        width: 1200px;
-        position: absolute;
-        left: -460px;
-        display: flex;
-        justify-content: space-between; }
-        header #second .wrapper .custom-container .navication nav ul li .pages ul {
-          display: flex; }
-          header #second .wrapper .custom-container .navication nav ul li .pages ul li a {
-            text-align: start;
-            text-transform: capitalize; }
-    header #second .wrapper .custom-container .navication nav ul :hover {
-      color: #e3a51e; }
-      header #second .wrapper .custom-container .navication nav ul :hover .dropdown {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0); }
-    header #second .wrapper .custom-container .navication nav ul > :first-child a {
-      color: #e3a51e; }
-  header #second .wrapper .custom-container .search button {
-    border: 0;
-    background-color: transparent;
-    padding: 0 0 0 25px;
-    color: #333333;
-    position: relative; }
-    header #second .wrapper .custom-container .search button i {
-      font-size: 20px;
-      font-weight: 600; }
-    header #second .wrapper .custom-container .search button span {
-      background-color: #e3a51e;
-      color: #fff;
-      width: 18px;
-      height: 18px;
-      text-align: center;
-      border-radius: 50%;
-      padding: 4px;
+        margin-bottom: 0; }
+        header #second .wrapper .custom-container .navication nav ul li {
+          margin-left: 25px;
+          position: static; }
+          header #second .wrapper .custom-container .navication nav ul li a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 300ms all ease-in; }
+            header #second .wrapper .custom-container .navication nav ul li a i {
+              font-size: 12px;
+              text-align: center;
+              margin-left: 5px;
+              padding: 52px 0; }
+          header #second .wrapper .custom-container .navication nav ul li .dropdown {
+            padding: 15px 0;
+            width: 220px;
+            position: absolute;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms all ease-in;
+            transform: translateY(20px);
+            z-index: 2;
+            background-color: #fff; }
+            header #second .wrapper .custom-container .navication nav ul li .dropdown ul {
+              display: flex;
+              align-items: flex-start;
+              flex-direction: column;
+              padding: 0;
+              width: 100%; }
+              header #second .wrapper .custom-container .navication nav ul li .dropdown ul li {
+                margin: 0;
+                width: 100%; }
+                header #second .wrapper .custom-container .navication nav ul li .dropdown ul li a {
+                  width: 100%;
+                  font-size: 14px;
+                  padding: 10px 15px;
+                  font-weight: 400;
+                  color: #666666;
+                  text-transform: capitalize;
+                  transition: 300ms all ease-in;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between; }
+                header #second .wrapper .custom-container .navication nav ul li .dropdown ul li :hover {
+                  color: #e3a51e; }
+          header #second .wrapper .custom-container .navication nav ul li .pages {
+            width: 80%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between; }
+            header #second .wrapper .custom-container .navication nav ul li .pages ul {
+              display: flex; }
+              header #second .wrapper .custom-container .navication nav ul li .pages ul li {
+                margin-top: 8px; }
+                header #second .wrapper .custom-container .navication nav ul li .pages ul li a {
+                  text-align: start;
+                  text-transform: capitalize;
+                  font-size: 14px;
+                  font-weight: 400;
+                  color: #666666;
+                  padding: 10px 15px; }
+              header #second .wrapper .custom-container .navication nav ul li .pages ul .title a {
+                font-size: 16px;
+                font-weight: 500;
+                color: #333333; }
+        header #second .wrapper .custom-container .navication nav ul :hover {
+          color: #e3a51e; }
+          header #second .wrapper .custom-container .navication nav ul :hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0); }
+        header #second .wrapper .custom-container .navication nav ul > :first-child a {
+          color: #e3a51e; }
+      @media (max-width: 1007px) {
+        header #second .wrapper .custom-container .navication {
+          display: none; } }
+      header #second .wrapper .custom-container .search {
+        display: flex; }
+        header #second .wrapper .custom-container .search button {
+          padding: 0 25px 0 0;
+          border: 0;
+          background-color: transparent;
+          color: #333333;
+          position: relative; }
+          header #second .wrapper .custom-container .search button i {
+            font-size: 20px;
+            font-weight: 600; }
+          header #second .wrapper .custom-container .search button span {
+            background-color: #e3a51e;
+            color: #fff;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            border-radius: 50%;
+            padding: 4px;
+            position: absolute;
+            top: -10px;
+            right: 14px;
+            font-size: 10px; }
+        header #second .wrapper .custom-container .search .menu-bar {
+          display: none; }
+          header #second .wrapper .custom-container .search .menu-bar i {
+            font-size: 20px; }
+        @media (max-width: 1007px) {
+          header #second .wrapper .custom-container .search > :not(:nth-child(3)) {
+            display: none; }
+          header #second .wrapper .custom-container .search .menu-bar {
+            display: block; } }
+    header #second .wrapper #menu-bar {
       position: absolute;
-      top: -10px;
-      right: -10px;
-      font-size: 10px; }
+      width: 0;
+      height: 100vh;
+      background-color: #fff;
+      z-index: 1000;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 300ms all ease-in;
+      filter: brightness(1) !important; }
+      header #second .wrapper #menu-bar .cancel {
+        position: absolute;
+        top: 0;
+        right: -40px; }
+        header #second .wrapper #menu-bar .cancel button {
+          width: 40px;
+          height: 40px;
+          background-color: #e3a51e;
+          border: 0;
+          color: #fff; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .search {
+        position: relative; }
+        header #second .wrapper #menu-bar .menu-bar-wrapper .search input {
+          border: 0;
+          background-color: #f2f2f2;
+          width: 100%;
+          height: 40px;
+          padding: 0 40px 0 10px;
+          font-size: 13px;
+          color: #666;
+          outline: none; }
+        header #second .wrapper #menu-bar .menu-bar-wrapper .search button {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 40px;
+          width: 40px;
+          border: 0; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links ul {
+        padding: 30px 0 15px 0;
+        margin: 0; }
+        header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li {
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li a {
+            width: 100%;
+            text-decoration: none;
+            color: #333333;
+            text-transform: capitalize;
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 400;
+            transition: 300ms all ease-in; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li button {
+            border: 0;
+            background-color: transparent; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li > :hover {
+            color: #e3a51e; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .account {
+        border-top: 1px solid black; }
+        header #second .wrapper #menu-bar .menu-bar-wrapper .account ul {
+          padding: 15px 0 0 0; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .account ul li a {
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: #666666;
+            transition: 300ms all ease-in; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .account ul li a i {
+              font-size: 12px; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .account ul li > :hover {
+            color: #e3a51e; }
+      @media (max-width: 640px) {
+        header #second .wrapper #menu-bar {
+          width: 260px; } }
+  @media (max-width: 1007px) {
+    header #second {
+      padding: 10px 0; } }
+
+#carusel .wrapper .custom-container .owl-carousel {
+  position: relative; }
+  #carusel .wrapper .custom-container .owl-carousel #item {
+    position: relative; }
+    #carusel .wrapper .custom-container .owl-carousel #item .image {
+      width: 100%; }
+      #carusel .wrapper .custom-container .owl-carousel #item .image img {
+        width: 100%;
+        height: 470px; }
+        @media (max-width: 1007px) {
+          #carusel .wrapper .custom-container .owl-carousel #item .image img {
+            height: 400px; } }
+        @media (max-width: 640px) {
+          #carusel .wrapper .custom-container .owl-carousel #item .image img {
+            height: 350px; } }
+    #carusel .wrapper .custom-container .owl-carousel #item .info {
+      position: absolute;
+      top: 25%;
+      left: 10%; }
+      #carusel .wrapper .custom-container .owl-carousel #item .info .type p {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+        line-height: 1.3;
+        margin: 0; }
+      #carusel .wrapper .custom-container .owl-carousel #item .info .title h2 {
+        font-size: 50px;
+        color: #fff;
+        line-height: 1.4;
+        font-weight: 600;
+        margin: 0; }
+        @media (max-width: 1007px) {
+          #carusel .wrapper .custom-container .owl-carousel #item .info .title h2 {
+            font-size: 35px; } }
+        @media (max-width: 640px) {
+          #carusel .wrapper .custom-container .owl-carousel #item .info .title h2 {
+            font-size: 25px; } }
+      #carusel .wrapper .custom-container .owl-carousel #item .info .desc p {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.7;
+        margin: 0; }
+      #carusel .wrapper .custom-container .owl-carousel #item .info .cus-btn button {
+        background-color: #fff;
+        color: #333333;
+        border: 0;
+        padding: 18px 44px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        margin: 32px 0 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        outline: none;
+        transition: 300ms all ease-in; }
+        #carusel .wrapper .custom-container .owl-carousel #item .info .cus-btn button:hover {
+          background-color: #333333;
+          color: #e3a51e; }
+      @media (max-width: 640px) {
+        #carusel .wrapper .custom-container .owl-carousel #item .info {
+          top: 15%; } }
+  #carusel .wrapper .custom-container .owl-carousel .owl-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    opacity: 0;
+    transition: 300ms all ease-in; }
+    #carusel .wrapper .custom-container .owl-carousel .owl-nav .owl-prev {
+      background-color: #fff;
+      margin-left: 15px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      transition: 300ms all ease-in; }
+      #carusel .wrapper .custom-container .owl-carousel .owl-nav .owl-prev span {
+        font-size: 40px;
+        border-radius: 0; }
+      #carusel .wrapper .custom-container .owl-carousel .owl-nav .owl-prev:hover {
+        background-color: #e3a51e;
+        color: #fff; }
+    #carusel .wrapper .custom-container .owl-carousel .owl-nav .owl-next {
+      background-color: #fff;
+      margin-right: 15px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      transition: 300ms all ease-in; }
+      #carusel .wrapper .custom-container .owl-carousel .owl-nav .owl-next span {
+        font-size: 40px;
+        border-radius: 0; }
+      #carusel .wrapper .custom-container .owl-carousel .owl-nav .owl-next:hover {
+        background-color: #e3a51e;
+        color: #fff; }
+    @media (max-width: 1007px) {
+      #carusel .wrapper .custom-container .owl-carousel .owl-nav {
+        display: none; } }
+  #carusel .wrapper .custom-container .owl-carousel:hover .owl-nav {
+    opacity: 1; }
+  #carusel .wrapper .custom-container .owl-carousel .owl-dots {
+    display: none; }
+    @media (max-width: 1007px) {
+      #carusel .wrapper .custom-container .owl-carousel .owl-dots {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 40%; }
+        #carusel .wrapper .custom-container .owl-carousel .owl-dots .owl-dot span {
+          width: 30px;
+          height: 6px;
+          background-color: #fff; }
+        #carusel .wrapper .custom-container .owl-carousel .owl-dots .active span {
+          background-color: #e3a51e; } }
+    @media (max-width: 640px) {
+      #carusel .wrapper .custom-container .owl-carousel .owl-dots {
+        display: none; } }
+
+main #shopping-about .wrapper .custom-container .custom-row {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  gap: 10px; }
+  main #shopping-about .wrapper .custom-container .custom-row .custom-col {
+    border: 1px solid black;
+    display: flex; }
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -184,5 +446,5 @@ header #second .wrapper .custom-container {
   font-weight: 400; }
 
 .custom-container {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto; }
