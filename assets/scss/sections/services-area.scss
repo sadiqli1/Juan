@@ -1,0 +1,56 @@
+@import "..//assets/mixin.scss";
+@import "..//assets/colors.scss";
+
+main{
+    #services-area{
+        .wrapper{
+            .custom-container{
+                .custom-row{
+                    padding: 10px 0;
+                    .custom-col{
+                        margin-top: 20px;
+                        .wrapper{
+                            border: 0;
+                            @include flex(center, center);
+                            gap: 30px;
+                            height: 110px;
+                            .info{
+                                .title{
+                                    h5{
+                                        font-size: 18px;
+                                        line-height: 1;
+                                        font-weight: 500;
+                                        padding-bottom: 5px;
+                                        color: $black;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                    }
+                                }
+                                .desc{
+                                    p{
+                                        font-size: 16px;
+                                        color: $black;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                            @media (max-width:1007px) {
+                                @include flex(center, center, column);
+                                height: 181px;
+                            }
+                        }
+                    }
+                    .cream{
+                        background-color: $cream;
+                    }
+                    .green{
+                        background-color: $creamGreen;
+                    }
+                    .pink{
+                        background-color: $pink;
+                    }
+                }
+            }
+        }
+    }
+}

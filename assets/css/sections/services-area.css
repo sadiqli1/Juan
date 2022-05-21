@@ -1,0 +1,36 @@
+main #services-area .wrapper .custom-container .custom-row {
+  padding: 10px 0; }
+  main #services-area .wrapper .custom-container .custom-row .custom-col {
+    margin-top: 20px; }
+    main #services-area .wrapper .custom-container .custom-row .custom-col .wrapper {
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      height: 110px; }
+      main #services-area .wrapper .custom-container .custom-row .custom-col .wrapper .info .title h5 {
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 500;
+        padding-bottom: 5px;
+        color: #333333;
+        text-transform: uppercase;
+        text-align: center; }
+      main #services-area .wrapper .custom-container .custom-row .custom-col .wrapper .info .desc p {
+        font-size: 16px;
+        color: #333333;
+        margin: 0; }
+      @media (max-width: 1007px) {
+        main #services-area .wrapper .custom-container .custom-row .custom-col .wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 181px; } }
+  main #services-area .wrapper .custom-container .custom-row .cream {
+    background-color: #fcedda; }
+  main #services-area .wrapper .custom-container .custom-row .green {
+    background-color: #f2fbcb; }
+  main #services-area .wrapper .custom-container .custom-row .pink {
+    background-color: #f7d8f9; }
