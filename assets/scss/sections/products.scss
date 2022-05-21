@@ -1,0 +1,312 @@
+@import "..//assets/mixin.scss";
+@import "..//assets/colors.scss";
+
+main {
+    #products {
+        .wrapper {
+            padding: 80px 0 0 0;
+
+            .custom-container {
+                .title {
+                    @include flex(center, center);
+                    padding: 0 0 42px 0;
+
+                    div {
+                        h2 {
+                            text-align: center;
+                            font-size: 30px;
+                            line-height: 1.2;
+                            padding-bottom: 12px;
+                            color: $black;
+                        }
+
+                        p {
+                            text-align: center;
+                            font-size: 18px;
+                            margin: 0;
+                            color: $black2;
+                        }
+                    }
+                }
+
+                .row {
+                    .owl-carousel {
+                        position: relative;
+
+                        .item {
+                            padding: 0 0 30px 0;
+
+                            .card {
+                                position: relative;
+                                z-index: 1;
+                                transition: 400ms all linear;
+
+                                .image {
+                                    overflow: hidden;
+
+                                    img {
+                                        overflow: hidden;
+                                        transition: 400ms all linear;
+                                    }
+                                }
+
+                                .title {
+                                    padding: 0 0 12px 0;
+
+                                    p {
+                                        font-size: 18px;
+                                        color: $black;
+                                        font-weight: 500;
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                .price {
+                                    width: 100%;
+                                    text-align: center;
+                                    padding: 0 0 40px 0;
+
+                                    span {
+                                        font-size: 18px;
+                                        color: $black;
+                                    }
+
+                                    del {
+                                        font-size: 16px;
+                                        color: $black;
+                                    }
+                                }
+
+                                .product-action {
+                                    ul {
+                                        padding: 0;
+                                        margin: 0;
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        gap: 15px;
+                                        position: absolute;
+                                        bottom: -23px;
+                                        left: 0;
+                                        z-index: 999999;
+
+                                        li {
+                                            transition: 400ms all linear;
+
+                                            button {
+                                                width: 46px;
+                                                height: 46px;
+                                                border-radius: 50%;
+                                                @include flex(center, center);
+                                                font-size: 20px;
+                                                line-height: 46px;
+                                                background-color: #fff;
+                                                border: 1px solid $mainColor;
+                                                color: $mainColor;
+                                            }
+                                        }
+
+                                        > :nth-child(1) {
+                                            transform: translateX(66px);
+                                            opacity: 0;
+                                        }
+
+                                        >:nth-child(2) {
+                                            position: relative;
+                                            z-index: 1;
+                                        }
+
+                                        > :nth-child(3) {
+                                            transform: translateX(-66px);
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            > :hover {
+                                border: 1px solid $mainColor;
+
+                                .product-action {
+                                    ul {
+                                        > :nth-child(1) {
+                                            transform: translateX(0);
+                                            opacity: 1;
+                                        }
+
+                                        > :nth-child(3) {
+                                            transform: translateX(0);
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+                                .image {
+                                    img {
+                                        transform: scale(1.15);
+                                        overflow: hidden;
+                                    }
+                                }
+                            }
+                        }
+
+                        .owl-nav {
+                            position: absolute;
+                            width: 98%;
+                            top: 40%;
+                            @include flex(center, space-between);
+                            opacity: 0;
+                            transition: 300ms all ease-in;
+
+                            .owl-prev {
+                                width: 46px;
+                                height: 46px;
+                                background-color: #f5f5f5;
+                                color: $black;
+                                @include flex(center, center);
+                                transition: 300ms all ease-in;
+                                margin-left: 15px;
+
+                                span {
+                                    font-size: 40px;
+                                }
+
+                                &:hover {
+                                    background-color: $mainColor;
+                                    color: #fff;
+                                }
+                            }
+
+                            .owl-next {
+                                width: 46px;
+                                height: 46px;
+                                background-color: #f5f5f5;
+                                color: $black;
+                                @include flex(center, center);
+                                transition: 300ms all ease-in;
+                                margin-right: 15px;
+
+                                span {
+                                    font-size: 40px;
+                                }
+
+                                &:hover {
+                                    background-color: $mainColor;
+                                    color: #fff;
+                                }
+                            }
+                        }
+
+                        .owl-dots {
+                            display: none;
+                        }
+
+                        &:hover {
+                            .owl-nav {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                .discount {
+                    width: 100%;
+                    padding: 80px 0 0 0;
+
+                    .custom-row {
+                        display: flex;
+                        width: 100%;
+
+                        .cus-col {
+                            width: 50%;
+
+                            .wrapper {
+                                position: relative;
+                                width: 100%;
+                                padding: 0;
+                                transition: 300ms all linear;
+
+                                .image {
+                                    overflow: hidden;
+                                    img {
+                                        width: 100%;
+                                        transition: 300ms all linear;
+                                    }
+                                }
+
+                                .desc {
+                                    position: absolute;
+                                    top: 40%;
+                                    left: 8%;
+
+                                    .title {
+                                        padding: 0;
+                                        margin: 0;
+                                        @include flex(null, start);
+
+                                        h4 {
+                                            font-size: 18px;
+                                            font-weight: 500;
+                                            padding-bottom: 14px;
+                                            color: #fff;
+                                        }
+                                    }
+
+                                    .about {
+                                        p {
+                                            font-size: 30px;
+                                            font-weight: 600;
+                                            color: #fff;
+                                            line-height: 1.4;
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    filter: brightness(0.8);
+                                    .image{
+                                        img{
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        @media (max-width:640px) {
+                            display: block;
+
+                            .cus-col {
+                                width: 100%;
+                            }
+                        }
+
+                        @media (max-width:1007px) {
+                            .cus-col {
+                                padding: 0 0 30px 0;
+                                .wrapper {
+                                    .desc {
+                                        top: 30%;
+
+                                        .title {
+                                            h4 {
+                                                font-size: 16px;
+                                                font-weight: 400;
+                                                padding-bottom: 8px;
+                                            }
+                                        }
+
+                                        .about {
+                                            p {
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
