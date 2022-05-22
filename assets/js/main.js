@@ -23,35 +23,35 @@ $('.custom-owl').owlCarousel({
     }
 });
 $('.custom-owl-1').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
         },
-        600:{
-            items:2
+        600: {
+            items: 2
         },
-        1000:{
-            items:4
+        1000: {
+            items: 4
         }
     }
 })
 
 $('.custom-owl-2').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
         },
-        600:{
-            items:2
+        600: {
+            items: 2
         },
-        1000:{
-            items:3
+        1000: {
+            items: 3
         }
     }
 })
@@ -82,5 +82,25 @@ window.onload = function () {
             menuBar.style.visibility = "hidden";
         }
         i++;
+    });
+
+    const plus = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper > .links > ul > li > .plus");
+    let j = 0;
+    plus.addEventListener("click", () => {
+        const dropdown = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper> .links > ul > li > .dropdown");
+        const plusIcon = document.querySelector(`#second > .wrapper > #menu-bar > .menu-bar-wrapper > .links > ul > li > .plus > i`);
+        if (j % 2 === 0) {
+            dropdown.style.opacity = "1";
+            dropdown.style.height = "max-content";
+            plusIcon.classList.add("fa-minus");
+            plusIcon.classList.remove("fa-plus");
+        }
+        else {
+            dropdown.style.opacity = "0";
+            dropdown.style.height = "0";
+            plusIcon.classList.remove("fa-minus");
+            plusIcon.classList.add("fa-plus");
+        }
+        j++;
     });
 };

@@ -189,38 +189,71 @@ header #second {
       @media (max-width: 1007px) {
         header #second .wrapper .custom-container .navication {
           display: none; } }
-      header #second .wrapper .custom-container .search {
-        display: flex; }
-        header #second .wrapper .custom-container .search button {
+      header #second .wrapper .custom-container .search ul {
+        display: flex;
+        padding: 0;
+        margin: 0; }
+        header #second .wrapper .custom-container .search ul li {
           padding: 0 25px 0 0;
+          position: static; }
+          header #second .wrapper .custom-container .search ul li button {
+            border: 0;
+            background-color: transparent;
+            color: #333333;
+            transition: 300ms all ease-in; }
+            header #second .wrapper .custom-container .search ul li button i {
+              font-size: 20px;
+              font-weight: 600; }
+            header #second .wrapper .custom-container .search ul li button span {
+              background-color: #e3a51e;
+              color: #fff;
+              width: 18px;
+              height: 18px;
+              text-align: center;
+              border-radius: 50%;
+              padding: 4px;
+              position: absolute;
+              margin-top: -10px;
+              font-size: 10px; }
+            header #second .wrapper .custom-container .search ul li button:hover {
+              color: #e3a51e; }
+          header #second .wrapper .custom-container .search ul li .dropdown {
+            width: 150px;
+            position: absolute;
+            padding: 20px;
+            border: 1px solid #e5e5e5;
+            z-index: 1000;
+            background-color: #fff;
+            margin-left: -130px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms all ease-in;
+            transform: translateY(20px); }
+            header #second .wrapper .custom-container .search ul li .dropdown ul {
+              display: block; }
+              header #second .wrapper .custom-container .search ul li .dropdown ul li a {
+                text-decoration: none;
+                color: #666666;
+                text-transform: capitalize;
+                font-size: 13px;
+                padding: 8px 0; }
+        header #second .wrapper .custom-container .search ul .setting:hover .dropdown {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0); }
+      header #second .wrapper .custom-container .search .menu-bar {
+        display: none; }
+        header #second .wrapper .custom-container .search .menu-bar button {
           border: 0;
           background-color: transparent;
-          color: #333333;
-          position: relative; }
-          header #second .wrapper .custom-container .search button i {
-            font-size: 20px;
-            font-weight: 600; }
-          header #second .wrapper .custom-container .search button span {
-            background-color: #e3a51e;
-            color: #fff;
-            width: 18px;
-            height: 18px;
-            text-align: center;
-            border-radius: 50%;
-            padding: 4px;
-            position: absolute;
-            top: -10px;
-            right: 14px;
-            font-size: 10px; }
-        header #second .wrapper .custom-container .search .menu-bar {
+          color: #333333; }
+        header #second .wrapper .custom-container .search .menu-bar i {
+          font-size: 20px; }
+      @media (max-width: 1007px) {
+        header #second .wrapper .custom-container .search > :not(:nth-child(3)) {
           display: none; }
-          header #second .wrapper .custom-container .search .menu-bar i {
-            font-size: 20px; }
-        @media (max-width: 1007px) {
-          header #second .wrapper .custom-container .search > :not(:nth-child(3)) {
-            display: none; }
-          header #second .wrapper .custom-container .search .menu-bar {
-            display: block; } }
+        header #second .wrapper .custom-container .search .menu-bar {
+          display: block; } }
     header #second .wrapper #menu-bar {
       position: absolute;
       width: 0;
@@ -265,9 +298,7 @@ header #second {
         margin: 0; }
         header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li {
           padding: 10px 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between; }
+          position: relative; }
           header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li a {
             width: 100%;
             text-decoration: none;
@@ -279,7 +310,20 @@ header #second {
             transition: 300ms all ease-in; }
           header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li button {
             border: 0;
-            background-color: transparent; }
+            background-color: transparent;
+            position: absolute;
+            right: 0; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown {
+            margin-left: 20px;
+            height: 0;
+            opacity: 0;
+            transition: 300ms all ease-in; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown ul {
+              padding: 0; }
+              header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown ul li a {
+                color: #333333;
+                font-size: 14px;
+                padding: 8px 0; }
           header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li > :hover {
             color: #e3a51e; }
       header #second .wrapper #menu-bar .menu-bar-wrapper .account {
