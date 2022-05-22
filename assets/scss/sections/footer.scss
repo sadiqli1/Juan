@@ -1,0 +1,150 @@
+@import "..//assets/mixin.scss";
+@import "..//assets/colors.scss";
+
+footer {
+    #first {
+        .wrapper {
+            background-color: $footerColor1;
+            padding: 80px 0;
+
+            .custom-container {
+                .col-lg-5 {
+                    .account {
+                        .account-title {
+                            h5 {
+                                font-size: 18px;
+                                color: $black;
+                                font-weight: 600;
+                                line-height: 1;
+                                padding-bottom: 28px;
+                                margin-top: -4px;
+                            }
+                        }
+
+                        .account-about {
+                            ul {
+                                padding: 0;
+
+                                li {
+                                    font-size: 16px;
+                                    line-height: 1.4;
+                                    margin-bottom: 15px;
+                                    color: $black;
+
+                                    i {
+                                        margin-right: 5px;
+                                    }
+
+                                    a {
+                                        text-decoration: none;
+                                        color: $black;
+                                        margin-left: 5px;
+                                        transition: 300ms all ease-in;
+
+                                        &:hover {
+                                            color: $mainColor;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col-lg-2,
+                .col-lg-3 {
+                    .cus-title {
+                        h5 {
+                            color: $black;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1;
+                            margin: 0;
+                            padding-bottom: 28px;
+                        }
+                    }
+
+                    .cus-body {
+                        ul {
+                            padding: 0;
+
+                            li {
+                                margin-bottom: 15px;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $black;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    transition: 300ms all ease-in;
+
+                                    &:hover {
+                                        color: $mainColor;
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col-lg-3 {
+                    @media (min-width:1007px) {
+                        @include flex(center, null, column);
+                    }
+                }
+            }
+        }
+    }
+
+    #second {
+        .wrapper {
+            background-color: $footerColor2;
+            padding: 20px 0;
+
+            .custom-container {
+                .row {
+                    .col-lg-6 {
+                        p {
+                            font-size: 14px;
+                            margin: 0;
+
+                            a {
+                                text-decoration: none;
+                                color: $mainColor;
+                            }
+
+                            i {
+                                color: red;
+                            }
+                            @media (max-width:640px) {
+                                width: 345px;
+                            };
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $black2;
+                            margin-right: 20px;
+
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .right {
+                        text-align: center;
+                        @media (min-width:640px) {
+                            text-align: right;
+                        }
+                    }
+                    @media (max-width:640px) {
+                        @include flex(null, null, column-reverse);
+                    };
+                }
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@ $('.custom-owl').owlCarousel({
         }
     }
 });
-$('.owl-carousel').owlCarousel({
+$('.custom-owl-1').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
@@ -35,6 +35,23 @@ $('.owl-carousel').owlCarousel({
         },
         1000:{
             items:4
+        }
+    }
+})
+
+$('.custom-owl-2').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
         }
     }
 })
