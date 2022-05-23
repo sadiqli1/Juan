@@ -124,6 +124,26 @@ main {
                                     margin-bottom: 20px;
                                     border-top: 10px solid $mainColor;
                                     border-radius: 10px;
+                                    // position: relative;
+                                    // width: 100%;
+                                    // height: 36px;
+                                    // box-sizing: border-box;
+                                    // background: rgba(248, 247, 244, 0.2);
+                                    // padding-top: 15px;
+                                    // padding-left: 16px;
+                                    // border-radius: 3px;
+                                    // display: flex;
+
+                                    // input {
+                                    //     // width: 50%;
+                                    //     position: absolute;
+                                    // }
+                                    // #lower{
+                                    //     left: 0;
+                                    // }
+                                    // #upper{
+                                    //     right: 0;
+                                    // }
                                 }
 
                                 .price {
@@ -154,6 +174,12 @@ main {
                                             line-height: 36px;
                                             padding: 0 15px;
                                             border-radius: 3px;
+                                            transition: 300ms all ease-in;
+
+                                            &:hover {
+                                                background-color: $mainColor;
+                                                color: #fff;
+                                            }
                                         }
                                     }
                                 }
@@ -246,9 +272,126 @@ main {
                     }
 
                     .col-lg-9 {
-                        .row {
+                        .col-title {
+                            @include flex(center, space-between);
+                            padding: 0 0 30px 0;
+
+                            .grid {
+                                ul {
+                                    @include flex();
+                                    gap: 10px;
+                                    padding: 0;
+                                    margin: 0;
+
+                                    li {
+                                        button {
+                                            border: 0;
+                                            width: 40px;
+                                            height: 40px;
+                                            color: #fff;
+                                            background-color: #9e9e9e;
+
+                                            &:hover {
+                                                background-color: $mainColor;
+                                            }
+                                        }
+
+                                        .activ-btn {
+                                            background-color: $mainColor;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .lists {
+                                @include flex(null, null, row);
+
+                                .sort {
+                                    @include flex(null, null, row);
+
+                                    p {
+                                        margin-right: 10px;
+                                        font-size: 16px;
+                                        color: $black2;
+                                        margin-top: 5px;
+                                    }
+                                }
+
+                                .list {
+                                    .list-title {
+                                        border: 1px solid #e8e8e8;
+                                        padding: 5px 10px;
+                                        border-radius: 5px;
+                                        width: 200px;
+                                        cursor: pointer;
+                                        @include flex(center, space-between)
+
+                                        p {
+                                            margin: 0;
+                                            padding: 0;
+                                            text-transform: capitalize;
+                                        }
+                                    }
+
+                                    .list-dropdown {
+                                        height: 0;
+                                        opacity: 0;
+                                        position: absolute;
+                                        z-index: 1000;
+                                        transition: 300ms all ease-in;
+                                        background-color: #fff;
+
+                                        ul {
+                                            border: 1px solid $borderColor;
+                                            border-radius: 5px;
+                                            padding: 0;
+                                            margin-left: 0;
+                                            margin-top: 5px;
+                                            width: 200px;
+
+                                            p {
+                                                font-size: 13px;
+                                                color: $black2;
+                                                background-color: #F6F6F6;
+                                                margin: 0;
+                                                padding: 10px 29px 10px 18px;
+                                                font-weight: 600;
+                                            }
+
+                                            li {
+                                                font-size: 13px;
+                                                color: $black2;
+                                                margin-bottom: 10px;
+                                                padding: 0 29px 0 18px;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .showing {
+                                    margin: 5px 0 0 20px;
+                                    color: $black2;
+                                    font-size: 16px;
+                                }
+                            }
+
+                            @media (max-width:640px) {
+                                @include flex(null, null, column-reverse);
+
+                                .lists {
+                                    @include flex(null, null, column-reverse);
+                                }
+                            }
+                        }
+
+                        .row-menu {
+                            display: none;
+
                             .col-lg-4 {
                                 margin-bottom: 30px;
+
                                 .card {
                                     position: relative;
                                     z-index: 1;
@@ -337,23 +480,24 @@ main {
                                         }
                                     }
                                 }
+
                                 > :hover {
                                     border: 1px solid $mainColor;
-    
+
                                     .product-action {
                                         ul {
                                             > :nth-child(1) {
                                                 transform: translateX(0);
                                                 opacity: 1;
                                             }
-    
+
                                             > :nth-child(3) {
                                                 transform: translateX(0);
                                                 opacity: 1;
                                             }
                                         }
                                     }
-    
+
                                     .image {
                                         img {
                                             transform: scale(1.15);
@@ -362,8 +506,118 @@ main {
                                     }
                                 }
                             }
+                            // @media (max-width:1007px) {
+                            //     @include flex(null, null, row-reverse);
+                            // }
+                            
+                        }
+
+                        .row-list {
+                            display: none;
+
+                            .col-lg-12 {
+                                .card {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    padding: 15px;
+                                    border-radius: 0;
+                                    margin-bottom: 20px;
+
+                                    .card-image {
+                                        width: max-content;
+                                        border: 1px solid $borderColor;
+
+                                        img {
+                                            transition: 300ms all ease-in;
+                                            overflow: hidden;
+                                        }
+                                    }
+
+                                    .card-desc {
+                                        width: fit-content;
+                                        padding-left: 30px;
+
+                                        .card-desc-title {
+                                            a {
+                                                text-decoration: none;
+                                                color: $black;
+                                                font-size: 22px;
+                                                font-weight: 500;
+                                                transition: 300ms all ease-in;
+
+                                                &:hover {
+                                                    color: $mainColor;
+                                                }
+                                            }
+                                        }
+
+                                        .card-desc-price {
+                                            padding: 15px 0;
+
+                                            span {
+                                                font-size: 18px;
+                                                color: $black;
+                                            }
+
+                                            del {
+                                                font-size: 16px;
+                                                color: $black2;
+                                            }
+                                        }
+
+                                        .card-desc-info {
+                                            p {
+                                                font-size: 16px;
+                                                color: $black2;
+                                                padding-bottom: 25px;
+                                            }
+                                        }
+
+                                        .card-desc-action {
+                                            ul {
+                                                margin: 0;
+                                                padding: 0;
+                                                @include flex();
+                                                gap: 5px;
+
+                                                li {
+                                                    button {
+                                                        background-color: #f6f6f6;
+                                                        border: 0;
+                                                        width: 44px;
+                                                        height: 44px;
+
+                                                        &:hover {
+                                                            background-color: $mainColor;
+                                                            color: #fff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        .card-image {
+                                            img {
+                                                transform: scale(1.1);
+                                            }
+                                        }
+                                    }
+                                    @media (max-width:640px) {
+                                        flex-direction: column;
+                                    }
+                                }
+                            }
+                        }
+
+                        .activ {
+                            display: flex;
+                            flex-direction: row-reverse;
                         }
                     }
+
                     @media (max-width:1007px) {
                         @include flex(null, null, column-reverse);
                     }
