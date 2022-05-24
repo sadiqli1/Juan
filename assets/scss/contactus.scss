@@ -1,0 +1,201 @@
+@import "sections/header.scss";
+@import "sections/footer.scss";
+@import "assets/mixin.scss";
+@import "assets/colors.scss";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 400;
+}
+
+.custom-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    #first {
+        .wrapper {
+            background-image: url("https://htmldemo.net/juan/juan/assets/img/banner/breadcrumb-banner.jpg");
+            padding: 55px 0 60px;
+
+            .custom-container {
+                .title {
+                    @include flex(center, center, column);
+
+                    h1 {
+                        font-size: 24px;
+                        color: $black;
+                        padding: 0 0 15px;
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+
+                    div {
+                        display: flex;
+                        gap: 10px;
+
+                        a {
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: $black;
+                            transition: 300ms all ease-in;
+                            text-transform: capitalize;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: $mainColor;
+                            text-transform: capitalize;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #second {
+        .wrapper {
+            padding: 80px 0;
+
+            .custom-container {
+                .row {
+                    .first-col {
+                        .row {
+                            >.col-12 {
+                                h2 {
+                                    font-size: 24px;
+                                    color: $black;
+                                    margin: 0;
+                                    padding: 0 0 30px;
+                                }
+                            }
+
+                            >.col-lg-6 {
+                                padding: 0 15px;
+
+                                >input {
+                                    width: 100%;
+                                    margin: 0 0 30px;
+                                    padding: 10px;
+                                    background-color: #f3f6f5;
+                                    border: 0;
+                                    font-size: inherit;
+                                    line-height: inherit;
+                                    font-style: italic;
+                                }
+                            }
+
+                            >.col-lg-12 {
+                                padding: 0 15px;
+
+                                textarea {
+                                    width: 100%;
+                                    height: 150px;
+                                    border: 0;
+                                    background-color: #f3f6f5;
+                                    padding: 10px;
+                                    margin-bottom: 30px;
+                                }
+                            }
+
+                            >.col-12 {
+                                padding: 0 15px;
+
+                                button {
+                                    font-size: 16px;
+                                    border: 0;
+                                    font-weight: 400;
+                                    line-height: 1;
+                                    color: $mainColor;
+                                    outline: none;
+                                    padding: 14px 25px;
+                                    background-color: $black;
+                                    text-transform: uppercase;
+                                    transition: 300ms all ease-in;
+
+                                    &:hover {
+                                        background-color: $mainColor;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    >.second-col {
+                        >.cus-title {
+                            padding: 0 0 30px;
+
+                            h2 {
+                                font-size: 24px;
+                                color: $black;
+                                text-transform: capitalize;
+                                margin: 0;
+                            }
+                        }
+
+                        >.desc {
+                            padding: 0 0 30px;
+
+                            p {
+                                color: $black2;
+                                margin: 0;
+                            }
+                        }
+
+                        >.contact {
+                            ul {
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+                                    font-size: 16px;
+                                    color: $black2;
+                                    margin: 0 0 15px;
+                                    padding: 0 0 15px;
+                                    border-bottom: 1px solid $borderColor;
+
+                                    i {
+                                        margin: 0 10px 0 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        >.working-hours {
+                            h3 {
+                                font-size: 16px;
+                                color: $black;
+                                padding: 0 0 5px;
+                                margin: 0;
+                            }
+
+                            p {
+                                font-size: 16px;
+
+                                span {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                        @media (max-width:1007px) {
+                            margin-top: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

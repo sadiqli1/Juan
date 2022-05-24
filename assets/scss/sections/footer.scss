@@ -127,7 +127,10 @@ footer {
                             text-decoration: none;
                             color: $black2;
                             margin-right: 20px;
-
+                            transition: 300ms all ease-in;
+                            &:hover{
+                                color: $mainColor;
+                            }
                             i {
                                 font-size: 16px;
                             }
