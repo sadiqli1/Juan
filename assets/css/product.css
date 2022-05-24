@@ -671,12 +671,20 @@ main #first .wrapper {
 
 main #second .wrapper {
   padding: 80px 0; }
-  main #second .wrapper .custom-container .row .col-lg-5 .image {
-    width: 100%;
+  main #second .wrapper .custom-container .row .col-lg-5 figure.zoom {
     border: 1px solid #e5e5e5;
-    margin-bottom: 20px; }
-    main #second .wrapper .custom-container .row .col-lg-5 .image img {
+    background-position: 50% 50%;
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    cursor: zoom-in;
+    background-image: url("https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg"); }
+    main #second .wrapper .custom-container .row .col-lg-5 figure.zoom img {
+      transition: opacity .5s;
+      display: block;
       width: 100%; }
+      main #second .wrapper .custom-container .row .col-lg-5 figure.zoom img:hover {
+        opacity: 0; }
   main #second .wrapper .custom-container .row .col-lg-5 .images-lists {
     width: 100%;
     display: flex;

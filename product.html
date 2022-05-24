@@ -348,10 +348,9 @@
                 <div class="custom-container">
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12">
-                            <div class="image">
-                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg"
-                                    alt="">
-                            </div>
+                            <figure class="zoom" id="zoom" onmousemove="zoom(event)">
+                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg" />
+                            </figure>
                             <div class="images-lists">
                                 <div class="img">
                                     <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg"
@@ -394,7 +393,7 @@
                             <div class="product-quantity-box">
                                 <div class="quantity">
                                     <span id="minus">-</span>
-                                    <span>1</span>
+                                    <span id="count">1</span>
                                     <span id="plus">+</span>
                                 </div>
                                 <a href="">Add To Cart</a>
@@ -525,7 +524,7 @@
                                     <div class="col">
                                         <label for="">
                                             <span>*</span>
-                                            your email 
+                                            your email
                                         </label>
                                         <input type="email" required>
                                     </div>
@@ -547,7 +546,7 @@
                                     <div class="col">
                                         <label for="">
                                             <span>*</span>
-                                            Rating 
+                                            Rating
                                         </label>
                                         <span class="bad">bad</span>
                                         <input type="radio" value="1" name="rating">
@@ -1069,6 +1068,7 @@
         </section>
     </footer>
     <!-- Footer End -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
