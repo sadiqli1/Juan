@@ -1,0 +1,180 @@
+@import "sections/header.scss";
+@import "sections/footer.scss";
+@import "assets/mixin.scss";
+@import "assets/colors.scss";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 400;
+}
+
+.custom-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    #first {
+        .wrapper {
+            background-image: url("https://htmldemo.net/juan/juan/assets/img/banner/breadcrumb-banner.jpg");
+            padding: 55px 0 60px;
+
+            .custom-container {
+                .title {
+                    @include flex(center, center, column);
+
+                    h1 {
+                        font-size: 24px;
+                        color: $black;
+                        padding: 0 0 15px;
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+
+                    div {
+                        display: flex;
+                        gap: 10px;
+
+                        a {
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: $black;
+                            transition: 300ms all ease-in;
+                            text-transform: capitalize;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: $mainColor;
+                            text-transform: capitalize;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #second {
+        .wrapper {
+            padding: 80px 0;
+            .custom-container {
+                .row {
+                    .col-lg-4 {
+                        padding-top: 15px;
+                        .card {
+                            border: 0;
+
+                            .image {
+                                width: 100%;
+                                height: 240px;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    cursor: pointer;
+                                }
+                                @media (max-width:1007px) {
+                                    height: 223px;
+                                }
+                            }
+
+                            .desc {
+                                padding-top: 20px;
+
+                                .desc-title {
+                                    padding: 0 0 10px 0;
+
+                                    a {
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        line-height: 1.6;
+                                        padding-bottom: 10px;
+                                        color: $black;
+                                        text-decoration: none;
+                                        transition: 400ms all ease-in;
+
+                                        &:hover {
+                                            color: $mainColor;
+                                        }
+                                    }
+                                }
+
+                                .desc-meta {
+                                    ul {
+                                        padding: 0 0 20px 0;
+                                        margin: 0;
+                                        @include flex();
+                                        gap: 5px;
+
+                                        li {
+                                            color: $black2;
+                                            font-size: 14px;
+
+                                            span {
+                                                font-weight: 600;
+                                                color: $black;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                div {
+                                    a {
+                                        color: $black;
+                                        font-weight: 500;
+                                        font-size: 15px;
+                                        text-decoration: none;
+                                        transition: 400ms all ease-in;
+
+                                        &:hover {
+                                            color: $mainColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    > .col-12{
+                        border: 1px solid $borderColor;
+                        @include flex(center, center);
+                        margin-top: 30px;
+                        ul{
+                            @include flex();
+                            padding: 20px 0;
+                            margin: 0;
+                            gap: 10px;
+                            li{
+                                button{
+                                    border: 1px solid $borderColor;
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: #fff;
+                                    color: $black;
+                                    transition: 300ms all ease-in;
+                                    border-radius: 4px;
+                                    &:hover{
+                                        background-color: $mainColor;
+                                        color: #fff;
+                                    }
+                                }
+                                .bir{
+                                    background-color: $mainColor;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
