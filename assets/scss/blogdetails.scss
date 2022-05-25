@@ -1,0 +1,534 @@
+@import "sections/header.scss";
+@import "sections/footer.scss";
+@import "assets/mixin.scss";
+@import "assets/colors.scss";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 400;
+}
+
+.custom-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    #first {
+        .wrapper {
+            background-image: url("https://htmldemo.net/juan/juan/assets/img/banner/breadcrumb-banner.jpg");
+            padding: 55px 0 60px;
+
+            .custom-container {
+                .title {
+                    @include flex(center, center, column);
+
+                    h1 {
+                        font-size: 24px;
+                        color: $black;
+                        padding: 0 0 15px;
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+
+                    div {
+                        display: flex;
+                        gap: 5px;
+
+                        a {
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: $black;
+                            transition: 300ms all ease-in;
+                            text-transform: capitalize;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: $mainColor;
+                            text-transform: capitalize;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #second {
+        .wrapper {
+            padding: 80px 0;
+
+            .custom-container {
+                .row {
+                    .col-lg-9 {
+                        .image {
+                            width: 100%;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .cus-title {
+                            padding: 20px 0 0 0;
+
+                            h5 {
+                                font-size: 24px;
+                                color: $black;
+                                padding: 0 0 10px 0;
+                                margin: 0;
+                                font-weight: 600;
+                                @media (max-width:640px) {
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        .desc-meta {
+                            ul {
+                                padding: 0 0 20px 0;
+                                margin: 0;
+                                @include flex();
+                                gap: 5px;
+
+                                li {
+                                    font-size: 14px;
+                                    color: $black2;
+
+                                    span {
+                                        color: $black;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+
+                        .txt {
+                            p {
+                                font-size: 16px;
+                                color: $black2;
+                            }
+
+                            #second-txt {
+                                margin: 25px 0 25px 30px;
+                                padding: 15px;
+                                border-left: 3px solid $mainColor;
+                                background-color: #f8f8f8;
+                            }
+                        }
+
+                        .comments {
+                            padding: 80px 0;
+
+                            .comment-title {
+                                h5 {
+                                    color: $black;
+                                    font-weight: 600;
+                                    padding: 0 0 15px 0;
+                                }
+                            }
+
+                            .comment1,
+                            .comment2,
+                            .comment3 {
+                                border: 1px solid $borderColor;
+                                margin: 0 0 30px 0;
+                                padding: 10px 20px;
+                                @include flex(null, null, space-between);
+
+                                .author-avatar {
+                                    margin: 0 10px 0 0;
+                                }
+
+                                .comment-body {
+                                    position: relative;
+
+                                    button {
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        border: 1px solid $borderColor;
+                                        border-radius: 20px;
+                                        padding: 5px 14px;
+                                        text-transform: capitalize;
+                                        color: $black;
+                                        background-color: transparent;
+                                        font-size: 12px;
+                                        transition: 300ms all ease-in;
+
+                                        &:hover {
+                                            background-color: $mainColor;
+                                            color: #fff;
+                                            border: 0;
+                                        }
+                                    }
+
+                                    h5 {
+                                        font-size: 14px;
+                                        color: $black;
+                                        text-transform: capitalize;
+                                        margin: 0;
+                                        padding: 0 0 5px 0;
+                                        font-weight: 600;
+                                    }
+
+                                    p {
+                                        color: $black2;
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    .comment-post-date {
+                                        font-size: 13px;
+                                        color: $black2;
+                                        padding: 0 0 10px 0;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+
+                            .comment2 {
+                                margin: 0 0 30px 40px;
+                            }
+                        }
+
+                        .comment-wrapper {
+                            .comment-title {
+                                h5 {
+                                    color: $black;
+                                    margin: 0;
+                                    padding: 0;
+                                    text-transform: uppercase;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            .comment-about {
+                                p {
+                                    padding: 10px 0 0;
+                                    margin: 0 0 10px;
+                                    color: $black2;
+                                }
+                            }
+
+                            form {
+                                .comment-txt {
+                                    @include flex(null, null, column);
+
+                                    label {
+                                        color: $black;
+                                        margin: 0 0 10px 0;
+                                        text-transform: capitalize;
+                                        font-weight: 500;
+                                    }
+
+                                    textarea {
+                                        border: 0;
+                                        background-color: #f8f8f8;
+                                        padding: 10px;
+                                        margin: 0 0 20px;
+                                        height: 130px;
+                                        outline: 0;
+                                        font-family: inherit;
+                                        font-size: inherit;
+                                        line-height: inherit;
+                                    }
+                                }
+
+                                .row {
+                                    .col-lg-4 {
+                                        margin: 0 0 20px 0;
+                                        @include flex(null, null, column);
+
+                                        label {
+                                            margin: 0 0 10px 0;
+                                            color: $black;
+                                            text-transform: capitalize;
+                                            font-weight: 500;
+                                        }
+
+                                        input {
+                                            padding: 8px 10px;
+                                            border: 0;
+                                            background-color: #f8f8f8;
+                                            text-transform: capitalize;
+                                            font-family: inherit;
+                                            font-size: inherit;
+                                            line-height: inherit;
+                                        }
+                                    }
+                                }
+
+                                button {
+                                    background-color: $black;
+                                    border: 0;
+                                    padding: 14px 25px;
+                                    color: $mainColor;
+                                    text-transform: uppercase;
+                                    margin: 10px 0 0 0;
+                                    transition: 300ms all ease-in;
+
+                                    &:hover {
+                                        background-color: $mainColor;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        @media (max-width:1007px) {
+                            margin-bottom: 60px;
+                        }
+                    }
+
+                    .col-lg-3 {
+                        .blog-widget {
+                            border: 1px solid $borderColor;
+
+                            .image {
+                                width: 100%;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            .about {
+                                padding: 20px;
+                                @include flex(center, center, column);
+
+                                h5 {
+                                    font-size: 18px;
+                                    color: $black;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    text-transform: capitalize;
+                                }
+
+                                p {
+                                    padding: 8px 0;
+                                    font-size: 14px;
+                                    color: $black2;
+                                    margin: 0;
+                                }
+
+                                .blog-widget-icon {
+                                    ul {
+                                        padding: 0;
+                                        margin: 0;
+                                        @include flex();
+                                        gap: 15px;
+
+                                        li {
+                                            a {
+                                                text-decoration: none;
+                                                color: $black2;
+                                                transition: 300ms all ease-in;
+
+                                                &:hover {
+                                                    color: $mainColor;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .search {
+                            padding: 40px 0 0 0;
+                            margin: 0 0 35px 0;
+
+                            .search-title {
+                                margin: 0 0 40px 0;
+
+                                h4 {
+                                    text-transform: capitalize;
+                                    font-size: 20px;
+                                    color: $black;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    padding-bottom: 5px;
+                                    border-bottom: 1px solid $borderColor;
+                                }
+                            }
+
+                            .search-body {
+                                position: relative;
+
+                                input {
+                                    width: 100%;
+                                    height: 46px;
+                                    border: 0;
+                                    outline: 0;
+                                    font-size: 14px;
+                                    padding: 0 55px 0 15px;
+                                    background-color: #f6f6f6;
+                                }
+
+                                button {
+                                    position: absolute;
+                                    right: 0;
+                                    width: 46px;
+                                    height: 46px;
+                                    border: 0;
+                                    background-color: $mainColor;
+                                    color: #fff;
+                                    transition: 300ms all ease-in;
+
+                                    &:hover {
+                                        background-color: $black;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        .recent-posts {
+                            .recent-posts-title {
+                                margin: 0 0 40px 0;
+
+                                h4 {
+                                    text-transform: capitalize;
+                                    font-size: 20px;
+                                    color: $black;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    padding-bottom: 5px;
+                                    border-bottom: 1px solid $borderColor;
+                                }
+                            }
+
+                            .recent-posts-body {
+                                .post {
+                                    @include flex();
+                                    margin-bottom: 30px;
+
+                                    .image {
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    .about {
+                                        padding-left: 10px;
+
+                                        p {
+                                            font-size: 14px;
+                                            color: $black2;
+                                            padding: 0 0 10px;
+                                            margin: 0;
+                                        }
+
+                                        a {
+                                            text-decoration: none;
+                                            color: $black;
+                                            font-size: 16px;
+                                            transition: 300ms all ease-in;
+                                            font-weight: 500;
+
+                                            &:hover {
+                                                color: $mainColor;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .categories {
+                            .categories-title {
+                                margin: 0 0 40px 0;
+
+                                h4 {
+                                    text-transform: capitalize;
+                                    font-size: 20px;
+                                    color: $black;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    padding-bottom: 5px;
+                                    border-bottom: 1px solid $borderColor;
+                                }
+                            }
+
+                            .categories-body {
+                                ul {
+                                    padding: 0;
+                                    margin: 0;
+
+                                    li {
+                                        margin: 0 0 20px;
+
+                                        a {
+                                            text-decoration: none;
+                                            color: $black;
+                                            width: 100%;
+                                            transition: 300ms all ease-in;
+                                            @include flex(null, space-between);
+
+                                            p {
+                                                text-transform: capitalize;
+                                                margin: 0;
+                                                font-weight: 400;
+                                            }
+
+                                            &:hover {
+                                                color: $mainColor;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .tags {
+                            .tags-title {
+                                margin: 0 0 40px 0;
+
+                                h4 {
+                                    text-transform: capitalize;
+                                    font-size: 20px;
+                                    color: $black;
+                                    font-weight: 500;
+                                    margin: 0;
+                                    padding-bottom: 5px;
+                                    border-bottom: 1px solid $borderColor;
+                                }
+                            }
+                            .tags-body{
+                                a{
+                                    padding: 5px 15px;
+                                    border: 1px solid $borderColor;
+                                    background-color: transparent;
+                                    color: $black;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    margin-bottom: 5px;
+                                    font-size: 14px;
+                                    text-transform: capitalize;
+                                    transition: 300ms all ease-in;
+                                    &:hover{
+                                        background-color: $mainColor;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
