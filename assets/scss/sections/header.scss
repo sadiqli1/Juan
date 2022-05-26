@@ -1,7 +1,191 @@
 @import "..//assets/mixin.scss";
 @import "..//assets/colors.scss";
 
+.offcanvas-overlay {
+    width: 100%;
+    height: 522%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 500;
+    display: none;
+    cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto;
+}
+
+.offcanvas-overlay-activ {
+    display: block;
+}
+
+.baskets {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    // width: 0;
+    transform: translateX(450px);
+    overflow: hidden;
+    transition: 300ms all ease-in;
+
+    .baskets-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        width: 375px;
+        height: 100vh;
+        padding: 50px 20px 0 20px;
+
+        >.cancel {
+            button {
+                border: 0;
+                background-color: $mainColor;
+                color: #fff;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: -50px;
+
+                &:hover {
+                    animation: identifier 100ms all ease-in;
+                }
+
+                @keyframes identifier {
+                    to {
+                        transform: rotate(0);
+                    }
+
+                    from {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+
+        .products {
+            .product {
+                @include flex(null, space-between);
+                gap: 10px;
+                padding: 20px 0;
+                border-bottom: 1px solid $borderColor;
+
+                .image {
+                    width: 83px;
+                    height: 89px;
+                    border: 1px solid $borderColor;
+
+                    a {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            // object-fit: fill;
+                        }
+                    }
+                }
+
+                .about {
+                    @include flex(null, space-between, column);
+
+                    .title {
+                        a {
+                            color: $black;
+                            font-weight: 500;
+                            font-size: 14px;
+                            text-decoration: none;
+                            text-transform: capitalize;
+                            transition: 300ms all ease-in;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+
+                    .price {
+                        @include flex();
+                        // gap: 5px;
+
+                        p {
+                            margin: 0;
+                            font-size: 14px;
+                        }
+
+                        .product-price {
+                            color: $mainColor;
+                        }
+                    }
+                }
+
+                .cancel {
+                    @include flex();
+
+                    button {
+                        border: 0;
+                        background-color: transparent;
+                        color: $black;
+                        transition: 300ms all ease-in;
+
+                        &:hover {
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .products-total-price {
+            padding: 15px 0 20px 0;
+            border-bottom: 1px solid $borderColor;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                gap: 5px;
+
+                li {
+                    @include flex(center, space-between);
+                    font-size: 14px;
+                    color: $black2;
+
+                    p {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            padding: 20px 0;
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 17px 0;
+                    background-color: $black;
+                    border: 0;
+                    margin: 0 0 10px 0;
+                    border-radius: 30px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:1007px) {
+        display: none;
+    }
+}
+
+.basket-activ {
+    transform: translateX(0);
+    overflow: visible;
+}
+
 header {
+
     #first {
         .wrapper {
             background-color: $mainColor;
@@ -279,6 +463,8 @@ header {
                 }
 
                 .search {
+                    @include flex();
+
                     ul {
                         @include flex();
                         padding: 0;
@@ -311,11 +497,13 @@ header {
                                     margin-top: -10px;
                                     font-size: 10px;
                                 }
-                                &:hover{
+
+                                &:hover {
                                     color: $mainColor;
                                 }
                             }
-                            .dropdown{
+
+                            .dropdown {
                                 width: 150px;
                                 position: absolute;
                                 padding: 20px;
@@ -327,10 +515,12 @@ header {
                                 visibility: hidden;
                                 transition: 300ms all ease-in;
                                 transform: translateY(20px);
-                                ul{
+
+                                ul {
                                     display: block;
-                                    li{
-                                        a{
+
+                                    li {
+                                        a {
                                             text-decoration: none;
                                             color: $black2;
                                             text-transform: capitalize;
@@ -341,13 +531,22 @@ header {
                                 }
                             }
                         }
-                        .setting{
-                            &:hover{
-                                .dropdown{
+
+                        .setting {
+                            &:hover {
+                                .dropdown {
                                     opacity: 1;
                                     visibility: visible;
                                     transform: translateY(0);
                                 }
+                            }
+                        }
+
+                        @media (max-width:1007px) {
+
+                            > :nth-child(1),
+                            :nth-child(2) {
+                                display: none;
                             }
                         }
                     }
@@ -367,10 +566,6 @@ header {
                     }
 
                     @media (max-width:1007px) {
-                        > :not(:nth-child(3)) {
-                            display: none;
-                        }
-
                         .menu-bar {
                             display: block;
                         }
@@ -459,15 +654,17 @@ header {
                                     right: 0;
                                 }
 
-                                .dropdown{
+                                .dropdown {
                                     margin-left: 20px;
                                     height: 0;
                                     opacity: 0;
                                     transition: 300ms all ease-in;
-                                    ul{
+
+                                    ul {
                                         padding: 0;
-                                        li{
-                                            a{
+
+                                        li {
+                                            a {
                                                 color: $black;
                                                 font-size: 14px;
                                                 padding: 8px 0;

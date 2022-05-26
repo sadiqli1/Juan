@@ -28,6 +28,81 @@
 <body>
 
     <!-- Header Start -->
+    <div class="offcanvas-overlay">
+    </div>
+    <div class="baskets">
+        <div class="baskets-wrapper">
+            <div class="cancel">
+                <button onclick="cancel()"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <div class="image">
+                        <a href="product.html">
+                            <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="about">
+                        <div class="title">
+                            <a href="product.html">Flowers bouquet pink for all flower lovers</a>
+                        </div>
+                        <div class="price">
+                            <p class="product-quantity">1 *</p>
+                            <p class="product-price">$100.00</p>
+                        </div>
+                    </div>
+                    <div class="cancel">
+                        <button><i class="fa-solid fa-x"></i></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image">
+                        <a href="product.html">
+                            <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="about">
+                        <div class="title">
+                            <a href="product.html">Flowers bouquet pink for all flower lovers</a>
+                        </div>
+                        <div class="price">
+                            <p class="product-quantity">1 *</p>
+                            <p class="product-price">$100.00</p>
+                        </div>
+                    </div>
+                    <div class="cancel">
+                        <button><i class="fa-solid fa-x"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-total-price">
+                <ul>
+                    <li>
+                        Sub-Total
+                        <p>$300.00</p>
+                    </li>
+                    <li>
+                        Eco Tax (-2.00)
+                        <p>$10.00</p>
+                    </li>
+                    <li>
+                        Vat(20%)
+                        <p>$60.00</p>
+                    </li>
+                    <li>
+                        Total
+                        <p>$370.00</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <ul>
+                    <li><i class="fa-solid fa-cart-shopping"></i> view cart</li>
+                    <li><i class="fa-solid fa-share"></i> checkout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <header>
         <section id="first">
             <div class="wrapper">
@@ -168,7 +243,7 @@
                 <div class="custom-container">
                     <div class="logo">
                         <a href="index.html">
-                        <img src="assets/images/logo.webp" alt="logo">
+                            <img src="assets/images/logo.webp" alt="logo">
                         </a>
                     </div>
                     <div class="navication">
@@ -278,8 +353,8 @@
                     <div class="search">
                         <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
                         <!-- <div class="setting"> -->
-                            <!-- <button><i class="fa-solid fa-gear"></i></button> -->
-                            <!-- <div class="dropdown">
+                        <!-- <button><i class="fa-solid fa-gear"></i></button> -->
+                        <!-- <div class="dropdown">
                                 <ul>
                                     <li>
                                         <a href="">login</a>
@@ -314,8 +389,8 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li>
-                                <button><i class="fa-solid fa-bag-shopping"></i><span>2</span></button>
+                            <li class="bag">
+                                <button onclick="cardSection()"><i class="fa-solid fa-bag-shopping"></i><span>2</span></button>
                             </li>
                         </ul>
                         <div class="menu-bar">
@@ -325,6 +400,7 @@
                 </div>
             </div>
         </section>
+
     </header>
     <!-- Header End -->
 
@@ -453,8 +529,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Leather Mens Slipper</p>
@@ -469,10 +547,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item1`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slippe`, `80.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -481,8 +561,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Quickiin Mens shoes</p>
@@ -497,10 +579,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item2`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -509,8 +593,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Rexpo Womens shoes</p>
@@ -525,10 +611,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item3`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -537,8 +625,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Primitive Mens shoes</p>
@@ -553,10 +643,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item4`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -565,8 +657,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Leather Mens Slipper</p>
@@ -581,10 +675,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item5`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slipper`, `80.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -593,8 +689,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Quickiin Mens shoes</p>
@@ -609,10 +707,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item6`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -621,8 +721,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Rexpo Womens shoes</p>
@@ -637,10 +739,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button  onclick="basket(`item7`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -649,8 +753,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Primitive Mens shoes</p>
@@ -665,10 +771,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item8`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -677,8 +785,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Leather Mens Slipper</p>
@@ -693,10 +803,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item9`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slipper`, `80.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -705,8 +817,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Quickiin Mens shoes</p>
@@ -721,10 +835,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item10`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -733,8 +849,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Rexpo Womens shoes</p>
@@ -749,10 +867,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item11`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn"
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -761,8 +881,10 @@
                             <div class="item">
                                 <div class="card">
                                     <div class="image">
-                                        <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
+                                        <a href="product.html">
+                                            <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
                                             alt="shoes">
+                                        </a>
                                     </div>
                                     <div class="title">
                                         <p>Primitive Mens shoes</p>
@@ -777,10 +899,12 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button onclick="basket(`item12`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
-                                                <button><i class="fa-regular fa-eye"></i></button>
+                                                <button type="button" class="btn btn-primary my-btn "
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                        class="fa-regular fa-eye"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -875,7 +999,9 @@
                                                         <button><i class="fa-solid fa-bag-shopping"></i></button>
                                                     </li>
                                                     <li>
-                                                        <button><i class="fa-regular fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-primary my-btn"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                                class="fa-regular fa-eye"></i></button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -912,7 +1038,9 @@
                                                         <button><i class="fa-solid fa-bag-shopping"></i></button>
                                                     </li>
                                                     <li>
-                                                        <button><i class="fa-regular fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-primary my-btn"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                                class="fa-regular fa-eye"></i></button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -951,7 +1079,9 @@
                                                         <button><i class="fa-solid fa-bag-shopping"></i></button>
                                                     </li>
                                                     <li>
-                                                        <button><i class="fa-regular fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-primary my-btn"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                                class="fa-regular fa-eye"></i></button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -988,7 +1118,9 @@
                                                         <button><i class="fa-solid fa-bag-shopping"></i></button>
                                                     </li>
                                                     <li>
-                                                        <button><i class="fa-regular fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-primary my-btn"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                                class="fa-regular fa-eye"></i></button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1015,7 +1147,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-1.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-1.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1042,7 +1176,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-2.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-2.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1069,7 +1205,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-3.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-3.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1096,7 +1234,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-1.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-1.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1123,7 +1263,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-2.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-2.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1150,7 +1292,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-3.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-3.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1177,7 +1321,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-1.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-1.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1204,7 +1350,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-2.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-2.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1231,7 +1379,9 @@
                         <div class="item">
                             <div class="card">
                                 <div class="image">
-                                    <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-3.jpg" alt="">
+                                    <a href="blogdetails.html">
+                                        <img src="https://htmldemo.net/juan/juan/assets/img/blog/blog-3.jpg" alt="">
+                                    </a>
                                 </div>
                                 <div class="desc">
                                     <div class="desc-title">
@@ -1326,6 +1476,87 @@
         <!-- Blogs End -->
     </main>
     <!-- Main End -->
+
+    <!-- Medal Star -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="custom-container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <figure class="zoom" id="zoom" onmousemove="zoom(event)">
+                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg" />
+                            </figure>
+                            <div class="images-lists">
+                                <div class="img">
+                                    <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img2.jpg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img3.jpg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="https://htmldemo.net/juan/juan/assets/img/product/product-details-img4.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12 col-sm-12">
+                            <div class="product-title">
+                                <h3>Primitive Mens Premium Shoes</h3>
+                            </div>
+                            <div class="product-review">
+                                <a href="#">1 Review(s)</a>
+                            </div>
+                            <div class="product-price">
+                                <span>$70.00</span>
+                                <del>$80.00</del>
+                            </div>
+                            <div class="product-desc">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                </p>
+                            </div>
+                            <div class="product-quantity-box">
+                                <div class="quantity">
+                                    <span id="minus">-</span>
+                                    <span id="count">1</span>
+                                    <span id="plus">+</span>
+                                </div>
+                                <a href="">Add To Cart</a>
+                            </div>
+                            <div class="availability">
+                                <h5>Availability:</h5>
+                                <span>In Stock</span>
+                            </div>
+                            <div class="share-icons">
+                                <h5>Share:</h5>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-pinterest"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Medal End -->
 
     <!-- Footer Start -->
     <footer>
@@ -1473,6 +1704,12 @@
         </section>
     </footer>
     <!-- Footer End -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="

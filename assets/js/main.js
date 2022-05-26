@@ -1,3 +1,90 @@
+// Basket Start
+function basket(id, img, title, price) {
+    let items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    if (items.length > 0) {
+        if (items.some((item) => item.item.id === id)) {
+            items = items.filter((item) => item.item.id !== id);
+
+        } else {
+            items.push({
+                item: {
+                    id,
+                    img: `https://${img}.jpg`,
+                    title,
+                    price,
+                },
+                count: 1,
+            })
+        }
+    } else {
+        items.push({
+            item: {
+                id,
+                img: `https://${img}.jpg`,
+                title,
+                price,
+            },
+            count: 1,
+        })
+    }
+    localStorage.setItem("items", JSON.stringify(items));
+}
+
+function basketAdd() {
+    const products = document.querySelector(".products");
+    products.innerHTML = "";
+    const items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    if(items.length > 0){
+        items.forEach(item => {
+            products.insertAdjacentHTML(`afterbegin`, ` <div class="product">
+            <div class="image">
+                <a href="product.html">
+                    <img src="${item.item.img}" alt="">
+                </a>
+            </div>
+            <div class="about">
+                <div class="title">
+                    <a href="product.html">${item.item.title}</a>
+                </div>
+                <div class="price">
+                    <p class="product-quantity">${item.count} *</p>
+                    <p class="product-price">$${item.item.price}</p>
+                </div>
+            </div>
+            <div class="cancel">
+                <button><i class="fa-solid fa-x"></i></button>
+            </div>
+        </div>`);
+        });
+    }
+    else{
+        products.innerHTML = "Your Basket is Empty"
+    }
+};
+basketAdd();
+
+function cardSection() {
+    const basket = document.querySelector(".baskets");
+    basket.classList.add("basket-activ");
+    const overlay = document.querySelector(".offcanvas-overlay");
+    overlay.classList.add("offcanvas-overlay-activ");
+    overlay.addEventListener("click", () => {
+        basket.classList.remove("basket-activ");
+        overlay.classList.remove("offcanvas-overlay-activ");
+    });
+    basketAdd();
+};
+function cancel() {
+    const basket = document.querySelector(".baskets");
+    basket.classList.remove("basket-activ");
+    const overlay = document.querySelector(".offcanvas-overlay");
+    overlay.classList.remove("offcanvas-overlay-activ");
+};
+
 $('.custom-owl').owlCarousel({
     loop: true,
     margin: 20,
@@ -104,3 +191,19 @@ window.onload = function () {
         j++;
     });
 };
+function zoom(e) {
+    var zoomer = e.currentTarget;
+    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+    x = offsetX / zoomer.offsetWidth * 100
+    y = offsetY / zoomer.offsetHeight * 100
+    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+}
+
+const btn = document.querySelectorAll(".my-btn");
+for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", () => {
+        const modal = document.querySelector(".modal");
+        modal.classList.add("activ");
+    });
+}
