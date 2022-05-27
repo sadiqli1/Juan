@@ -120,7 +120,11 @@
             border-radius: 30px;
             color: #fff;
             text-align: center;
-            font-size: 13px; }
+            font-size: 13px;
+            transition: 300ms all ease-in; }
+            .baskets .baskets-wrapper .buttons ul a li:hover {
+              background-color: #e3a51e;
+              color: #fff; }
   @media (max-width: 1007px) {
     .baskets {
       display: none; } }

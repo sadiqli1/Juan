@@ -179,6 +179,11 @@
                         color: #fff;
                         text-align: center;
                         font-size: 13px;
+                        transition: 300ms all ease-in;
+                        &:hover{
+                            background-color: $mainColor;
+                            color: #fff;
+                        }
                     }
                 }
             }

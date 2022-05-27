@@ -62,7 +62,7 @@ function basketAdd() {
             </div>
             
             <div class="cancel">
-                <button onclick="productDelete(${item.item.id})"><i class="fa-solid fa-x"></i></button>
+                <button onclick="productDelete('${item.item.id}')"><i class="fa-solid fa-x"></i></button>
             </div>
         </div>`);
             const priceNum = parseFloat(item.item.price);
@@ -86,6 +86,16 @@ function basketAdd() {
     productCount();
 };
 basketAdd();
+
+
+function productDelete(id) {
+    let items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    items = items.filter((item) => item.item.id !== id);
+    localStorage.setItem("items", JSON.stringify(items));
+    basketAdd();
+}
 
 function productCount() {
     const productCount = document.querySelector(".products-count");
@@ -225,6 +235,7 @@ window.onload = function () {
         }
         j++;
     });
+
 };
 function zoom(e) {
     var zoomer = e.currentTarget;

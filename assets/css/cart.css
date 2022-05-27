@@ -120,7 +120,11 @@
             border-radius: 30px;
             color: #fff;
             text-align: center;
-            font-size: 13px; }
+            font-size: 13px;
+            transition: 300ms all ease-in; }
+            .baskets .baskets-wrapper .buttons ul a li:hover {
+              background-color: #e3a51e;
+              color: #fff; }
   @media (max-width: 1007px) {
     .baskets {
       display: none; } }
@@ -655,9 +659,10 @@ main #second .wrapper {
         main #second .wrapper .custom-container .row .col-12 table tbody tr .quantity div p {
           font-size: 22px;
           color: #666666;
-          margin: 0; }
+          margin: 0;
+          cursor: pointer; }
         main #second .wrapper .custom-container .row .col-12 table tbody tr .quantity div input {
-          width: 10px;
+          width: 20px;
           border: 0;
           outline: 0; }
       main #second .wrapper .custom-container .row .col-12 table tbody tr .total-price p {
