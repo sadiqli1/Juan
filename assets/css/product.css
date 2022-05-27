@@ -43,48 +43,53 @@
     transform: rotate(0); }
   from {
     transform: rotate(360deg); } }
-    .baskets .baskets-wrapper .products .product {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 20px 0;
-      border-bottom: 1px solid #e5e5e5; }
-      .baskets .baskets-wrapper .products .product .image {
-        width: 83px;
-        height: 89px;
-        border: 1px solid #e5e5e5; }
-        .baskets .baskets-wrapper .products .product .image a img {
-          width: 100%;
-          height: 100%; }
-      .baskets .baskets-wrapper .products .product .about {
+    .baskets .baskets-wrapper .products {
+      height: 45vh;
+      overflow: scroll; }
+      .baskets .baskets-wrapper .products::-webkit-scrollbar {
+        display: none; }
+      .baskets .baskets-wrapper .products .product {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between; }
-        .baskets .baskets-wrapper .products .product .about .title a {
-          color: #333333;
-          font-weight: 500;
-          font-size: 14px;
-          text-decoration: none;
-          text-transform: capitalize;
-          transition: 300ms all ease-in; }
-          .baskets .baskets-wrapper .products .product .about .title a:hover {
-            color: #e3a51e; }
-        .baskets .baskets-wrapper .products .product .about .price {
+        justify-content: space-between;
+        gap: 10px;
+        padding: 20px 0;
+        border-bottom: 1px solid #e5e5e5; }
+        .baskets .baskets-wrapper .products .product .image {
+          width: 83px;
+          height: 89px;
+          border: 1px solid #e5e5e5; }
+          .baskets .baskets-wrapper .products .product .image a img {
+            width: 100%;
+            height: 100%; }
+        .baskets .baskets-wrapper .products .product .about {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; }
+          .baskets .baskets-wrapper .products .product .about .title a {
+            color: #333333;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 300ms all ease-in; }
+            .baskets .baskets-wrapper .products .product .about .title a:hover {
+              color: #e3a51e; }
+          .baskets .baskets-wrapper .products .product .about .price {
+            display: flex; }
+            .baskets .baskets-wrapper .products .product .about .price p {
+              margin: 0;
+              font-size: 14px; }
+            .baskets .baskets-wrapper .products .product .about .price .product-price {
+              color: #e3a51e; }
+        .baskets .baskets-wrapper .products .product .cancel {
           display: flex; }
-          .baskets .baskets-wrapper .products .product .about .price p {
-            margin: 0;
-            font-size: 14px; }
-          .baskets .baskets-wrapper .products .product .about .price .product-price {
-            color: #e3a51e; }
-      .baskets .baskets-wrapper .products .product .cancel {
-        display: flex; }
-        .baskets .baskets-wrapper .products .product .cancel button {
-          border: 0;
-          background-color: transparent;
-          color: #333333;
-          transition: 300ms all ease-in; }
-          .baskets .baskets-wrapper .products .product .cancel button:hover {
-            color: #e3a51e; }
+          .baskets .baskets-wrapper .products .product .cancel button {
+            border: 0;
+            background-color: transparent;
+            color: #333333;
+            transition: 300ms all ease-in; }
+            .baskets .baskets-wrapper .products .product .cancel button:hover {
+              color: #e3a51e; }
     .baskets .baskets-wrapper .products-total-price {
       padding: 15px 0 20px 0;
       border-bottom: 1px solid #e5e5e5; }
@@ -105,15 +110,17 @@
       .baskets .baskets-wrapper .buttons ul {
         padding: 0;
         margin: 0; }
-        .baskets .baskets-wrapper .buttons ul li {
-          padding: 17px 0;
-          background-color: #333333;
-          border: 0;
-          margin: 0 0 10px 0;
-          border-radius: 30px;
-          color: #fff;
-          text-align: center;
-          font-size: 13px; }
+        .baskets .baskets-wrapper .buttons ul a {
+          text-decoration: none; }
+          .baskets .baskets-wrapper .buttons ul a li {
+            padding: 17px 0;
+            background-color: #333333;
+            border: 0;
+            margin: 0 0 10px 0;
+            border-radius: 30px;
+            color: #fff;
+            text-align: center;
+            font-size: 13px; }
   @media (max-width: 1007px) {
     .baskets {
       display: none; } }

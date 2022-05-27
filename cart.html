@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+
+<body>
+    <!-- Basket Start -->
+    <div class="offcanvas-overlay"></div>
+    <div class="baskets">
+        <div class="baskets-wrapper">
+            <div class="cancel">
+                <button onclick="cancel()"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <div class="image">
+                        <a href="product.html">
+                            <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="about">
+                        <div class="title">
+                            <a href="product.html">Flowers bouquet pink for all flower lovers</a>
+                        </div>
+                        <div class="price">
+                            <p class="product-quantity">1 *</p>
+                            <p class="product-price">$100.00</p>
+                        </div>
+                    </div>
+                    <div class="cancel">
+                        <button><i class="fa-solid fa-x"></i></button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image">
+                        <a href="product.html">
+                            <img src="https://htmldemo.net/juan/juan/assets/img/cart/cart-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="about">
+                        <div class="title">
+                            <a href="product.html">Flowers bouquet pink for all flower lovers</a>
+                        </div>
+                        <div class="price">
+                            <p class="product-quantity">1 *</p>
+                            <p class="product-price">$100.00</p>
+                        </div>
+                    </div>
+                    <div class="cancel">
+                        <button><i class="fa-solid fa-x"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-total-price">
+                <ul>
+                    <li class="sub-total">
+                        Sub-Total
+                        <p>$300.00</p>
+                    </li>
+                    <li class="eco-tax">
+                        Eco Tax (-2.00)
+                        <p>$10.00</p>
+                    </li>
+                    <li class="vat">
+                        Vat(20%)
+                        <p>$60.00</p>
+                    </li>
+                    <li class="total">
+                        Total
+                        <p>$370.00</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <ul>
+                    <li><i class="fa-solid fa-cart-shopping"></i> view cart</li>
+                    <li><i class="fa-solid fa-share"></i> checkout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Basket End -->
+
+    <!-- Header Start -->
+    <header>
+        <section id="first">
+            <div class="wrapper">
+                <div class="custom-container">
+                    <div>
+                        <p>Welcome to juan online store</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="">$ Dollar (US) <i class="fa-solid fa-angle-down"></i></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="">$ Usd</a>
+                                        </li>
+                                        <li>
+                                            <a href="">€ Euro</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="https://htmldemo.net/juan/juan/assets/img/icon/en.png" alt="flag">
+                                    English <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <img src="https://htmldemo.net/juan/juan/assets/img/icon/en.png"
+                                                    alt="Flag">
+                                                English
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <img src="https://htmldemo.net/juan/juan/assets/img/icon/fr.png"
+                                                    alt="Flag">
+                                                French
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="second">
+            <div class="wrapper">
+                <div id="menu-bar">
+                    <div class="menu-bar-wrapper">
+                        <div class="cancel">
+                            <button><i class="fa-solid fa-x"></i></button>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="Search Here...">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div class="links">
+                            <ul>
+                                <li>
+                                    <a href="">home</a>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="">home version 01</a>
+                                            </li>
+                                            <li>
+                                                <a href="">home version 02</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">pages</a>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="">home version 01</a>
+                                            </li>
+                                            <li>
+                                                <a href="">home version 02</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">shop</a>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="">home version 01</a>
+                                            </li>
+                                            <li>
+                                                <a href="">home version 02</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">blog</a>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="">home version 01</a>
+                                            </li>
+                                            <li>
+                                                <a href="">home version 02</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="account">
+                            <ul>
+                                <li>
+                                    <a href="">currency <i class="fa-solid fa-angle-down"></i></a>
+                                </li>
+                                <li>
+                                    <a href="">my account <i class="fa-solid fa-angle-down"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.webp" alt="logo">
+                        </a>
+                    </div>
+                    <div class="navication">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        HOME <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li><a href="">Home Version 01</a></li>
+                                            <li><a href="">Home Version 02</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        PAGES <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    <div class="pages dropdown">
+                                        <ul>
+                                            <li class="title"><a href="">Column 1</a></li>
+                                            <li><a href="">shop grid left sidebar</a></li>
+                                            <li><a href="">shop grid right sidebar</a></li>
+                                            <li><a href="">shop list left sidebar</a></li>
+                                            <li><a href="">shop list right sidebar</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="title"><a href="">Column 2</a></li>
+                                            <li><a href="product.html">product details</a></li>
+                                            <li><a href="product.html">product details affiliate</a></li>
+                                            <li><a href="product.html">product details variable</a></li>
+                                            <li><a href="product.html">product details group</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="title"><a href="">Column 3</a></li>
+                                            <li><a href="">cart</a></li>
+                                            <li><a href="">checkout</a></li>
+                                            <li><a href="">compare</a></li>
+                                            <li><a href="">wishlist</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="title"><a href="">Column 4</a></li>
+                                            <li><a href="">my-account</a></li>
+                                            <li><a href="">login-register</a></li>
+                                            <li><a href="">contact us</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="shop.html">
+                                        SHOP <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="">Shop grid layout <span>></span></a>
+                                            </li>
+                                            <li>
+                                                <a href="">Shop list layout <span>></span></a>
+                                            </li>
+                                            <li>
+                                                <a href="">products detalis <span>></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        BLOG <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="">blog left sidebar</a>
+                                            </li>
+                                            <li>
+                                                <a href="">blog right sidebar</a>
+                                            </li>
+                                            <li>
+                                                <a href="blognoslidebar.html">blog grid no sidebar</a>
+                                            </li>
+                                            <li>
+                                                <a href="">blog details</a>
+                                            </li>
+                                            <li>
+                                                <a href="">blog details audio</a>
+                                            </li>
+                                            <li>
+                                                <a href="">blog details video</a>
+                                            </li>
+                                            <li>
+                                                <a href="">blog details left sidebar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="contactus.html">
+                                        CONTACT US
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="search">
+                        <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                        <!-- <div class="setting"> -->
+                        <!-- <button><i class="fa-solid fa-gear"></i></button> -->
+                        <!-- <div class="dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="">login</a>
+                                    </li>
+                                    <li>
+                                        <a href="">register</a>
+                                    </li>
+                                    <li>
+                                        <a href="">my account</a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        <!-- </div> -->
+                        <!-- <button><i class="fa-solid fa-bag-shopping"></i><span>2</span></button> -->
+                        <ul>
+                            <li>
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </li>
+                            <li class="setting">
+                                <button><i class="fa-solid fa-gear"></i></button>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="">login</a>
+                                        </li>
+                                        <li>
+                                            <a href="">register</a>
+                                        </li>
+                                        <li>
+                                            <a href="">my account</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="bag">
+                                <button onclick="cardSection()"><i class="fa-solid fa-bag-shopping"></i><span
+                                        class="products-count"></span></button>
+                            </li>
+                        </ul>
+                        <div class="menu-bar">
+                            <button><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main>
+        <section id="first">
+            <div class="wrapper">
+                <div class="custom-container">
+                    <div class="cus-title">
+                        <h1>cart</h1>
+                        <div class="links">
+                            <a href="index.html">Home</a> /
+                            <p>Cart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="second">
+            <div class="wrapper">
+                <div class="custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Thumbnail</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <!-- <tr>
+                                        <td class="image">
+                                            <a href="product.html">
+                                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                                    alt="">
+                                            </a>
+                                        </td>
+                                        <td class="title">
+                                            <a href="product.html">Leather Mens Slipper</a>
+                                        </td>
+                                        <td class="price">
+                                            <p>$295.00</p>
+                                        </td>
+                                        <td class="quantity">
+                                            <div>
+                                                <p>-</p>
+                                                <input type="text" value="1">
+                                                <p>+</p>
+                                            </div>
+                                        </td>
+                                        <td class="total-price">
+                                            <p>$300.00</p>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="image">
+                                            <a href="product.html">
+                                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                                    alt="">
+                                            </a>
+                                        </td>
+                                        <td class="title">
+                                            <a href="product.html">Leather Mens Slipper</a>
+                                        </td>
+                                        <td class="price">
+                                            <p>$295.00</p>
+                                        </td>
+                                        <td class="quantity">
+                                            <div>
+                                                <p>-</p>
+                                                <input type="text" value="1">
+                                                <p>+</p>
+                                            </div>
+                                        </td>
+                                        <td class="total-price">
+                                            <p>$300.00</p>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="image">
+                                            <a href="product.html">
+                                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                                    alt="">
+                                            </a>
+                                        </td>
+                                        <td class="title">
+                                            <a href="product.html">Leather Mens Slipper</a>
+                                        </td>
+                                        <td class="price">
+                                            <p>$295.00</p>
+                                        </td>
+                                        <td class="quantity">
+                                            <div>
+                                                <p>-</p>
+                                                <input type="text" value="1">
+                                                <p>+</p>
+                                            </div>
+                                        </td>
+                                        <td class="total-price">
+                                            <p>$300.00</p>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="image">
+                                            <a href="product.html">
+                                                <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
+                                                    alt="">
+                                            </a>
+                                        </td>
+                                        <td class="title">
+                                            <a href="product.html">Leather Mens Slipper</a>
+                                        </td>
+                                        <td class="price">
+                                            <p>$295.00</p>
+                                        </td>
+                                        <td class="quantity">
+                                            <div>
+                                                <p>-</p>
+                                                <input type="text" value="1">
+                                                <p>+</p>
+                                            </div>
+                                        </td>
+                                        <td class="total-price">
+                                            <p>$300.00</p>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </a>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            <div class="cus-buttons">
+                                <div class="apply-coupon"> 
+                                    <input type="text" placeholder="Enter Your Coupon Code">
+                                    <button>APPLAY COUPON</button>
+                                </div>
+                                <div class="update-cart">
+                                    <button>update cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="cart-calculate-wrapper">
+                                <div class="cart-calculate-items">
+                                    <h3>Cart Totals</h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Sub Total</td>
+                                                <td>$230</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shipping</td>
+                                                <td>$70</td>
+                                            </tr>
+                                            <tr class="total-price">
+                                                <td>Total</td>
+                                                <td class="price">$300</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="checkout">
+                                    <a href="">Proceed Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <section id="first">
+            <div class="wrapper">
+                <div class="custom-container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-12">
+                            <div class="account">
+                                <div class="account-title">
+                                    <h5>My Account</h5>
+                                </div>
+                                <div class="account-about">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            184 Main Rd E, St Albans VIC 3021, Australia
+                                        </li>
+                                        <li>
+                                            <i class="fa-regular fa-envelope"></i>
+                                            Mail Us:
+                                            <a href="">yourmail@gmail.com</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-phone"></i>
+                                            Phone:
+                                            <a href="">+ 00 254 254565</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12">
+                            <div class="cus-title">
+                                <h5>Categories</h5>
+                            </div>
+                            <div class="cus-body">
+                                <ul>
+                                    <li>
+                                        <a href="">Ecommerce</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Shopify</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Prestashop</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Opencart</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Magento</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Jigoshop</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12">
+                            <div class="cus-title">
+                                <h5>Information</h5>
+                            </div>
+                            <div class="cus-body">
+                                <ul>
+                                    <li>
+                                        <a href="">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Returns & Exchanges</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Shipping & Delivery</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="cus-title">
+                                <h5>Quick Links</h5>
+                            </div>
+                            <div class="cus-body">
+                                <ul>
+                                    <li>
+                                        <a href="">Store Location</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Orders Tracking</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Size Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Shopping Rates</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="second">
+            <div class="wrapper">
+                <div class="custom-container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p>
+                                © 2021
+                                <b>Juan</b>
+                                Made with
+                                <i class="fa-solid fa-heart"></i>
+                                by
+                                <a href="">
+                                    <b>HasThemes</b>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 right">
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>

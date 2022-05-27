@@ -26,10 +26,8 @@
 </head>
 
 <body>
-
-    <!-- Header Start -->
-    <div class="offcanvas-overlay">
-    </div>
+    <!-- Basket Start -->
+    <div class="offcanvas-overlay"></div>
     <div class="baskets">
         <div class="baskets-wrapper">
             <div class="cancel">
@@ -77,19 +75,19 @@
             </div>
             <div class="products-total-price">
                 <ul>
-                    <li>
+                    <li class="sub-total">
                         Sub-Total
                         <p>$300.00</p>
                     </li>
-                    <li>
+                    <li class="eco-tax">
                         Eco Tax (-2.00)
                         <p>$10.00</p>
                     </li>
-                    <li>
+                    <li class="vat">
                         Vat(20%)
                         <p>$60.00</p>
                     </li>
-                    <li>
+                    <li class="total">
                         Total
                         <p>$370.00</p>
                     </li>
@@ -97,12 +95,19 @@
             </div>
             <div class="buttons">
                 <ul>
-                    <li><i class="fa-solid fa-cart-shopping"></i> view cart</li>
-                    <li><i class="fa-solid fa-share"></i> checkout</li>
+                    <a href="cart.html">
+                        <li><i class="fa-solid fa-cart-shopping"></i> view cart</li>
+                    </a>
+                    <a href="cart.html">
+                        <li><i class="fa-solid fa-share"></i> checkout</li>
+                    </a>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- Basket End -->
+
+    <!-- Header Start -->
     <header>
         <section id="first">
             <div class="wrapper">
@@ -390,7 +395,8 @@
                                 </div>
                             </li>
                             <li class="bag">
-                                <button onclick="cardSection()"><i class="fa-solid fa-bag-shopping"></i><span>2</span></button>
+                                <button onclick="cardSection()"><i class="fa-solid fa-bag-shopping"></i><span
+                                        class="products-count"></span></button>
                             </li>
                         </ul>
                         <div class="menu-bar">
@@ -531,7 +537,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -547,7 +553,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item1`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slippe`, `80.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item1`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slippe`, `80.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -563,7 +571,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -579,7 +587,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item2`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item2`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -595,7 +605,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -611,7 +621,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item3`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item3`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -627,7 +639,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -643,7 +655,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item4`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item4`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -659,7 +673,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -675,7 +689,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item5`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slipper`, `80.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item5`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slipper`, `80.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -691,7 +707,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -707,7 +723,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item6`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item6`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -723,7 +741,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -739,7 +757,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button  onclick="basket(`item7`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item7`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -755,7 +775,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -771,7 +791,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item8`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item8`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -787,7 +809,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-1.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -803,7 +825,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item9`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slipper`, `80.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item9`, `htmldemo.net/juan/juan/assets/img/product/product-1`, `Leather Mens Slipper`, `80.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -819,7 +843,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-2.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -835,7 +859,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item10`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item10`, `htmldemo.net/juan/juan/assets/img/product/product-2`, `Quickiin Mens shoes`, `100.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -851,7 +877,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-3.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -867,7 +893,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item11`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item11`, `htmldemo.net/juan/juan/assets/img/product/product-3`, `Rexpo Womens shoes`, `90.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn"
@@ -883,7 +911,7 @@
                                     <div class="image">
                                         <a href="product.html">
                                             <img src="https://htmldemo.net/juan/juan/assets/img/product/product-4.jpg"
-                                            alt="shoes">
+                                                alt="shoes">
                                         </a>
                                     </div>
                                     <div class="title">
@@ -899,7 +927,9 @@
                                                 <button><i class="fa-regular fa-heart"></i></button>
                                             </li>
                                             <li>
-                                                <button onclick="basket(`item12`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i class="fa-solid fa-bag-shopping"></i></button>
+                                                <button
+                                                    onclick="basket(`item12`, `htmldemo.net/juan/juan/assets/img/product/product-4`, `Primitive Mens shoes`, `85.00`)"><i
+                                                        class="fa-solid fa-bag-shopping"></i></button>
                                             </li>
                                             <li>
                                                 <button type="button" class="btn btn-primary my-btn "

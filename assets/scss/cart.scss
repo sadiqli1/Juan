@@ -1,0 +1,289 @@
+@import "sections/header.scss";
+@import "sections/footer.scss";
+@import "assets/mixin.scss";
+@import "assets/colors.scss";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 400;
+}
+
+.custom-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    #first {
+        .wrapper {
+            background-image: url("https://htmldemo.net/juan/juan/assets/img/banner/breadcrumb-banner.jpg");
+
+            .custom-container {
+                .cus-title {
+                    @include flex(center, center, column);
+                    padding: 55px 0 60px 0;
+
+                    h1 {
+                        font-size: 24px;
+                        padding: 0 0 15px 0;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        color: $black;
+                    }
+
+                    .links {
+                        @include flex();
+                        gap: 10px;
+
+                        a {
+                            font-size: 16px;
+                            color: $black;
+                            text-decoration: none;
+                            transition: 300ms all ease-in;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #second {
+        .wrapper {
+            padding: 80px 0;
+
+            .custom-container {
+                .row {
+                    .col-12 {
+                        table {
+                            border: 1px solid $borderColor;
+                            width: 100%;
+
+                            thead {
+                                background-color: $mainColor;
+
+                                tr {
+                                    text-align: center;
+
+                                    th {
+                                        font-size: 14px;
+                                        padding: 15px 20px;
+                                        color: #fff;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 10px 20px;
+                                        border: 1px solid $borderColor;
+                                    }
+
+                                    text-align: center;
+
+                                    .image {
+                                        a {
+                                            img {
+                                                width: 100px;
+                                                height: 100px;
+                                            }
+                                        }
+                                    }
+
+                                    .title {
+                                        a {
+                                            text-decoration: none;
+                                            color: $black;
+                                            font-size: 16px;
+                                            transition: 300ms all ease-in;
+
+                                            &:hover {
+                                                color: $mainColor;
+                                            }
+                                        }
+                                    }
+
+                                    .price {
+                                        p {
+                                            margin: 0;
+                                            color: $black;
+                                        }
+                                    }
+
+                                    .quantity {
+                                        div {
+                                            @include flex(center, space-around);
+                                            width: 90px;
+                                            border: 1px solid $borderColor;
+                                            // padding: 0 15px;
+                                            margin: auto auto;
+
+                                            p {
+                                                font-size: 22px;
+                                                color: $black2;
+                                                margin: 0;
+                                            }
+
+                                            input {
+                                                width: 10px;
+                                                border: 0;
+                                                outline: 0;
+                                            }
+                                        }
+                                    }
+
+                                    .total-price {
+                                        p {
+                                            margin: 0;
+                                            color: $black;
+                                        }
+                                    }
+
+                                    .trash {
+                                        a {
+                                            text-decoration: none;
+                                            color: $black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .cus-buttons {
+                            @include flex(center, space-between);
+                            padding: 15px 20px;
+                            border: 1px solid $borderColor;
+                            border-top: 0;
+
+                            .apply-coupon {
+                                width: 50%;
+
+                                input {
+                                    width: 65%;
+                                    padding: 12px 10px;
+                                    outline: 1px solid $borderColor;
+                                    border: 1px solid $borderColor;
+                                }
+
+                                button {
+                                    width: 30%;
+                                    padding: 12px 10px;
+                                    border: 0;
+                                    background-color: $black;
+                                    color: $mainColor;
+                                    transition: 300ms all ease-in;
+
+                                    &:hover {
+                                        background-color: $mainColor;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+
+                            .update-cart {
+                                button {
+                                    border: 0;
+                                    background-color: $black;
+                                    color: $mainColor;
+                                    padding: 12px 25px;
+                                    text-transform: uppercase;
+                                    transition: 300ms all ease-in;
+
+                                    &:hover {
+                                        background-color: $mainColor;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .row {
+                    width: 100%;
+
+                    .col-5 {
+                        margin-left: auto;
+
+                        .cart-calculate-wrapper {
+                            margin: 30px 0 0 0;
+                            width: 100%;
+
+                            .cart-calculate-items {
+                                background-color: #f8f8f8;
+
+                                h3 {
+                                    // border-bottom: 1px solid $borderColor;
+                                    padding: 27px 15px 25px;
+                                    text-align: center;
+                                }
+
+                                table {
+                                    width: 100%;
+
+                                    tbody {
+                                        width: 100%;
+                                        width: 100%;
+
+                                        tr {
+                                            @include flex(center, space-between);
+                                            border-top: 1px solid $borderColor;
+
+                                            td {
+                                                padding: 15px 20px;
+                                                color: $black;
+                                            }
+                                        }
+
+                                        .total-price {
+                                            .price {
+                                                color: $mainColor;
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .checkout {
+                                width: 100%;
+                                padding: 14px 25px;
+                                background-color: $black;
+                                text-align: center;
+                                transition: 300ms all ease-in;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $mainColor;
+                                    transition: 300ms all ease-in;
+                                }
+
+                                &:hover {
+                                    background-color: $mainColor;
+
+                                    a {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

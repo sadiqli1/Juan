@@ -60,7 +60,6 @@ function basketAdd() {
                     <p class="product-price">$${item.item.price}</p>
                 </div>
             </div>
-            
             <div class="cancel">
                 <button onclick="productDelete(${item.item.id})"><i class="fa-solid fa-x"></i></button>
             </div>
@@ -86,6 +85,45 @@ function basketAdd() {
     productCount();
 };
 basketAdd();
+
+function renderContent(){
+    const tbody = document.querySelector(".tbody");
+    const items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    items.forEach(item =>{
+        tbody.insertAdjacentHTML("afterbegin", `<tr>
+        <td class="image">
+            <a href="product.html">
+                <img src="${item.item.img}"
+                    alt="">
+            </a>
+        </td>
+        <td class="title">
+            <a href="product.html">${item.item.title}</a>
+        </td>
+        <td class="price">
+            <p>$${item.item.price}</p>
+        </td>
+        <td class="quantity">
+            <div>
+                <p>-</p>
+                <input type="text" value="1">
+                <p>+</p>
+            </div>
+        </td>
+        <td class="total-price">
+            <p>$${item.item.price * item.count}</p>
+        </td>
+        <td class="trash">
+            <a href="">
+                <i class="fa-solid fa-trash-can"></i>
+            </a>
+        </td>
+    </tr>`)
+    })
+}
+renderContent();
 
 function productCount() {
     const productCount = document.querySelector(".products-count");
@@ -118,127 +156,6 @@ function cancel() {
     const overlay = document.querySelector(".offcanvas-overlay");
     overlay.classList.remove("offcanvas-overlay-activ");
 };
+
+window.addEventListener("storage", renderContent);
 // Basket End
-
-$('.custom-owl').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true,
-    autoplay: true,
-    autoPlaySpeed: 1000,
-    autoPlayTimeout: 1000,
-    autoplayHoverPause: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    slideSpeed: 300,
-    paginationSpeed: 3000,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1000: {
-            items: 1
-        }
-    }
-});
-$('.custom-owl-1').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 2
-        },
-        1000: {
-            items: 4
-        }
-    }
-})
-
-$('.custom-owl-2').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 2
-        },
-        1000: {
-            items: 3
-        }
-    }
-})
-window.onload = function () {
-    const menu = document.querySelector("#second > .wrapper > .custom-container > .search > .menu-bar button");
-    let i = 0;
-    menu.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const menuBar = document.querySelector("#second > .wrapper > #menu-bar");
-        const body = document.querySelector("body");
-        const cancel = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper .cancel button");
-        if (i % 2 === 0) {
-            menuBar.style.width = "300px";
-            // body.style.filter = "brightness(0.8)";
-            menuBar.style.opacity = "1";
-            menuBar.style.visibility = "visible";
-            cancel.addEventListener("click", (e) => {
-                e.stopPropagation();
-                menuBar.style.width = "0";
-                // body.style.filter = "brightness(1)";
-                menuBar.style.opacity = "0";
-                menuBar.style.visibility = "hidden";
-            });
-        } else {
-            menuBar.style.width = "0";
-            // body.style.filter = "brightness(1)";
-            menuBar.style.opacity = "0";
-            menuBar.style.visibility = "hidden";
-        }
-        i++;
-    });
-
-    const plus = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper > .links > ul > li > .plus");
-    let j = 0;
-    plus.addEventListener("click", () => {
-        const dropdown = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper> .links > ul > li > .dropdown");
-        const plusIcon = document.querySelector(`#second > .wrapper > #menu-bar > .menu-bar-wrapper > .links > ul > li > .plus > i`);
-        if (j % 2 === 0) {
-            dropdown.style.opacity = "1";
-            dropdown.style.height = "max-content";
-            plusIcon.classList.add("fa-minus");
-            plusIcon.classList.remove("fa-plus");
-        }
-        else {
-            dropdown.style.opacity = "0";
-            dropdown.style.height = "0";
-            plusIcon.classList.remove("fa-minus");
-            plusIcon.classList.add("fa-plus");
-        }
-        j++;
-    });
-};
-function zoom(e) {
-    var zoomer = e.currentTarget;
-    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-    x = offsetX / zoomer.offsetWidth * 100
-    y = offsetY / zoomer.offsetHeight * 100
-    zoomer.style.backgroundPosition = x + '% ' + y + '%';
-}
-
-const btn = document.querySelectorAll(".my-btn");
-for (let i = 0; i < btn.length; i++) {
-    btn[i].addEventListener("click", () => {
-        const modal = document.querySelector(".modal");
-        modal.classList.add("activ");
-    });
-}
