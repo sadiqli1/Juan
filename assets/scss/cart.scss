@@ -66,7 +66,13 @@ main {
 
             .custom-container {
                 .row {
-                    .col-12 {
+                    .col-lg-12 {
+                        overflow: scroll;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
                         table {
                             border: 1px solid $borderColor;
                             width: 100%;
@@ -158,6 +164,10 @@ main {
                                         a {
                                             text-decoration: none;
                                             color: $black;
+                                            transition: 300ms all ease-in;
+                                            &:hover{
+                                                color: $mainColor;
+                                            }
                                         }
                                     }
                                 }
@@ -165,48 +175,82 @@ main {
                         }
 
                         .cus-buttons {
-                            @include flex(center, space-between);
                             padding: 15px 20px;
                             border: 1px solid $borderColor;
                             border-top: 0;
+                            width: 100%;
 
-                            .apply-coupon {
-                                width: 50%;
+                            .row {
+                                .col-lg-8 {
+                                    .apply-coupon {
+                                        .row {
+                                            .col-lg-8 {
+                                                input {
+                                                    width: 100%;
+                                                    padding: 10px 10px;
+                                                    font-size: 14px;
+                                                    outline: 1px solid $borderColor;
+                                                    border: 1px solid $borderColor;
+                                                }
+                                            }
 
-                                input {
-                                    width: 65%;
-                                    padding: 12px 10px;
-                                    outline: 1px solid $borderColor;
-                                    border: 1px solid $borderColor;
-                                }
+                                            .col-lg-4 {
+                                                button {
+                                                    width: 100%;
+                                                    font-weight: 400;
+                                                    line-height: 1;
+                                                    padding: 14px 0;
+                                                    background-color: $black;
+                                                    color: $mainColor;
+                                                    border: 0;
+                                                    white-space: nowrap;
+                                                    vertical-align: middle;
+                                                    transition: 300ms all ease-in;
+                                                    &:hover{
+                                                        background-color: $mainColor;
+                                                        color: #fff;
+                                                    }
+                                                }
+                                            }
 
-                                button {
-                                    width: 30%;
-                                    padding: 12px 10px;
-                                    border: 0;
-                                    background-color: $black;
-                                    color: $mainColor;
-                                    transition: 300ms all ease-in;
+                                            @media (max-width:1007px) {
+                                                margin: 0;
 
-                                    &:hover {
-                                        background-color: $mainColor;
-                                        color: #fff;
+                                                .col-lg-8,
+                                                .col-lg-4 {
+                                                    padding: 0;
+                                                    margin-bottom: 10px
+                                                }
+                                            }
+                                        }
                                     }
                                 }
-                            }
 
-                            .update-cart {
-                                button {
-                                    border: 0;
-                                    background-color: $black;
-                                    color: $mainColor;
-                                    padding: 12px 25px;
-                                    text-transform: uppercase;
-                                    transition: 300ms all ease-in;
+                                .col-lg-4 {
+                                    @include flex(center, flex-end);
 
-                                    &:hover {
-                                        background-color: $mainColor;
-                                        color: #fff;
+                                    .update-cart {
+                                        button {
+                                            background-color: $black;
+                                            color: $mainColor;
+                                            border: 0;
+                                            padding: 10px 25px;
+                                            text-transform: uppercase;
+                                            transition: 300ms all ease-in;
+
+                                            &:hover {
+                                                background-color: $mainColor;
+                                                color: #fff;
+                                            }
+                                        }
+
+                                        @media (max-width:1007px) {
+                                            width: 100%;
+
+                                            button {
+                                                width: 100%;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -217,7 +261,7 @@ main {
                 .row {
                     width: 100%;
 
-                    .col-5 {
+                    .col-lg-5 {
                         margin-left: auto;
 
                         .cart-calculate-wrapper {

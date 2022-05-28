@@ -133,6 +133,18 @@
   transform: translateX(0);
   overflow: visible; }
 
+.offcanvas-overlay-menubar {
+  width: 100%;
+  height: 522%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 500;
+  display: none;
+  cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
+
+.offcanvas-overlay-menubar-activ {
+  display: block; }
+
 header #first .wrapper {
   background-color: #e3a51e; }
   header #first .wrapper .custom-container {
@@ -394,7 +406,9 @@ header #second {
           header #second .wrapper .custom-container .search .menu-bar {
             display: block; } }
     header #second .wrapper #menu-bar {
-      position: absolute;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
       width: 0;
       height: 100vh;
       background-color: #fff;
@@ -432,39 +446,40 @@ header #second {
           height: 40px;
           width: 40px;
           border: 0; }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .links ul {
-        padding: 30px 0 15px 0;
-        margin: 0; }
-        header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li {
-          padding: 10px 0;
-          position: relative; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li a {
-            width: 100%;
-            text-decoration: none;
-            color: #333333;
-            text-transform: capitalize;
-            font-size: 15px;
-            line-height: 18px;
-            font-weight: 400;
-            transition: 300ms all ease-in; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li button {
-            border: 0;
-            background-color: transparent;
-            position: absolute;
-            right: 0; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown {
-            margin-left: 20px;
-            height: 0;
-            opacity: 0;
-            transition: 300ms all ease-in; }
-            header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown ul {
-              padding: 0; }
-              header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown ul li a {
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion {
+        padding: 30px 0 15px 0; }
+        header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item {
+          border: 0; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 {
+            border-color: transparent; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 button {
+              padding: 10px 0;
+              background-color: transparent;
+              color: #333333;
+              border: 0; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 > a {
+              text-decoration: none;
+              color: #333333;
+              font-size: 16px; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul {
+            padding: 0; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li {
+              margin-bottom: 10px; }
+              header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li a {
+                text-decoration: none;
                 color: #333333;
-                font-size: 14px;
-                padding: 8px 0; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li > :hover {
-            color: #e3a51e; }
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,...");
+        font-family: 'FontAwesome';
+        content: "\f068"; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion-button::after {
+        background-image: url("data:image/svg+xml,...");
+        font-family: 'FontAwesome';
+        content: "\f067"; }
       header #second .wrapper #menu-bar .menu-bar-wrapper .account {
         border-top: 1px solid black; }
         header #second .wrapper #menu-bar .menu-bar-wrapper .account ul {
@@ -619,131 +634,155 @@ main #first .wrapper {
 
 main #second .wrapper {
   padding: 80px 0; }
-  main #second .wrapper .custom-container .row .col-12 table {
-    border: 1px solid #e5e5e5;
-    width: 100%; }
-    main #second .wrapper .custom-container .row .col-12 table thead {
-      background-color: #e3a51e; }
-      main #second .wrapper .custom-container .row .col-12 table thead tr {
+  main #second .wrapper .custom-container .row .col-lg-12 {
+    overflow: scroll; }
+    main #second .wrapper .custom-container .row .col-lg-12::-webkit-scrollbar {
+      display: none; }
+    main #second .wrapper .custom-container .row .col-lg-12 table {
+      border: 1px solid #e5e5e5;
+      width: 100%; }
+      main #second .wrapper .custom-container .row .col-lg-12 table thead {
+        background-color: #e3a51e; }
+        main #second .wrapper .custom-container .row .col-lg-12 table thead tr {
+          text-align: center; }
+          main #second .wrapper .custom-container .row .col-lg-12 table thead tr th {
+            font-size: 14px;
+            padding: 15px 20px;
+            color: #fff;
+            font-weight: 600; }
+      main #second .wrapper .custom-container .row .col-lg-12 table tbody tr {
         text-align: center; }
-        main #second .wrapper .custom-container .row .col-12 table thead tr th {
-          font-size: 14px;
-          padding: 15px 20px;
-          color: #fff;
-          font-weight: 600; }
-    main #second .wrapper .custom-container .row .col-12 table tbody tr {
-      text-align: center; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr td {
-        padding: 10px 20px;
-        border: 1px solid #e5e5e5; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr .image a img {
-        width: 100px;
-        height: 100px; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr .title a {
-        text-decoration: none;
-        color: #333333;
-        font-size: 16px;
-        transition: 300ms all ease-in; }
-        main #second .wrapper .custom-container .row .col-12 table tbody tr .title a:hover {
-          color: #e3a51e; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr .price p {
-        margin: 0;
-        color: #333333; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr .quantity div {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 90px;
-        border: 1px solid #e5e5e5;
-        margin: auto auto; }
-        main #second .wrapper .custom-container .row .col-12 table tbody tr .quantity div p {
-          font-size: 22px;
-          color: #666666;
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr td {
+          padding: 10px 20px;
+          border: 1px solid #e5e5e5; }
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .image a img {
+          width: 100px;
+          height: 100px; }
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .title a {
+          text-decoration: none;
+          color: #333333;
+          font-size: 16px;
+          transition: 300ms all ease-in; }
+          main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .title a:hover {
+            color: #e3a51e; }
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .price p {
           margin: 0;
-          cursor: pointer; }
-        main #second .wrapper .custom-container .row .col-12 table tbody tr .quantity div input {
-          width: 20px;
-          border: 0;
-          outline: 0; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr .total-price p {
-        margin: 0;
-        color: #333333; }
-      main #second .wrapper .custom-container .row .col-12 table tbody tr .trash a {
-        text-decoration: none;
-        color: #333333; }
-  main #second .wrapper .custom-container .row .col-12 .cus-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    border: 1px solid #e5e5e5;
-    border-top: 0; }
-    main #second .wrapper .custom-container .row .col-12 .cus-buttons .apply-coupon {
-      width: 50%; }
-      main #second .wrapper .custom-container .row .col-12 .cus-buttons .apply-coupon input {
-        width: 65%;
-        padding: 12px 10px;
+          color: #333333; }
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .quantity div {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 90px;
+          border: 1px solid #e5e5e5;
+          margin: auto auto; }
+          main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .quantity div p {
+            font-size: 22px;
+            color: #666666;
+            margin: 0;
+            cursor: pointer; }
+          main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .quantity div input {
+            width: 20px;
+            border: 0;
+            outline: 0; }
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .total-price p {
+          margin: 0;
+          color: #333333; }
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .trash a {
+          text-decoration: none;
+          color: #333333;
+          transition: 300ms all ease-in; }
+          main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .trash a:hover {
+            color: #e3a51e; }
+    main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons {
+      padding: 15px 20px;
+      border: 1px solid #e5e5e5;
+      border-top: 0;
+      width: 100%; }
+      main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-8 .apply-coupon .row .col-lg-8 input {
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 14px;
         outline: 1px solid #e5e5e5;
         border: 1px solid #e5e5e5; }
-      main #second .wrapper .custom-container .row .col-12 .cus-buttons .apply-coupon button {
-        width: 30%;
-        padding: 12px 10px;
-        border: 0;
+      main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-8 .apply-coupon .row .col-lg-4 button {
+        width: 100%;
+        font-weight: 400;
+        line-height: 1;
+        padding: 14px 0;
         background-color: #333333;
         color: #e3a51e;
+        border: 0;
+        white-space: nowrap;
+        vertical-align: middle;
         transition: 300ms all ease-in; }
-        main #second .wrapper .custom-container .row .col-12 .cus-buttons .apply-coupon button:hover {
+        main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-8 .apply-coupon .row .col-lg-4 button:hover {
           background-color: #e3a51e;
           color: #fff; }
-    main #second .wrapper .custom-container .row .col-12 .cus-buttons .update-cart button {
-      border: 0;
-      background-color: #333333;
-      color: #e3a51e;
-      padding: 12px 25px;
-      text-transform: uppercase;
-      transition: 300ms all ease-in; }
-      main #second .wrapper .custom-container .row .col-12 .cus-buttons .update-cart button:hover {
-        background-color: #e3a51e;
-        color: #fff; }
+      @media (max-width: 1007px) {
+        main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-8 .apply-coupon .row {
+          margin: 0; }
+          main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-8 .apply-coupon .row .col-lg-8,
+          main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-8 .apply-coupon .row .col-lg-4 {
+            padding: 0;
+            margin-bottom: 10px; } }
+      main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-4 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+        main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-4 .update-cart button {
+          background-color: #333333;
+          color: #e3a51e;
+          border: 0;
+          padding: 10px 25px;
+          text-transform: uppercase;
+          transition: 300ms all ease-in; }
+          main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-4 .update-cart button:hover {
+            background-color: #e3a51e;
+            color: #fff; }
+        @media (max-width: 1007px) {
+          main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-4 .update-cart {
+            width: 100%; }
+            main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons .row .col-lg-4 .update-cart button {
+              width: 100%; } }
   main #second .wrapper .custom-container .row {
     width: 100%; }
-    main #second .wrapper .custom-container .row .col-5 {
+    main #second .wrapper .custom-container .row .col-lg-5 {
       margin-left: auto; }
-      main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper {
+      main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper {
         margin: 30px 0 0 0;
         width: 100%; }
-        main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items {
+        main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items {
           background-color: #f8f8f8; }
-          main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items h3 {
+          main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items h3 {
             padding: 27px 15px 25px;
             text-align: center; }
-          main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items table {
+          main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items table {
             width: 100%; }
-            main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items table tbody {
+            main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items table tbody {
               width: 100%;
               width: 100%; }
-              main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items table tbody tr {
+              main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items table tbody tr {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 border-top: 1px solid #e5e5e5; }
-                main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items table tbody tr td {
+                main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items table tbody tr td {
                   padding: 15px 20px;
                   color: #333333; }
-              main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .cart-calculate-items table tbody .total-price .price {
+              main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .cart-calculate-items table tbody .total-price .price {
                 color: #e3a51e;
                 font-weight: 600; }
-        main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .checkout {
+        main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .checkout {
           width: 100%;
           padding: 14px 25px;
           background-color: #333333;
           text-align: center;
           transition: 300ms all ease-in; }
-          main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .checkout a {
+          main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .checkout a {
             text-decoration: none;
             color: #e3a51e;
             transition: 300ms all ease-in; }
-          main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .checkout:hover {
+          main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .checkout:hover {
             background-color: #e3a51e; }
-            main #second .wrapper .custom-container .row .col-5 .cart-calculate-wrapper .checkout:hover a {
+            main #second .wrapper .custom-container .row .col-lg-5 .cart-calculate-wrapper .checkout:hover a {
               color: #fff; }

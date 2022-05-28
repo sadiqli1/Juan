@@ -133,6 +133,18 @@
   transform: translateX(0);
   overflow: visible; }
 
+.offcanvas-overlay-menubar {
+  width: 100%;
+  height: 522%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 500;
+  display: none;
+  cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
+
+.offcanvas-overlay-menubar-activ {
+  display: block; }
+
 header #first .wrapper {
   background-color: #e3a51e; }
   header #first .wrapper .custom-container {
@@ -394,7 +406,9 @@ header #second {
           header #second .wrapper .custom-container .search .menu-bar {
             display: block; } }
     header #second .wrapper #menu-bar {
-      position: absolute;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
       width: 0;
       height: 100vh;
       background-color: #fff;
@@ -432,39 +446,40 @@ header #second {
           height: 40px;
           width: 40px;
           border: 0; }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .links ul {
-        padding: 30px 0 15px 0;
-        margin: 0; }
-        header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li {
-          padding: 10px 0;
-          position: relative; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li a {
-            width: 100%;
-            text-decoration: none;
-            color: #333333;
-            text-transform: capitalize;
-            font-size: 15px;
-            line-height: 18px;
-            font-weight: 400;
-            transition: 300ms all ease-in; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li button {
-            border: 0;
-            background-color: transparent;
-            position: absolute;
-            right: 0; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown {
-            margin-left: 20px;
-            height: 0;
-            opacity: 0;
-            transition: 300ms all ease-in; }
-            header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown ul {
-              padding: 0; }
-              header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li .dropdown ul li a {
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion {
+        padding: 30px 0 15px 0; }
+        header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item {
+          border: 0; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 {
+            border-color: transparent; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 button {
+              padding: 10px 0;
+              background-color: transparent;
+              color: #333333;
+              border: 0; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 > a {
+              text-decoration: none;
+              color: #333333;
+              font-size: 16px; }
+          header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul {
+            padding: 0; }
+            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li {
+              margin-bottom: 10px; }
+              header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li a {
+                text-decoration: none;
                 color: #333333;
-                font-size: 14px;
-                padding: 8px 0; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links ul li > :hover {
-            color: #e3a51e; }
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,...");
+        font-family: 'FontAwesome';
+        content: "\f068"; }
+      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion-button::after {
+        background-image: url("data:image/svg+xml,...");
+        font-family: 'FontAwesome';
+        content: "\f067"; }
       header #second .wrapper #menu-bar .menu-bar-wrapper .account {
         border-top: 1px solid black; }
         header #second .wrapper #menu-bar .menu-bar-wrapper .account ul {
