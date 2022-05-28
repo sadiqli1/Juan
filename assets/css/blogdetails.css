@@ -1,9 +1,29 @@
+.backtotop {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  height: 40px;
+  width: 40px;
+  background-color: #e3a51e;
+  color: #fff;
+  text-align: center;
+  z-index: 100000;
+  border: 0;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 300ms all ease-in; }
+
+.backtotop-activ {
+  opacity: 1;
+  transform: translateY(0); }
+
 .offcanvas-overlay {
   width: 100%;
   height: 522%;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 500;
+  z-index: 9999;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
 
@@ -13,7 +33,7 @@
 .baskets {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999900;
   transform: translateX(450px);
   overflow: hidden;
   transition: 300ms all ease-in; }
@@ -238,7 +258,8 @@ header #first .wrapper {
     display: none; } }
 
 header #second {
-  padding: 0; }
+  padding: 0;
+  transition: 300ms all ease-in; }
   header #second .wrapper {
     position: relative;
     background-color: #fff; }
@@ -500,6 +521,18 @@ header #second {
   @media (max-width: 1007px) {
     header #second {
       padding: 10px 0; } }
+
+header .second-activ {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible; }
+
+header .second-hide {
+  opacity: 0;
+  visibility: hidden; }
 
 footer #first .wrapper {
   background-color: #f0f0f0;

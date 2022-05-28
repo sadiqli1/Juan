@@ -1,12 +1,38 @@
 @import "..//assets/mixin.scss";
 @import "..//assets/colors.scss";
 
+//Back To Top Start 
+.backtotop {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    height: 40px;
+    width: 40px;
+    background-color: $mainColor;
+    color: #fff;
+    text-align: center;
+    z-index: 100000;
+    border: 0;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 300ms all ease-in;
+}
+
+.backtotop-activ{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+//Back To Top End
+
+
 .offcanvas-overlay {
     width: 100%;
     height: 522%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    z-index: 500;
+    z-index: 9999;
     display: none;
     cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto;
 }
@@ -18,7 +44,7 @@
 .baskets {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999900;
     // width: 0;
     transform: translateX(450px);
     overflow: hidden;
@@ -210,7 +236,8 @@
     display: none;
     cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto;
 }
-.offcanvas-overlay-menubar-activ{
+
+.offcanvas-overlay-menubar-activ {
     display: block;
 }
 
@@ -357,6 +384,7 @@ header {
 
     #second {
         padding: 0;
+        transition: 300ms all ease-in;
 
         .wrapper {
             position: relative;
@@ -603,6 +631,7 @@ header {
                 }
 
             }
+
             #menu-bar {
                 position: fixed;
                 top: 0;
@@ -658,32 +687,39 @@ header {
                     }
 
                     .links {
-                        
-                        .accordion{
+
+                        .accordion {
                             padding: 30px 0 15px 0;
-                            .accordion-item{
+
+                            .accordion-item {
                                 border: 0;
-                                h2{
+
+                                h2 {
                                     border-color: transparent;
-                                    button{
+
+                                    button {
                                         padding: 10px 0;
                                         background-color: transparent;
                                         color: $black;
                                         border: 0;
                                     }
-                                    >a{
+
+                                    >a {
                                         text-decoration: none;
                                         color: $black;
                                         font-size: 16px;
                                     }
                                 }
-                                >.accordion-collapse{
-                                    >.accordion-body{
-                                        ul{
+
+                                >.accordion-collapse {
+                                    >.accordion-body {
+                                        ul {
                                             padding: 0;
-                                            li{
+
+                                            li {
                                                 margin-bottom: 10px;
-                                                a{
+
+                                                a {
                                                     text-decoration: none;
                                                     color: $black;
                                                     width: 100%;
@@ -695,6 +731,7 @@ header {
                                 }
                             }
                         }
+
                         .accordion-button:not(.collapsed)::after {
                             background-image: url("data:image/svg+xml,...");
                             font-family: 'FontAwesome';
@@ -745,5 +782,19 @@ header {
         @media (max-width:1007px) {
             padding: 10px 0;
         }
+    }
+
+    .second-activ {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .second-hide {
+        opacity: 0;
+        visibility: hidden;
     }
 }

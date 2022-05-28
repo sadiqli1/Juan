@@ -5,7 +5,22 @@ function basket(id, img, title, price) {
         : [];
     if (items.length > 0) {
         if (items.some((item) => item.item.id === id)) {
-            items = items.filter((item) => item.item.id !== id);
+            // items = items.filter((item) => item.item.id !== id);
+            // items.forEach(item =>{
+            //     if(item.item.id = id){
+            //         item.count += 1;
+            //     }
+            // })
+            items = items.map((item) => {
+                if (item.item.id === id) {
+                    return {
+                        ...item,
+                        count: item.count + 1
+                    }
+                } else {
+                    return item;
+                }
+            }).filter(Boolean);
 
         } else {
             items.push({
@@ -31,7 +46,8 @@ function basket(id, img, title, price) {
     }
     localStorage.setItem("items", JSON.stringify(items));
     productCount();
-
+    basketAdd();
+    priceCalc();
 }
 
 function basketAdd() {
@@ -40,10 +56,7 @@ function basketAdd() {
     const items = localStorage.getItem("items")
         ? JSON.parse(localStorage.getItem("items"))
         : [];
-    let subTotal = 0;
-    const subTotalS = document.querySelector(".sub-total p");
     if (items.length > 0) {
-        let count = 0;
         items.forEach(item => {
             products.insertAdjacentHTML(`afterbegin`, ` <div class="product">
             <div class="image">
@@ -65,28 +78,37 @@ function basketAdd() {
                 <button onclick="productDelete('${item.item.id}')"><i class="fa-solid fa-x"></i></button>
             </div>
         </div>`);
-            const priceNum = parseFloat(item.item.price);
-            subTotal += priceNum;
-            count += item.count;
         });
-        // const SubTotalnum = parseFloat(subTotal);
-        subTotalS.innerHTML = `$${subTotal}`;
-        const ecoTax = document.querySelector(".eco-tax p");
-        ecoTax.innerHTML = `$${count * 5}`;
-        const vat = document.querySelector(".vat p");
-        vat.innerHTML = `$${subTotal * 20 / 100}`;
-        const total = document.querySelector(".total p");
-        const ecoTaxnum = parseFloat(ecoTax.innerHTML);
-        const vatnum = parseFloat(vat.innerHTML);
-        total.innerHTML = `$${subTotal + (count * 5) + (subTotal * 20 / 100)}`
     }
     else {
         products.innerHTML = "Your Basket is Empty"
     }
     productCount();
+    priceCalc();
 };
 basketAdd();
 
+function priceCalc() {
+    const items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    const subTotalS = document.querySelector(".sub-total p");
+    const ecoTax = document.querySelector(".eco-tax p");
+    const vat = document.querySelector(".vat p");
+    const total = document.querySelector(".total p");
+    let subTotal = 0;
+    let count = 0;
+    items.forEach(item => {
+        const price = parseFloat(item.item.price);
+        subTotal += price * item.count;
+        count += item.count;
+    });
+    subTotalS.innerHTML = `$${subTotal}`;
+    ecoTax.innerHTML = `$${count * 5}`;
+    vat.innerHTML = `$${(subTotal * 20) / 100}`;
+    total.innerHTML = `$${subTotal + (count * 5) + (subTotal * 20) / 100}`;
+}
+priceCalc();
 
 function productDelete(id) {
     let items = localStorage.getItem("items")
@@ -102,11 +124,7 @@ function productCount() {
     const items = localStorage.getItem("items")
         ? JSON.parse(localStorage.getItem("items"))
         : [];
-    let i = 0;
-    items.forEach((item) => {
-        i += item.count;
-    });
-    productCount.innerHTML = i;
+    productCount.innerHTML = items.length;
 }
 productCount();
 
@@ -214,7 +232,7 @@ window.onload = function () {
                 menuBar.style.visibility = "hidden";
                 offcanvasOverlayMenubar.classList.remove("offcanvas-overlay-menubar-activ");
             });
-            offcanvasOverlayMenubar.addEventListener("click", ()=>{
+            offcanvasOverlayMenubar.addEventListener("click", () => {
                 menuBar.style.width = "0";
                 menuBar.style.opacity = "0";
                 menuBar.style.visibility = "hidden";
@@ -229,12 +247,35 @@ window.onload = function () {
         }
         i++;
     });
-    window.addEventListener("scroll",(e) =>{
-        console.log(e)
+    window.addEventListener("scroll", (e) => {
+        const header = document.querySelector("header > #second");
+        if (window.scrollY > 167 && window.scrollY < 280) {
+            header.classList.add("second-hide");
+        } else if (window.scrollY > 280) {
+            header.classList.add("second-activ");
+            header.classList.remove("second-hide");
+        } else {
+            header.classList.remove("second-activ");
+            header.classList.remove("second-hide");
+        }
     })
 
 };
 // Menu Bar End
+
+// Back To Top Start
+const backToTop = document.querySelector(".backtotop");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 600) {
+        backToTop.classList.add("backtotop-activ");
+    } else {
+        backToTop.classList.remove("backtotop-activ");
+    }
+});
+backToTop.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+})
+// Back To Top End
 
 
 //Modal Start

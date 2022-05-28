@@ -1,9 +1,29 @@
+.backtotop {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  height: 40px;
+  width: 40px;
+  background-color: #e3a51e;
+  color: #fff;
+  text-align: center;
+  z-index: 100000;
+  border: 0;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 300ms all ease-in; }
+
+.backtotop-activ {
+  opacity: 1;
+  transform: translateY(0); }
+
 .offcanvas-overlay {
   width: 100%;
   height: 522%;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 500;
+  z-index: 9999;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
 
@@ -13,7 +33,7 @@
 .baskets {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999900;
   transform: translateX(450px);
   overflow: hidden;
   transition: 300ms all ease-in; }
@@ -238,7 +258,8 @@ header #first .wrapper {
     display: none; } }
 
 header #second {
-  padding: 0; }
+  padding: 0;
+  transition: 300ms all ease-in; }
   header #second .wrapper {
     position: relative;
     background-color: #fff; }
@@ -501,6 +522,18 @@ header #second {
     header #second {
       padding: 10px 0; } }
 
+header .second-activ {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible; }
+
+header .second-hide {
+  opacity: 0;
+  visibility: hidden; }
+
 footer #first .wrapper {
   background-color: #f0f0f0;
   padding: 80px 0; }
@@ -669,36 +702,177 @@ main #second .wrapper {
         font-size: 20px;
         color: #333333;
         font-weight: 500; }
-    main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .horizantal-line {
-      margin-bottom: 20px;
-      border-top: 10px solid #e3a51e;
-      border-radius: 10px; }
-    main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price form label {
-      font-size: 16px;
-      color: #333333;
-      font-weight: 400; }
-    main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price form input {
-      background-color: transparent;
-      color: #666666;
-      border: 0;
-      outline: none;
-      cursor: default;
-      margin-bottom: 20px; }
-    main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price form button {
-      border: 0;
-      background-color: #ebebeb;
-      color: #333333;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      text-transform: uppercase;
-      line-height: 36px;
-      padding: 0 15px;
-      border-radius: 3px;
-      transition: 300ms all ease-in; }
-      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price form button:hover {
-        background-color: #e3a51e;
-        color: #fff; }
+    main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body {
+      /* Reset style for input range */
+      /* Style toddler input range */
+      /* Style track input range */
+      /* Style for input value block */
+      /* Style for active state input */ }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .filter-price {
+        width: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-title {
+        position: relative;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.2em;
+        font-weight: 400; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field {
+        position: relative;
+        width: 100%;
+        height: 36px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        padding: 0; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range] {
+        position: absolute; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range] {
+        width: 100%;
+        height: 2px;
+        border: 0;
+        outline: 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        pointer-events: none;
+        -webkit-appearance: none; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]:active,
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]:focus {
+        outline: 0; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-ms-track {
+        width: 188px;
+        height: 2px;
+        border: 0;
+        outline: 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        pointer-events: none;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+        border-radius: 5px; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-webkit-slider-thumb {
+        /* WebKit/Blink */
+        position: relative;
+        -webkit-appearance: none;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+        margin-top: -4px;
+        background-color: #fff;
+        cursor: ew-resize;
+        cursor: ew-resize;
+        pointer-events: all;
+        z-index: 100; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-moz-range-thumb {
+        /* Firefox */
+        position: relative;
+        appearance: none;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-top: -5px;
+        background-color: #fff;
+        cursor: pointer;
+        cursor: pointer;
+        pointer-events: all;
+        z-index: 100; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-ms-thumb {
+        /* IE */
+        position: relative;
+        appearance: none;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-top: -5px;
+        background-color: #fff;
+        cursor: pointer;
+        cursor: pointer;
+        pointer-events: all;
+        z-index: 100; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-webkit-slider-runnable-track {
+        /* WebKit/Blink */
+        width: 188px;
+        height: 10px;
+        cursor: pointer;
+        background: #e3a51e;
+        border-radius: 5px; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-moz-range-track {
+        /* Firefox */
+        width: 188px;
+        height: 2px;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 5px; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]::-ms-track {
+        /* IE */
+        width: 188px;
+        height: 2px;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 5px; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap {
+        display: flex;
+        padding: 20px 0 0 0;
+        color: #000;
+        font-size: 14px;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin-bottom: 7px; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap-1,
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap-2 {
+        display: flex; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-title {
+        margin-right: 5px;
+        color: #000;
+        font-size: 16px;
+        color: #333333;
+        font-weight: 400; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap_line {
+        margin: 0 10px; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap #one,
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap #two {
+        width: 30px;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        margin-right: 2px;
+        background: 0;
+        border: 0;
+        outline: 0;
+        color: #666666;
+        font-family: 'Karla', 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 1.2em;
+        font-weight: 400; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-wrap label {
+        text-align: right; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]:hover::-webkit-slider-thumb {
+        box-shadow: 0 0 0 0.5px #fff;
+        transition-duration: 0.3s; }
+      main #second .wrapper .custom-container .row .col-lg-3 .filter .filter-body .price-field input[type=range]:active::-webkit-slider-thumb {
+        box-shadow: 0 0 0 0.5px #fff;
+        transition-duration: 0.3s; }
   main #second .wrapper .custom-container .row .col-lg-3 .colors {
     margin-bottom: 35px; }
     main #second .wrapper .custom-container .row .col-lg-3 .colors .colors-title h3 {
