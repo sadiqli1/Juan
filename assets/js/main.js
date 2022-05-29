@@ -305,3 +305,17 @@ const img2 = document.querySelectorAll(".modal .modal-dialog .modal-content .cus
         });
     };
 // Modal End
+
+
+// Searh Btn Start
+const searchWrapper = document.querySelector(".search-wrapper");
+function search(){
+    searchWrapper.classList.add("search-wrapper-activ");
+    console.log("sa")
+}
+
+const searchClose = document.querySelector(".search-wrapper .search-inner .search-close");
+searchClose.addEventListener("click", () =>{
+    searchWrapper.classList.remove("search-wrapper-activ");
+})
+// Searh Btn End

@@ -526,7 +526,7 @@
                         <!-- <button><i class="fa-solid fa-bag-shopping"></i><span>2</span></button> -->
                         <ul>
                             <li>
-                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </li>
                             <li class="setting">
                                 <button><i class="fa-solid fa-gear"></i></button>
@@ -2094,6 +2094,27 @@
         </section>
     </footer>
     <!-- Footer End -->
+
+    <!-- Search Form Start -->
+    <div class="search-wrapper">
+        <div class="search-inner">
+            <div class="search-close">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="custom-container">
+                <div class="search-box">
+                    <form action="">
+                        <input type="text" placeholder="Search entire storage here...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Form End -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>

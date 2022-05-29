@@ -1179,6 +1179,78 @@ footer #second .wrapper {
       display: flex;
       flex-direction: column-reverse; } }
 
+.search-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms all ease-in; }
+  .search-wrapper .search-inner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999; }
+    .search-wrapper .search-inner .search-close {
+      position: absolute;
+      right: 50px;
+      top: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      text-align: center;
+      color: #e3a51e;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      .search-wrapper .search-inner .search-close i {
+        transition: 300ms all ease-in; }
+      .search-wrapper .search-inner .search-close:hover i {
+        transform: rotate(180deg); }
+    .search-wrapper .search-inner .custom-container {
+      height: 100vh;
+      position: relative; }
+      .search-wrapper .search-inner .custom-container .search-box {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        padding: 0 30px; }
+        .search-wrapper .search-inner .custom-container .search-box form {
+          width: 100%;
+          position: relative; }
+          .search-wrapper .search-inner .custom-container .search-box form input {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            outline: 0;
+            color: #fff;
+            border-bottom: 2px solid #e3a51e;
+            background-color: transparent;
+            padding: 1px 20px 15px 2px; }
+            .search-wrapper .search-inner .custom-container .search-box form input::placeholder {
+              color: #fff;
+              font-style: italic; }
+          .search-wrapper .search-inner .custom-container .search-box form button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 50px;
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 18px;
+            padding: 0 0 15px 0;
+            text-transform: capitalize; }
+            .search-wrapper .search-inner .custom-container .search-box form button i {
+              margin-right: 10px;
+              font-size: 20px; }
+
+.search-wrapper-activ {
+  opacity: 1;
+  visibility: visible; }
+
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;

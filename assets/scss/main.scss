@@ -4,7 +4,8 @@
 @import "sections/products.scss";
 @import "sections/top-seller.scss";
 @import "sections/footer.scss";
-*{
+
+* {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -13,19 +14,21 @@
     font-weight: 400;
 }
 
-.custom-container{
+.custom-container {
     max-width: 80%;
     margin: 0 auto;
-}   
+}
 
-.modal{
+.modal {
     transform: translateY(-500px);
     transition: 100ms all ease-in;
-    .modal-dialog{
-        .modal-content{
+
+    .modal-dialog {
+        .modal-content {
             .custom-container {
                 padding: 20px;
                 margin: 0;
+
                 .row {
                     .col-lg-5 {
                         figure.zoom {
@@ -47,6 +50,7 @@
                             }
 
                         }
+
                         .images-lists {
                             width: 100%;
                             @include flex();
@@ -204,6 +208,6 @@
     }
 }
 
-.activ{
+.activ {
     transform: translateY(0);
 }
