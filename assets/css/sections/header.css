@@ -55,8 +55,10 @@
       position: absolute;
       top: 0;
       left: -50px; }
-      .baskets .baskets-wrapper > .cancel button:hover {
-        animation: identifier 100ms all ease-in; }
+      .baskets .baskets-wrapper > .cancel button i {
+        transition: 300ms all ease-in; }
+      .baskets .baskets-wrapper > .cancel button:hover i {
+        transform: rotate(180deg); }
 
 @keyframes identifier {
   to {
@@ -262,7 +264,8 @@ header #second {
   transition: 300ms all ease-in; }
   header #second .wrapper {
     position: relative;
-    background-color: #fff; }
+    background-color: #fff;
+    transition: 300ms all ease-in; }
     header #second .wrapper .custom-container {
       display: flex;
       align-items: center;
@@ -448,6 +451,10 @@ header #second {
           background-color: #e3a51e;
           border: 0;
           color: #fff; }
+          header #second .wrapper #menu-bar .cancel button i {
+            transition: 300ms all ease-in; }
+          header #second .wrapper #menu-bar .cancel button:hover i {
+            transform: rotate(180deg); }
       header #second .wrapper #menu-bar .menu-bar-wrapper .search {
         position: relative; }
         header #second .wrapper #menu-bar .menu-bar-wrapper .search input {
@@ -527,7 +534,8 @@ header #second {
     opacity: 1;
     visibility: visible;
     background-color: #fff;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    transition: 300ms all ease-in; }
   header #second .wrapper-hide {
     opacity: 0;
     visibility: hidden; }

@@ -611,6 +611,11 @@ main {
                                             color: $black;
                                             font-weight: 500;
                                             margin-bottom: 0;
+                                            cursor: pointer;
+                                            transition: 300ms all ease-in;
+                                            &:hover{
+                                                color: $mainColor;
+                                            }
                                         }
                                     }
 
@@ -740,6 +745,37 @@ main {
                                         img {
                                             transform: scale(1.15);
                                             overflow: hidden;
+                                        }
+                                    }
+                                }
+                            }
+
+                            > .col-12{
+                                border: 1px solid $borderColor;
+                                @include flex(center, center);
+                                margin-top: 30px;
+                                ul{
+                                    @include flex();
+                                    padding: 20px 0;
+                                    margin: 0;
+                                    gap: 10px;
+                                    li{
+                                        button{
+                                            border: 1px solid $borderColor;
+                                            width: 40px;
+                                            height: 40px;
+                                            background-color: #fff;
+                                            color: $black;
+                                            transition: 300ms all ease-in;
+                                            border-radius: 4px;
+                                            &:hover{
+                                                background-color: $mainColor;
+                                                color: #fff;
+                                            }
+                                        }
+                                        .bir{
+                                            background-color: $mainColor;
+                                            color: #fff;
                                         }
                                     }
                                 }
@@ -886,6 +922,37 @@ main {
 
                                     @media (max-width:640px) {
                                         flex-direction: column;
+                                    }
+                                }
+                            }
+
+                            > .col-12{
+                                border: 1px solid $borderColor;
+                                @include flex(center, center);
+                                margin-top: 30px;
+                                ul{
+                                    @include flex();
+                                    padding: 20px 0;
+                                    margin: 0;
+                                    gap: 10px;
+                                    li{
+                                        button{
+                                            border: 1px solid $borderColor;
+                                            width: 40px;
+                                            height: 40px;
+                                            background-color: #fff;
+                                            color: $black;
+                                            transition: 300ms all ease-in;
+                                            border-radius: 4px;
+                                            &:hover{
+                                                background-color: $mainColor;
+                                                color: #fff;
+                                            }
+                                        }
+                                        .bir{
+                                            background-color: $mainColor;
+                                            color: #fff;
+                                        }
                                     }
                                 }
                             }

@@ -55,8 +55,10 @@
       position: absolute;
       top: 0;
       left: -50px; }
-      .baskets .baskets-wrapper > .cancel button:hover {
-        animation: identifier 100ms all ease-in; }
+      .baskets .baskets-wrapper > .cancel button i {
+        transition: 300ms all ease-in; }
+      .baskets .baskets-wrapper > .cancel button:hover i {
+        transform: rotate(180deg); }
 
 @keyframes identifier {
   to {
@@ -262,7 +264,8 @@ header #second {
   transition: 300ms all ease-in; }
   header #second .wrapper {
     position: relative;
-    background-color: #fff; }
+    background-color: #fff;
+    transition: 300ms all ease-in; }
     header #second .wrapper .custom-container {
       display: flex;
       align-items: center;
@@ -448,6 +451,10 @@ header #second {
           background-color: #e3a51e;
           border: 0;
           color: #fff; }
+          header #second .wrapper #menu-bar .cancel button i {
+            transition: 300ms all ease-in; }
+          header #second .wrapper #menu-bar .cancel button:hover i {
+            transform: rotate(180deg); }
       header #second .wrapper #menu-bar .menu-bar-wrapper .search {
         position: relative; }
         header #second .wrapper #menu-bar .menu-bar-wrapper .search input {
@@ -527,7 +534,8 @@ header #second {
     opacity: 1;
     visibility: visible;
     background-color: #fff;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    transition: 300ms all ease-in; }
   header #second .wrapper-hide {
     opacity: 0;
     visibility: hidden; }
@@ -1101,7 +1109,11 @@ main #second .wrapper {
             font-size: 18px;
             color: #333333;
             font-weight: 500;
-            margin-bottom: 0; }
+            margin-bottom: 0;
+            cursor: pointer;
+            transition: 300ms all ease-in; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .title p:hover {
+              color: #e3a51e; }
         main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .price {
           width: 100%;
           text-align: center;
@@ -1185,6 +1197,31 @@ main #second .wrapper {
         main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 > :hover .image img {
           transform: scale(1.15);
           overflow: hidden; }
+    main #second .wrapper .custom-container .row .col-lg-9 .row-menu > .col-12 {
+      border: 1px solid #e5e5e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px; }
+      main #second .wrapper .custom-container .row .col-lg-9 .row-menu > .col-12 ul {
+        display: flex;
+        padding: 20px 0;
+        margin: 0;
+        gap: 10px; }
+        main #second .wrapper .custom-container .row .col-lg-9 .row-menu > .col-12 ul li button {
+          border: 1px solid #e5e5e5;
+          width: 40px;
+          height: 40px;
+          background-color: #fff;
+          color: #333333;
+          transition: 300ms all ease-in;
+          border-radius: 4px; }
+          main #second .wrapper .custom-container .row .col-lg-9 .row-menu > .col-12 ul li button:hover {
+            background-color: #e3a51e;
+            color: #fff; }
+        main #second .wrapper .custom-container .row .col-lg-9 .row-menu > .col-12 ul li .bir {
+          background-color: #e3a51e;
+          color: #fff; }
   main #second .wrapper .custom-container .row .col-lg-9 .row-list {
     display: none; }
     main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card {
@@ -1270,6 +1307,31 @@ main #second .wrapper {
       @media (max-width: 640px) {
         main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card {
           flex-direction: column; } }
+    main #second .wrapper .custom-container .row .col-lg-9 .row-list > .col-12 {
+      border: 1px solid #e5e5e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px; }
+      main #second .wrapper .custom-container .row .col-lg-9 .row-list > .col-12 ul {
+        display: flex;
+        padding: 20px 0;
+        margin: 0;
+        gap: 10px; }
+        main #second .wrapper .custom-container .row .col-lg-9 .row-list > .col-12 ul li button {
+          border: 1px solid #e5e5e5;
+          width: 40px;
+          height: 40px;
+          background-color: #fff;
+          color: #333333;
+          transition: 300ms all ease-in;
+          border-radius: 4px; }
+          main #second .wrapper .custom-container .row .col-lg-9 .row-list > .col-12 ul li button:hover {
+            background-color: #e3a51e;
+            color: #fff; }
+        main #second .wrapper .custom-container .row .col-lg-9 .row-list > .col-12 ul li .bir {
+          background-color: #e3a51e;
+          color: #fff; }
   main #second .wrapper .custom-container .row .col-lg-9 .activ {
     display: flex;
     flex-direction: row-reverse; }

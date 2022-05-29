@@ -146,6 +146,13 @@ function cancel() {
     const overlay = document.querySelector(".offcanvas-overlay");
     overlay.classList.remove("offcanvas-overlay-activ");
 };
+
+if(window.screen.width < 1007){
+    const bag = document.querySelector(".bag button");
+    bag.addEventListener("click", () =>{
+        document.location.href = "http://127.0.0.1:5500/cart.html";
+    })
+}
 // Basket End
 
 

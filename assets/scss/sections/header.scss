@@ -70,9 +70,13 @@
                 position: absolute;
                 top: 0;
                 left: -50px;
-
+                i{
+                    transition: 300ms all ease-in;
+                }
                 &:hover {
-                    animation: identifier 100ms all ease-in;
+                    i{
+                        transform: rotate(180deg);
+                    }
                 }
 
                 @keyframes identifier {
@@ -389,6 +393,7 @@ header {
         .wrapper {
             position: relative;
             background-color: #fff;
+            transition: 300ms all ease-in;
 
             .custom-container {
                 @include flex(center, space-between);
@@ -656,6 +661,14 @@ header {
                         background-color: $mainColor;
                         border: 0;
                         color: #fff;
+                        i{
+                            transition: 300ms all ease-in;
+                        }
+                        &:hover{
+                            i{
+                                transform: rotate(180deg);
+                            }
+                        }
                     }
                 }
 
@@ -788,6 +801,7 @@ header {
             visibility: visible;
             background-color: #fff;
             box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+            transition: 300ms all ease-in;
         }
     
         .wrapper-hide {
