@@ -93,6 +93,34 @@ main {
                                         li {
                                             transition: 400ms all linear;
 
+                                            .tooltip {
+                                                opacity: 0;
+                                                // display: none;
+                                                position: absolute;
+                                                top: -42px;
+                                                right: -21px;
+                                                background-color: $black;
+                                                color: white;
+                                                font-size: 14px;
+                                                border-radius: 5px;
+                                                width: max-content;
+                                                transform: translateY(15px);
+                                                transition: 300ms all ease-in;
+
+                                                i {
+                                                    position: absolute;
+                                                    bottom: -12px;
+                                                    font-size: 20px;
+                                                    left: 40%;
+                                                    color: $black;
+                                                }
+                                            }
+
+                                            .wishlist {
+                                                top: -42px;
+                                                right: -8px;
+                                            }
+
                                             button {
                                                 width: 46px;
                                                 height: 46px;
@@ -103,6 +131,20 @@ main {
                                                 background-color: #fff;
                                                 border: 1px solid $mainColor;
                                                 color: $mainColor;
+                                                transition: 300ms all ease-in;
+                                            }
+
+                                            &:hover {
+                                                button {
+                                                    background-color: $mainColor;
+                                                    color: #fff;
+                                                }
+
+                                                .tooltip {
+                                                    opacity: 1;
+                                                    // display: block;
+                                                    transform: translateY(0);
+                                                }
                                             }
                                         }
 
@@ -228,6 +270,7 @@ main {
 
                                 .image {
                                     overflow: hidden;
+
                                     img {
                                         width: 100%;
                                         transition: 300ms all linear;
@@ -261,10 +304,12 @@ main {
                                         }
                                     }
                                 }
-                                &:hover{
+
+                                &:hover {
                                     filter: brightness(0.8);
-                                    .image{
-                                        img{
+
+                                    .image {
+                                        img {
                                             transform: scale(1.1);
                                         }
                                     }
@@ -283,6 +328,7 @@ main {
                         @media (max-width:1007px) {
                             .cus-col {
                                 padding: 0 0 30px 0;
+
                                 .wrapper {
                                     .desc {
                                         top: 30%;

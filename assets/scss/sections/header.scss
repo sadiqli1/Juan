@@ -11,7 +11,7 @@
     background-color: $mainColor;
     color: #fff;
     text-align: center;
-    z-index: 100000;
+    z-index: 999;
     border: 0;
     border-radius: 4px;
     opacity: 0;
@@ -29,9 +29,9 @@
 
 .offcanvas-overlay {
     width: 100%;
-    height: 522%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     display: none;
     cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto;
@@ -229,10 +229,10 @@
 
 .offcanvas-overlay-menubar {
     width: 100%;
-    height: 522%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 500;
+    position: fixed;
+    z-index: 9999;
     display: none;
     cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto;
 }
@@ -632,14 +632,30 @@ header {
 
             }
 
+            .custom-container-activ {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                opacity: 1;
+                visibility: visible;
+                background-color: #fff;
+            }
+        
+            .custom-container-hide {
+                opacity: 0;
+                visibility: hidden;
+            }
+
             #menu-bar {
                 position: fixed;
                 top: 0;
-                z-index: 1000;
+                z-index: 99999;
                 width: 0;
                 height: 100vh;
                 background-color: #fff;
-                z-index: 1000;
                 padding: 20px;
                 opacity: 0;
                 visibility: hidden;
@@ -782,19 +798,5 @@ header {
         @media (max-width:1007px) {
             padding: 10px 0;
         }
-    }
-
-    .second-activ {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .second-hide {
-        opacity: 0;
-        visibility: hidden;
     }
 }

@@ -120,7 +120,7 @@ main {
                             }
 
                             .filter-body {
-                                
+
                                 .wrapper {
                                     display: flex;
                                     flex-direction: column;
@@ -646,6 +646,34 @@ main {
                                             li {
                                                 transition: 400ms all linear;
 
+                                                .tooltip {
+                                                    opacity: 0;
+                                                    // display: none;
+                                                    position: absolute;
+                                                    top: -42px;
+                                                    right: -21px;
+                                                    background-color: $black;
+                                                    color: white;
+                                                    font-size: 14px;
+                                                    border-radius: 5px;
+                                                    width: max-content;
+                                                    transform: translateY(15px);
+                                                    transition: 300ms all ease-in;
+
+                                                    i {
+                                                        position: absolute;
+                                                        bottom: -12px;
+                                                        font-size: 20px;
+                                                        left: 40%;
+                                                        color: $black;
+                                                    }
+                                                }
+
+                                                .wishlist {
+                                                    top: -42px;
+                                                    right: -8px;
+                                                }
+
                                                 button {
                                                     width: 46px;
                                                     height: 46px;
@@ -656,6 +684,20 @@ main {
                                                     background-color: #fff;
                                                     border: 1px solid $mainColor;
                                                     color: $mainColor;
+                                                    transition: 300ms all ease-in;
+                                                }
+
+                                                &:hover {
+                                                    button {
+                                                        background-color: $mainColor;
+                                                        color: #fff;
+                                                    }
+
+                                                    .tooltip {
+                                                        opacity: 1;
+                                                        // display: block;
+                                                        transform: translateY(0);
+                                                    }
                                                 }
                                             }
 
@@ -779,17 +821,56 @@ main {
                                                 gap: 5px;
 
                                                 li {
+                                                    position: relative;
+                                                    .tooltip {
+                                                        opacity: 0;
+                                                        // display: none;
+                                                        position: absolute;
+                                                        top: -42px;
+                                                        right: -21px;
+                                                        background-color: $black;
+                                                        color: white;
+                                                        font-size: 14px;
+                                                        border-radius: 5px;
+                                                        width: max-content;
+                                                        transform: translateY(15px);
+                                                        transition: 300ms all ease-in;
+
+                                                        i {
+                                                            position: absolute;
+                                                            bottom: -12px;
+                                                            font-size: 20px;
+                                                            left: 40%;
+                                                            color: $black;
+                                                        }
+                                                    }
+
+                                                    .wishlist {
+                                                        top: -42px;
+                                                        right: -8px;
+                                                    }
+
                                                     button {
                                                         background-color: #f6f6f6;
+                                                        color: $black;
                                                         border: 0;
                                                         width: 44px;
                                                         height: 44px;
+                                                        transition: 300ms all ease-in;
+                                                        border-radius: 0;
+                                                    }
 
-                                                        &:hover {
+                                                    &:hover{
+                                                        button{
                                                             background-color: $mainColor;
                                                             color: #fff;
                                                         }
-                                                    }
+                                                        .tooltip {
+                                                            opacity: 1;
+                                                            // display: block;
+                                                            transform: translateY(0);
+                                                        }
+                                                    }   
                                                 }
                                             }
                                         }
@@ -818,6 +899,193 @@ main {
 
                     @media (max-width:1007px) {
                         @include flex(null, null, column-reverse);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            .custom-container {
+                padding: 20px;
+                margin: 0;
+
+                .row {
+                    .col-lg-5 {
+                        figure.zoom {
+                            border: 1px solid $borderColor;
+                            background-position: 50% 50%;
+                            position: relative;
+                            overflow: hidden;
+                            cursor: pointer;
+                            background-image: url("https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg");
+
+                            img {
+                                transition: opacity .5s;
+                                display: block;
+                                width: 100%;
+
+                                &:hover {
+                                    opacity: 0;
+                                }
+                            }
+
+                        }
+
+                        .images-lists {
+                            width: 100%;
+                            @include flex();
+                            gap: 10px;
+
+                            .img {
+                                width: 25%;
+                                border: 1px solid $borderColor;
+
+                                img {
+                                    width: 100%;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+
+                    .col-lg-7 {
+                        .product-title {
+                            h3 {
+                                font-size: 24px;
+                                font-weight: 500;
+                                padding: 0 0 10px 0;
+                                margin: 0;
+                                color: $black;
+
+                                @media (max-width:640px) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+
+                        .product-review {
+                            a {
+                                font-size: 14px;
+                                color: $mainColor;
+                                text-decoration: none;
+                            }
+                        }
+
+                        .product-price {
+                            padding: 10px 0 0 0;
+
+                            span {
+                                font-size: 18px;
+                                color: $black;
+                                font-weight: 500;
+                            }
+
+                            del {
+                                font-size: 18px;
+                                color: $black;
+                                font-weight: 500;
+                            }
+                        }
+
+                        .product-desc {
+                            p {
+                                padding: 15px 0 20px;
+                                font-size: 16pz;
+                                color: $black2;
+                            }
+                        }
+
+                        .product-quantity-box {
+                            @include flex();
+                            margin-bottom: 20px;
+                            gap: 30px;
+
+                            .quantity {
+                                width: 90px;
+                                height: 46px;
+                                padding: 0 15px;
+                                border: 1px solid #ddd;
+                                @include flex(center, space-between);
+
+                                span {
+                                    font-size: 22px;
+                                    color: $black2;
+                                }
+
+                                #minus,
+                                #plus {
+                                    cursor: pointer;
+                                }
+                            }
+
+                            a {
+                                @include flex(center, center);
+                                text-decoration: none;
+                                color: $mainColor;
+                                font-size: 16px;
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                padding: 11px 25px;
+                                background-color: $black;
+                                transition: 300ms all ease-in;
+
+                                &:hover {
+                                    background-color: $mainColor;
+                                    color: white;
+                                }
+                            }
+                        }
+
+                        .availability {
+                            @include flex();
+                            margin-bottom: 20px;
+
+                            h5 {
+                                font-weight: 500;
+                                color: $black;
+                                font-size: 14px;
+                                margin: 0 10px 0 0;
+                            }
+
+                            span {
+                                font-size: 14px;
+                                color: #22dd77;
+                                padding-left: 3px;
+                            }
+                        }
+
+                        .share-icons {
+                            @include flex(center);
+
+                            h5 {
+                                font-size: 14px;
+                                color: $black;
+                                font-weight: 500;
+                                margin: 0 10px 0 0;
+                            }
+
+                            a {
+                                width: 36px;
+                                height: 36px;
+                                @include flex(center, center);
+                                text-decoration: none;
+                                color: $black2;
+                                padding: 0 8px;
+                                border: 1px solid $borderColor;
+                                margin: 0 6px 0 0;
+                                transition: 300ms all ease-in;
+
+                                &:hover {
+                                    background-color: $mainColor;
+                                    color: #fff;
+                                }
+                            }
+                        }
                     }
                 }
             }

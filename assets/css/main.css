@@ -7,7 +7,7 @@
   background-color: #e3a51e;
   color: #fff;
   text-align: center;
-  z-index: 100000;
+  z-index: 999;
   border: 0;
   border-radius: 4px;
   opacity: 0;
@@ -20,9 +20,9 @@
 
 .offcanvas-overlay {
   width: 100%;
-  height: 522%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
@@ -155,10 +155,10 @@
 
 .offcanvas-overlay-menubar {
   width: 100%;
-  height: 522%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  z-index: 500;
+  position: fixed;
+  z-index: 9999;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
 
@@ -426,14 +426,26 @@ header #second {
         @media (max-width: 1007px) {
           header #second .wrapper .custom-container .search .menu-bar {
             display: block; } }
+    header #second .wrapper .custom-container-activ {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      opacity: 1;
+      visibility: visible;
+      background-color: #fff; }
+    header #second .wrapper .custom-container-hide {
+      opacity: 0;
+      visibility: hidden; }
     header #second .wrapper #menu-bar {
       position: fixed;
       top: 0;
-      z-index: 1000;
+      z-index: 99999;
       width: 0;
       height: 100vh;
       background-color: #fff;
-      z-index: 1000;
       padding: 20px;
       opacity: 0;
       visibility: hidden;
@@ -521,18 +533,6 @@ header #second {
   @media (max-width: 1007px) {
     header #second {
       padding: 10px 0; } }
-
-header .second-activ {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  opacity: 1;
-  visibility: visible; }
-
-header .second-hide {
-  opacity: 0;
-  visibility: hidden; }
 
 #carusel .wrapper .custom-container .owl-carousel {
   position: relative; }
@@ -757,6 +757,27 @@ main #products .wrapper {
           z-index: 999999; }
           main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li {
             transition: 400ms all linear; }
+            main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li .tooltip {
+              opacity: 0;
+              position: absolute;
+              top: -42px;
+              right: -21px;
+              background-color: #333333;
+              color: white;
+              font-size: 14px;
+              border-radius: 5px;
+              width: max-content;
+              transform: translateY(15px);
+              transition: 300ms all ease-in; }
+              main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li .tooltip i {
+                position: absolute;
+                bottom: -12px;
+                font-size: 20px;
+                left: 40%;
+                color: #333333; }
+            main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li .wishlist {
+              top: -42px;
+              right: -8px; }
             main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li button {
               width: 46px;
               height: 46px;
@@ -768,7 +789,14 @@ main #products .wrapper {
               line-height: 46px;
               background-color: #fff;
               border: 1px solid #e3a51e;
-              color: #e3a51e; }
+              color: #e3a51e;
+              transition: 300ms all ease-in; }
+            main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li:hover button {
+              background-color: #e3a51e;
+              color: #fff; }
+            main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul li:hover .tooltip {
+              opacity: 1;
+              transform: translateY(0); }
           main #products .wrapper .custom-container .row .owl-carousel .item .card .product-action ul > :nth-child(1) {
             transform: translateX(66px);
             opacity: 0; }

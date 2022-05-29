@@ -7,7 +7,7 @@
   background-color: #e3a51e;
   color: #fff;
   text-align: center;
-  z-index: 100000;
+  z-index: 999;
   border: 0;
   border-radius: 4px;
   opacity: 0;
@@ -20,9 +20,9 @@
 
 .offcanvas-overlay {
   width: 100%;
-  height: 522%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
@@ -155,10 +155,10 @@
 
 .offcanvas-overlay-menubar {
   width: 100%;
-  height: 522%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  z-index: 500;
+  position: fixed;
+  z-index: 9999;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
 
@@ -426,14 +426,26 @@ header #second {
         @media (max-width: 1007px) {
           header #second .wrapper .custom-container .search .menu-bar {
             display: block; } }
+    header #second .wrapper .custom-container-activ {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      opacity: 1;
+      visibility: visible;
+      background-color: #fff; }
+    header #second .wrapper .custom-container-hide {
+      opacity: 0;
+      visibility: hidden; }
     header #second .wrapper #menu-bar {
       position: fixed;
       top: 0;
-      z-index: 1000;
+      z-index: 99999;
       width: 0;
       height: 100vh;
       background-color: #fff;
-      z-index: 1000;
       padding: 20px;
       opacity: 0;
       visibility: hidden;
@@ -521,18 +533,6 @@ header #second {
   @media (max-width: 1007px) {
     header #second {
       padding: 10px 0; } }
-
-header .second-activ {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  opacity: 1;
-  visibility: visible; }
-
-header .second-hide {
-  opacity: 0;
-  visibility: hidden; }
 
 footer #first .wrapper {
   background-color: #f0f0f0;
@@ -1052,6 +1052,27 @@ main #second .wrapper {
           z-index: 999999; }
           main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li {
             transition: 400ms all linear; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li .tooltip {
+              opacity: 0;
+              position: absolute;
+              top: -42px;
+              right: -21px;
+              background-color: #333333;
+              color: white;
+              font-size: 14px;
+              border-radius: 5px;
+              width: max-content;
+              transform: translateY(15px);
+              transition: 300ms all ease-in; }
+              main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li .tooltip i {
+                position: absolute;
+                bottom: -12px;
+                font-size: 20px;
+                left: 40%;
+                color: #333333; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li .wishlist {
+              top: -42px;
+              right: -8px; }
             main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li button {
               width: 46px;
               height: 46px;
@@ -1063,7 +1084,14 @@ main #second .wrapper {
               line-height: 46px;
               background-color: #fff;
               border: 1px solid #e3a51e;
-              color: #e3a51e; }
+              color: #e3a51e;
+              transition: 300ms all ease-in; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li:hover button {
+              background-color: #e3a51e;
+              color: #fff; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul li:hover .tooltip {
+              opacity: 1;
+              transform: translateY(0); }
           main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .product-action ul > :nth-child(1) {
             transform: translateX(66px);
             opacity: 0; }
@@ -1127,14 +1155,43 @@ main #second .wrapper {
           padding: 0;
           display: flex;
           gap: 5px; }
-          main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li button {
-            background-color: #f6f6f6;
-            border: 0;
-            width: 44px;
-            height: 44px; }
-            main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li button:hover {
+          main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li {
+            position: relative; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li .tooltip {
+              opacity: 0;
+              position: absolute;
+              top: -42px;
+              right: -21px;
+              background-color: #333333;
+              color: white;
+              font-size: 14px;
+              border-radius: 5px;
+              width: max-content;
+              transform: translateY(15px);
+              transition: 300ms all ease-in; }
+              main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li .tooltip i {
+                position: absolute;
+                bottom: -12px;
+                font-size: 20px;
+                left: 40%;
+                color: #333333; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li .wishlist {
+              top: -42px;
+              right: -8px; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li button {
+              background-color: #f6f6f6;
+              color: #333333;
+              border: 0;
+              width: 44px;
+              height: 44px;
+              transition: 300ms all ease-in;
+              border-radius: 0; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li:hover button {
               background-color: #e3a51e;
               color: #fff; }
+            main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card .card-desc .card-desc-action ul li:hover .tooltip {
+              opacity: 1;
+              transform: translateY(0); }
       main #second .wrapper .custom-container .row .col-lg-9 .row-list .col-lg-12 .card:hover .card-image img {
         transform: scale(1.1); }
       @media (max-width: 640px) {
@@ -1147,3 +1204,125 @@ main #second .wrapper {
     main #second .wrapper .custom-container .row {
       display: flex;
       flex-direction: column-reverse; } }
+
+.modal .modal-dialog .modal-content .custom-container {
+  padding: 20px;
+  margin: 0; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 figure.zoom {
+    border: 1px solid #e5e5e5;
+    background-position: 50% 50%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url("https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg"); }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 figure.zoom img {
+      transition: opacity .5s;
+      display: block;
+      width: 100%; }
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 figure.zoom img:hover {
+        opacity: 0; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 .images-lists {
+    width: 100%;
+    display: flex;
+    gap: 10px; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 .images-lists .img {
+      width: 25%;
+      border: 1px solid #e5e5e5; }
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 .images-lists .img img {
+        width: 100%;
+        cursor: pointer; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-title h3 {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    margin: 0;
+    color: #333333; }
+    @media (max-width: 640px) {
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-title h3 {
+        font-size: 20px; } }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-review a {
+    font-size: 14px;
+    color: #e3a51e;
+    text-decoration: none; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-price {
+    padding: 10px 0 0 0; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-price span {
+      font-size: 18px;
+      color: #333333;
+      font-weight: 500; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-price del {
+      font-size: 18px;
+      color: #333333;
+      font-weight: 500; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-desc p {
+    padding: 15px 0 20px;
+    font-size: 16pz;
+    color: #666666; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 30px; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box .quantity {
+      width: 90px;
+      height: 46px;
+      padding: 0 15px;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box .quantity span {
+        font-size: 22px;
+        color: #666666; }
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box .quantity #minus,
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box .quantity #plus {
+        cursor: pointer; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #e3a51e;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 11px 25px;
+      background-color: #333333;
+      transition: 300ms all ease-in; }
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .product-quantity-box a:hover {
+        background-color: #e3a51e;
+        color: white; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .availability {
+    display: flex;
+    margin-bottom: 20px; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .availability h5 {
+      font-weight: 500;
+      color: #333333;
+      font-size: 14px;
+      margin: 0 10px 0 0; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .availability span {
+      font-size: 14px;
+      color: #22dd77;
+      padding-left: 3px; }
+  .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .share-icons {
+    display: flex;
+    align-items: center; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .share-icons h5 {
+      font-size: 14px;
+      color: #333333;
+      font-weight: 500;
+      margin: 0 10px 0 0; }
+    .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .share-icons a {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #666666;
+      padding: 0 8px;
+      border: 1px solid #e5e5e5;
+      margin: 0 6px 0 0;
+      transition: 300ms all ease-in; }
+      .modal .modal-dialog .modal-content .custom-container .row .col-lg-7 .share-icons a:hover {
+        background-color: #e3a51e;
+        color: #fff; }

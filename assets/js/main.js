@@ -248,15 +248,15 @@ window.onload = function () {
         i++;
     });
     window.addEventListener("scroll", (e) => {
-        const header = document.querySelector("header > #second");
+        const header = document.querySelector("header > #second > .wrapper >.custom-container");
         if (window.scrollY > 167 && window.scrollY < 280) {
             header.classList.add("second-hide");
         } else if (window.scrollY > 280) {
-            header.classList.add("second-activ");
-            header.classList.remove("second-hide");
+            header.classList.add("custom-container-activ");
+            header.classList.remove("custom-container-hide");
         } else {
-            header.classList.remove("second-activ");
-            header.classList.remove("second-hide");
+            header.classList.remove("custom-container-activ");
+            header.classList.remove("custom-container-hide");
         }
     })
 
@@ -295,4 +295,13 @@ for (let i = 0; i < btn.length; i++) {
         modal.classList.add("activ");
     });
 }
+
+const img2 = document.querySelectorAll(".modal .modal-dialog .modal-content .custom-container .row .col-lg-5 .images-lists .img img");
+    const imgcon2 = document.querySelectorAll(".modal .modal-dialog .modal-content .custom-container .row .col-lg-5 #zoom");
+    for (let i = 0; i < img2.length; i++) {
+        img2[i].addEventListener("click", () => {
+            imgcon2[0].children[0].src = img2[i].src;
+            imgcon2[0].style.backgroundImage = `url(${img2[i].src})`;
+        });
+    };
 // Modal End
