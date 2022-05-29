@@ -43,55 +43,6 @@ window.onload = function () {
         grid.classList.add("activ-btn");
         list.classList.remove("activ-btn");
     });
-    // Menu Bar start
-const menu = document.querySelector("#second > .wrapper > .custom-container > .search > .menu-bar button");
-const offcanvasOverlayMenubar = document.querySelector(".offcanvas-overlay-menubar");
-let j = 0;
-menu.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const menuBar = document.querySelector("#second > .wrapper > #menu-bar");
-    const body = document.querySelector("body");
-    const cancel = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper .cancel button");
-    if (j % 2 === 0) {
-        menuBar.style.width = "300px";
-        // body.style.filter = "brightness(0.8)";
-        menuBar.style.opacity = "1";
-        menuBar.style.visibility = "visible";
-        cancel.addEventListener("click", (e) => {
-            e.stopPropagation();
-            menuBar.style.width = "0";
-            menuBar.style.opacity = "0";
-            menuBar.style.visibility = "hidden";
-            offcanvasOverlayMenubar.classList.remove("offcanvas-overlay-menubar-activ");
-        });
-        offcanvasOverlayMenubar.addEventListener("click", () => {
-            menuBar.style.width = "0";
-            menuBar.style.opacity = "0";
-            menuBar.style.visibility = "hidden";
-            offcanvasOverlayMenubar.classList.remove("offcanvas-overlay-menubar-activ");
-        })
-        offcanvasOverlayMenubar.classList.add("offcanvas-overlay-menubar-activ");
-    } else {
-        menuBar.style.width = "0";
-        menuBar.style.opacity = "0";
-        menuBar.style.visibility = "hidden";
-        offcanvasOverlayMenubar.classList.remove("offcanvas-overlay-menubar-activ");
-    }
-    i++;
-});
-window.addEventListener("scroll", (e) => {
-    const header = document.querySelector("header > #second > .wrapper >.custom-container");
-    if (window.scrollY > 167 && window.scrollY < 280) {
-        header.classList.add("second-hide");
-    } else if (window.scrollY > 280) {
-        header.classList.add("custom-container-activ");
-        header.classList.remove("custom-container-hide");
-    } else {
-        header.classList.remove("custom-container-activ");
-        header.classList.remove("custom-container-hide");
-    }
-})
-// Menu Bar End
 };
 
 var lowerSlider = document.querySelector('#lower');

@@ -426,19 +426,6 @@ header #second {
         @media (max-width: 1007px) {
           header #second .wrapper .custom-container .search .menu-bar {
             display: block; } }
-    header #second .wrapper .custom-container-activ {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      opacity: 1;
-      visibility: visible;
-      background-color: #fff; }
-    header #second .wrapper .custom-container-hide {
-      opacity: 0;
-      visibility: hidden; }
     header #second .wrapper #menu-bar {
       position: fixed;
       top: 0;
@@ -530,6 +517,20 @@ header #second {
       @media (max-width: 640px) {
         header #second .wrapper #menu-bar {
           width: 260px; } }
+  header #second .wrapper-activ {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    background-color: #fff;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2); }
+  header #second .wrapper-hide {
+    opacity: 0;
+    visibility: hidden; }
   @media (max-width: 1007px) {
     header #second {
       padding: 10px 0; } }
