@@ -32,6 +32,7 @@
                         // width: 370px;
                         // height: 368px;
                         width: fit-content;
+                        width: 100%;
 
                         img {
                             width: 100%;
@@ -44,109 +45,160 @@
                 }
 
                 .col-lg-8 {
-                    .row {
-                        margin-bottom: 30px;
+                    .owl-carousel-3 {
+                        .item {
+                            .row {
+                                .col-lg-12 {
+                                    margin-bottom: 30px;
 
-                        .col-lg-6 {
-                            .card {
-                                @include flex(null, space-between, row);
-                                border: 0;
+                                    .card {
+                                        @include flex(null, null, row);
+                                        border: 0;
 
-                                .image {
-                                    overflow: hidden;
+                                        .image {
+                                            overflow: hidden;
 
-                                    img {
-                                        transition: 300ms all ease-in;
-                                        cursor: pointer;
+                                            img {
+                                                transition: 300ms all ease-in;
+                                                cursor: pointer;
 
-                                        &:hover {
-                                            transform: scale(1.1);
-                                        }
-                                    }
-                                }
-
-                                .desc {
-                                    position: relative;
-
-                                    .title {
-                                        padding-bottom: 13px;
-
-                                        a {
-                                            color: $black;
-                                            text-decoration: none;
-                                            font-weight: 500;
-                                            text-transform: capitalize;
-                                            font-size: 16px;
-                                            transition: 300ms all ease-in;
-
-                                            &:hover {
-                                                color: $mainColor;
+                                                &:hover {
+                                                    transform: scale(1.1);
+                                                }
                                             }
                                         }
-                                    }
 
-                                    .price {
-                                        span {
-                                            font-size: 16px;
-                                            color: $black;
-                                        }
+                                        .desc {
+                                            position: relative;
+                                            margin-left: 20px;
 
-                                        del {
-                                            font-size: 16px;
-                                            color: $black;
-                                        }
-                                    }
+                                            .title {
+                                                padding-bottom: 13px;
 
-                                    .review {
-                                        padding-top: 20px;
-
-                                        i {
-                                            font-size: 11px;
-                                            color: $mainColor;
-                                        }
-                                    }
-
-                                    .product-action {
-                                        position: absolute;
-                                        bottom: 0;
-
-                                        ul {
-                                            @include flex();
-                                            padding: 0;
-                                            gap: 5px;
-                                            margin: 0;
-
-                                            li {
-                                                button {
-                                                    border: 0;
-                                                    width: 44px;
-                                                    height: 44px;
-                                                    background-color: #f6f6f6;
+                                                a {
+                                                    color: $black;
+                                                    text-decoration: none;
+                                                    font-weight: 500;
+                                                    text-transform: capitalize;
+                                                    font-size: 16px;
                                                     transition: 300ms all ease-in;
 
-                                                    i {
-                                                        font-size: 22px;
-                                                        color: $black;
-                                                        transition: 300ms all ease-in;
-                                                    }
-
                                                     &:hover {
-                                                        background-color: $mainColor;
+                                                        color: $mainColor;
+                                                    }
+                                                }
+                                            }
 
-                                                        i {
-                                                            color: #fff;
+                                            .price {
+                                                span {
+                                                    font-size: 16px;
+                                                    color: $black;
+                                                }
+
+                                                del {
+                                                    font-size: 16px;
+                                                    color: $black;
+                                                }
+                                            }
+
+                                            .review {
+                                                padding-top: 20px;
+
+                                                i {
+                                                    font-size: 11px;
+                                                    color: $mainColor;
+                                                }
+                                            }
+
+                                            .product-action {
+                                                position: absolute;
+                                                bottom: 0;
+
+                                                ul {
+                                                    @include flex();
+                                                    padding: 0;
+                                                    gap: 5px;
+                                                    margin: 0;
+
+                                                    li {
+                                                        transition: 400ms all linear;
+                                                        position: relative;
+
+                                                        .tooltip {
+                                                            opacity: 0;
+                                                            // display: none;
+                                                            position: absolute;
+                                                            top: -42px;
+                                                            right: -21px;
+                                                            background-color: $black;
+                                                            color: white;
+                                                            font-size: 14px;
+                                                            border-radius: 5px;
+                                                            width: max-content;
+                                                            transform: translateY(15px);
+                                                            transition: 300ms all ease-in;
+
+                                                            i {
+                                                                position: absolute;
+                                                                bottom: -12px;
+                                                                font-size: 20px;
+                                                                left: 40%;
+                                                                color: $black;
+                                                            }
+                                                        }
+
+                                                        .wishlist {
+                                                            top: -42px;
+                                                            right: -8px;
+                                                        }
+
+                                                        button {
+                                                            width: 46px;
+                                                            height: 46px;
+                                                            @include flex(center, center);
+                                                            font-size: 20px;
+                                                            line-height: 46px;
+                                                            background-color: #f6f6f6;
+                                                            border: 0;
+                                                            color: $black;
+                                                            transition: 300ms all ease-in;
+                                                        }
+
+                                                        &:hover {
+                                                            button {
+                                                                background-color: $mainColor;
+                                                                color: #fff;
+                                                            }
+
+                                                            .tooltip {
+                                                                opacity: 1;
+                                                                // display: block;
+                                                                transform: translateY(0);
+                                                            }
                                                         }
                                                     }
                                                 }
                                             }
+
+                                            @media (max-width:470px) {
+                                                margin: 0;
+                                            }
+                                        }
+
+                                        @media (max-width:470px) {
+                                            @include flex(null, null, column);
                                         }
                                     }
                                 }
                             }
+                        }
 
-                            @media (max-width:1007px) {
-                                margin-bottom: 20px;
-                            }
+                        .owl-nav {
+                            display: none;
+                        }
+
+                        .owl-dots {
+                            display: none;
                         }
                     }
 
@@ -161,42 +213,50 @@
     }
 }
 
-#blog{
-    .wrapper{
-        padding: 80px 0 0 0; 
-        .custom-container{
-            .cus-title{
+#blog {
+    .wrapper {
+        padding: 80px 0 0 0;
+
+        .custom-container {
+            .cus-title {
                 width: 100%;
-                @include flex(center,center, column);
+                @include flex(center, center, column);
                 padding-bottom: 42px;
-                h2{
+
+                h2 {
                     font-size: 30px;
                     line-height: 1.2;
                     padding-bottom: 12px;
                     color: $black;
                     font-weight: 600;
                 }
-                p{
+
+                p {
                     font-size: 18px;
                     color: $black2;
                     line-height: 1.7;
                     font-weight: 400;
                 }
             }
-            .custom-owl-2{
-                .item{
-                    .card{
+
+            .custom-owl-2 {
+                .item {
+                    .card {
                         border: 0;
-                        .image{
-                            img{
+
+                        .image {
+                            img {
                                 cursor: pointer;
                             }
                         }
-                        .desc{
+
+                        .desc {
                             padding-top: 20px;
-                            .desc-title{
+
+                            .desc-title {
                                 padding: 0 0 10px 0;
-                                a{
+
+                                a {
                                     font-size: 18px;
                                     font-weight: 600;
                                     line-height: 1.6;
@@ -204,35 +264,41 @@
                                     color: $black;
                                     text-decoration: none;
                                     transition: 400ms all ease-in;
-                                    &:hover{
+
+                                    &:hover {
                                         color: $mainColor;
                                     }
                                 }
                             }
-                            .desc-meta{
-                                ul{
+
+                            .desc-meta {
+                                ul {
                                     padding: 0 0 20px 0;
                                     margin: 0;
                                     @include flex();
                                     gap: 5px;
-                                    li{
+
+                                    li {
                                         color: $black2;
                                         font-size: 14px;
-                                        span{
+
+                                        span {
                                             font-weight: 600;
                                             color: $black;
                                         }
                                     }
                                 }
                             }
-                            div{
-                                a{
+
+                            div {
+                                a {
                                     color: $black;
                                     font-weight: 500;
                                     font-size: 15px;
                                     text-decoration: none;
                                     transition: 400ms all ease-in;
-                                    &:hover{
+
+                                    &:hover {
                                         color: $mainColor;
                                     }
                                 }
@@ -240,39 +306,47 @@
                         }
                     }
                 }
-                .owl-nav{
+
+                .owl-nav {
                     display: none;
                 }
-                .owl-dots{
+
+                .owl-dots {
                     display: none;
                 }
             }
-            .brand{
+
+            .brand {
                 width: 95%;
                 padding: 80px 0;
                 margin: 0 auto;
-                .custom-owl-1{
-                    .item{
+
+                .custom-owl-1 {
+                    .item {
                         margin: 0 34px;
-                        a{
-                            img{
+
+                        a {
+                            img {
                                 opacity: 0.3;
                                 transition: 300ms all linear;
-                                &:hover{
+
+                                &:hover {
                                     opacity: 1;
                                 }
                             }
                         }
                     }
-                    .owl-nav{
+
+                    .owl-nav {
                         display: none;
                     }
-                    .owl-dots{
+
+                    .owl-dots {
                         display: none;
                     }
                 }
             }
-            
+
         }
     }
 }

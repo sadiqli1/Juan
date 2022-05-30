@@ -29,13 +29,14 @@ function renderContent() {
             <p>$${item.item.price * item.count}</p>
         </td>
         <td class="trash">
-            <a href="" onclick="productDelete('${item.item.id}')">
+            <button onclick="productDelete('${item.item.id}')">
                 <i class="fa-solid fa-trash-can"></i>
-            </a>
+            </button>
         </td>
     </tr>`)
     })
     price();
+    productCount();
 }
 renderContent();
 
@@ -45,7 +46,7 @@ function decrease(id) {
         : [];
     items.forEach(item => {
         if (item.item.id === id) {
-            if(item.count > 1){
+            if (item.count > 1) {
                 item.count -= 1;
             }
         };
@@ -94,7 +95,18 @@ function productDelete(id) {
     items = items.filter((item) => item.item.id !== id);
     localStorage.setItem("items", JSON.stringify(items));
     basketAdd();
+    renderContent();
 }
 
+function productCount() {
+    const productCount = document.querySelector(".products-count");
+    const items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    productCount.innerHTML = items.length;
+}
+productCount();
+
 window.addEventListener("storage", renderContent);
+window.addEventListener("storage", productCount);
 // Basket End

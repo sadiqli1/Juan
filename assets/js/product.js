@@ -94,3 +94,13 @@ function zoom(e) {
     y = offsetY / zoomer.offsetHeight * 100
     zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }
+
+function productCount() {
+    const productCount = document.querySelector(".products-count");
+    const items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    productCount.innerHTML = items.length;
+}
+productCount();
+window.addEventListener("storage", productCount);

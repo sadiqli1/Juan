@@ -974,7 +974,7 @@ main #second .wrapper {
     border: 1px solid #e5e5e5;
     background-position: 50% 50%;
     position: relative;
-    width: 500px;
+    width: 100%;
     overflow: hidden;
     cursor: pointer;
     background-image: url("https://htmldemo.net/juan/juan/assets/img/product/product-details-img1.jpg"); }

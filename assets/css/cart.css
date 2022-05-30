@@ -801,11 +801,12 @@ main #second .wrapper {
         main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .total-price p {
           margin: 0;
           color: #333333; }
-        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .trash a {
-          text-decoration: none;
-          color: #333333;
+        main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .trash button {
+          background-color: transparent;
+          border: 0;
+          font-size: 14px;
           transition: 300ms all ease-in; }
-          main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .trash a:hover {
+          main #second .wrapper .custom-container .row .col-lg-12 table tbody tr .trash button:hover {
             color: #e3a51e; }
     main #second .wrapper .custom-container .row .col-lg-12 .cus-buttons {
       padding: 15px 20px;

@@ -1098,10 +1098,12 @@ main #second .wrapper {
         z-index: 1;
         transition: 400ms all linear; }
         main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .image {
-          overflow: hidden; }
+          overflow: hidden;
+          width: 100%; }
           main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .image img {
             overflow: hidden;
-            transition: 400ms all linear; }
+            transition: 400ms all linear;
+            width: 100%; }
         main #second .wrapper .custom-container .row .col-lg-9 .row-menu .col-lg-4 .card .title {
           padding: 0 0 12px 0;
           text-align: center; }
@@ -1341,8 +1343,7 @@ main #second .wrapper {
       flex-direction: column-reverse; } }
 
 .modal .modal-dialog .modal-content .custom-container {
-  padding: 20px;
-  margin: 0; }
+  padding: 20px 0; }
   .modal .modal-dialog .modal-content .custom-container .row .col-lg-5 figure.zoom {
     border: 1px solid #e5e5e5;
     background-position: 50% 50%;

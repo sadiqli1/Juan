@@ -153,6 +153,9 @@ if(window.screen.width < 1007){
         document.location.href = "http://127.0.0.1:5500/cart.html";
     })
 }
+
+window.addEventListener("storage", productCount);
+window.addEventListener("storage", basketAdd);
 // Basket End
 
 
@@ -211,6 +214,27 @@ $('.custom-owl-2').owlCarousel({
         },
         1000: {
             items: 3
+        }
+    }
+})
+
+
+$('.owl-carousel-3').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        576:{
+            items:1
+        },
+        992:{
+            items:1
+        },
+        1200:{
+            items:2
         }
     }
 })

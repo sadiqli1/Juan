@@ -78,3 +78,13 @@ lowerSlider.oninput = function () {
     }
     document.querySelector('#one').value = this.value
 };
+
+function productCount() {
+    const productCount = document.querySelector(".products-count");
+    const items = localStorage.getItem("items")
+        ? JSON.parse(localStorage.getItem("items"))
+        : [];
+    productCount.innerHTML = items.length;
+}
+productCount();
+window.addEventListener("storage", productCount);

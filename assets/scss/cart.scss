@@ -161,13 +161,14 @@ main {
                                     }
 
                                     .trash {
-                                        a {
-                                            text-decoration: none;
-                                            color: $black;
-                                            transition: 300ms all ease-in;
-                                            &:hover{
-                                                color: $mainColor;
-                                            }
+                                        button{
+                                                background-color: transparent;
+                                                border: 0;
+                                                font-size: 14px;
+                                                transition: 300ms all ease-in;
+                                                &:hover{
+                                                    color: $mainColor;
+                                                }
                                         }
                                     }
                                 }

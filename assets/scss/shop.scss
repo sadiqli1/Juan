@@ -595,10 +595,12 @@ main {
 
                                     .image {
                                         overflow: hidden;
+                                        width: 100%;
 
                                         img {
                                             overflow: hidden;
                                             transition: 400ms all linear;
+                                            width: 100%;
                                         }
                                     }
 
@@ -970,7 +972,6 @@ main {
                 }
             }
         }
-
     }
 }
 
@@ -978,8 +979,8 @@ main {
     .modal-dialog {
         .modal-content {
             .custom-container {
-                padding: 20px;
-                margin: 0;
+                padding: 20px 0;
+                // margin: 0;
 
                 .row {
                     .col-lg-5 {
