@@ -160,7 +160,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   display: none;
   cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto; }
 
@@ -322,6 +322,8 @@ header #second {
                   display: flex;
                   align-items: center;
                   justify-content: space-between; }
+                  header #second .wrapper .custom-container .navication nav ul li .dropdown ul li a i {
+                    padding: 0; }
                 header #second .wrapper .custom-container .navication nav ul li .dropdown ul li :hover {
                   color: #e3a51e; }
           header #second .wrapper .custom-container .navication nav ul li .pages {
@@ -429,108 +431,16 @@ header #second {
         @media (max-width: 1007px) {
           header #second .wrapper .custom-container .search .menu-bar {
             display: block; } }
-    header #second .wrapper #menu-bar {
-      position: fixed;
-      top: 0;
-      z-index: 99999;
-      width: 0;
-      height: 100vh;
-      background-color: #fff;
-      padding: 20px;
-      opacity: 0;
-      visibility: hidden;
-      transition: 300ms all ease-in;
-      filter: brightness(1) !important; }
-      header #second .wrapper #menu-bar .cancel {
-        position: absolute;
-        top: 0;
-        right: -40px; }
-        header #second .wrapper #menu-bar .cancel button {
-          width: 40px;
-          height: 40px;
-          background-color: #e3a51e;
-          border: 0;
-          color: #fff; }
-          header #second .wrapper #menu-bar .cancel button i {
-            transition: 300ms all ease-in; }
-          header #second .wrapper #menu-bar .cancel button:hover i {
-            transform: rotate(180deg); }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .search {
-        position: relative; }
-        header #second .wrapper #menu-bar .menu-bar-wrapper .search input {
-          border: 0;
-          background-color: #f2f2f2;
-          width: 100%;
-          height: 40px;
-          padding: 0 40px 0 10px;
-          font-size: 13px;
-          color: #666;
-          outline: none; }
-        header #second .wrapper #menu-bar .menu-bar-wrapper .search button {
-          position: absolute;
-          right: 0;
-          top: 0;
-          height: 40px;
-          width: 40px;
-          border: 0; }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion {
-        padding: 30px 0 15px 0; }
-        header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item {
-          border: 0; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 {
-            border-color: transparent; }
-            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 button {
-              padding: 10px 0;
-              background-color: transparent;
-              color: #333333;
-              border: 0; }
-            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 > a {
-              text-decoration: none;
-              color: #333333;
-              font-size: 16px; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul {
-            padding: 0; }
-            header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li {
-              margin-bottom: 10px; }
-              header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li a {
-                text-decoration: none;
-                color: #333333;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between; }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion-button:not(.collapsed)::after {
-        background-image: url("data:image/svg+xml,...");
-        font-family: 'FontAwesome';
-        content: "\f068"; }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .links .accordion-button::after {
-        background-image: url("data:image/svg+xml,...");
-        font-family: 'FontAwesome';
-        content: "\f067"; }
-      header #second .wrapper #menu-bar .menu-bar-wrapper .account {
-        border-top: 1px solid black; }
-        header #second .wrapper #menu-bar .menu-bar-wrapper .account ul {
-          padding: 15px 0 0 0; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .account ul li a {
-            text-decoration: none;
-            font-size: 14px;
-            text-transform: capitalize;
-            color: #666666;
-            transition: 300ms all ease-in; }
-            header #second .wrapper #menu-bar .menu-bar-wrapper .account ul li a i {
-              font-size: 12px; }
-          header #second .wrapper #menu-bar .menu-bar-wrapper .account ul li > :hover {
-            color: #e3a51e; }
-      @media (max-width: 640px) {
-        header #second .wrapper #menu-bar {
-          width: 260px; } }
+    @media (max-width: 1007px) {
+      header #second .wrapper {
+        padding: 10px 0; } }
   header #second .wrapper-activ {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 90;
     opacity: 1;
     visibility: visible;
     background-color: #fff;
@@ -539,9 +449,162 @@ header #second {
   header #second .wrapper-hide {
     opacity: 0;
     visibility: hidden; }
-  @media (max-width: 1007px) {
-    header #second {
-      padding: 10px 0; } }
+  header #second #menu-bar {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 0;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms all ease-in;
+    filter: brightness(1) !important; }
+    header #second #menu-bar .cancel {
+      position: absolute;
+      top: 0;
+      right: -40px; }
+      header #second #menu-bar .cancel button {
+        width: 40px;
+        height: 40px;
+        background-color: #e3a51e;
+        border: 0;
+        color: #fff; }
+        header #second #menu-bar .cancel button i {
+          transition: 300ms all ease-in; }
+        header #second #menu-bar .cancel button:hover i {
+          transform: rotate(90deg); }
+    header #second #menu-bar .menu-bar-wrapper .search {
+      position: relative; }
+      header #second #menu-bar .menu-bar-wrapper .search input {
+        border: 0;
+        background-color: #f2f2f2;
+        width: 100%;
+        height: 40px;
+        padding: 0 40px 0 10px;
+        font-size: 13px;
+        color: #666;
+        outline: none; }
+      header #second #menu-bar .menu-bar-wrapper .search button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 40px;
+        width: 40px;
+        border: 0; }
+    header #second #menu-bar .menu-bar-wrapper .links {
+      border-bottom: 1px solid #666666;
+      overflow: scroll;
+      max-height: 250px; }
+      header #second #menu-bar .menu-bar-wrapper .links::-webkit-scrollbar {
+        display: none; }
+      header #second #menu-bar .menu-bar-wrapper .links .accordion {
+        padding: 30px 0 15px 0; }
+        header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item {
+          border: 0; }
+          header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 {
+            border-color: transparent; }
+            header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 button {
+              padding: 10px 0;
+              background-color: transparent;
+              color: #333333;
+              border: 0; }
+            header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item h2 > a {
+              text-decoration: none;
+              color: #333333;
+              font-size: 16px; }
+          header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul {
+            padding: 0; }
+            header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li {
+              margin-bottom: 10px; }
+              header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul li a {
+                text-decoration: none;
+                color: #333333;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; }
+            header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li {
+              padding: 10px 0; }
+              header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; }
+                header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div > a {
+                  text-decoration: none;
+                  color: #333333;
+                  font-size: 15px;
+                  transition: 300ms all ease-in; }
+                header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div > button {
+                  position: relative;
+                  border: 0;
+                  background-color: transparent; }
+                  header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div > button > span {
+                    position: absolute;
+                    right: 0;
+                    width: 10px;
+                    height: 1px;
+                    background-color: black;
+                    transition: 300ms all ease-in; }
+                  header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div > button > .first {
+                    transform: rotate(90deg);
+                    transition: 300ms all ease-in; }
+                  header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div > button .minus {
+                    transform: rotate(0); }
+                header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div:hover a {
+                  color: #e3a51e; }
+                header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > div:hover button span {
+                  background-color: #e3a51e; }
+              header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > .cus-dropdown {
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: 300ms all linear; }
+                header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > .cus-dropdown ul {
+                  margin: 0;
+                  padding: 0; }
+                  header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > .cus-dropdown ul li {
+                    padding: 8px 0 8px 15px; }
+                    header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > .cus-dropdown ul li a {
+                      text-decoration: none;
+                      color: #333333;
+                      text-transform: capitalize;
+                      font-size: 14px;
+                      transition: 300ms all ease-in; }
+                      header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li > .cus-dropdown ul li a:hover {
+                        color: #e3a51e; }
+              header #second #menu-bar .menu-bar-wrapper .links .accordion .accordion-item > .accordion-collapse > .accordion-body ul > li .cus-dropdown-activ {
+                height: 100%;
+                opacity: 1;
+                visibility: visible;
+                transition: 300ms all linear; }
+      header #second #menu-bar .menu-bar-wrapper .links .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,...");
+        font-family: 'FontAwesome';
+        content: "\f068"; }
+      header #second #menu-bar .menu-bar-wrapper .links .accordion-button::after {
+        background-image: url("data:image/svg+xml,...");
+        font-family: 'FontAwesome';
+        content: "\f067"; }
+      header #second #menu-bar .menu-bar-wrapper .links .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0, 0, 0, 0.125); }
+    header #second #menu-bar .menu-bar-wrapper .account ul {
+      padding: 15px 0 0 0; }
+      header #second #menu-bar .menu-bar-wrapper .account ul li a {
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #666666;
+        transition: 300ms all ease-in; }
+        header #second #menu-bar .menu-bar-wrapper .account ul li a i {
+          font-size: 12px; }
+      header #second #menu-bar .menu-bar-wrapper .account ul li > :hover {
+        color: #e3a51e; }
+    @media (max-width: 640px) {
+      header #second #menu-bar {
+        width: 260px; } }
 
 footer #first .wrapper {
   background-color: #f0f0f0;
@@ -612,9 +675,9 @@ footer #second .wrapper {
       color: #e3a51e; }
     footer #second .wrapper .custom-container .row .col-lg-6 p i {
       color: red; }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       footer #second .wrapper .custom-container .row .col-lg-6 p {
-        width: 345px; } }
+        text-align: center; } }
   footer #second .wrapper .custom-container .row .col-lg-6 a {
     text-decoration: none;
     color: #666666;
@@ -626,10 +689,10 @@ footer #second .wrapper {
       font-size: 16px; }
   footer #second .wrapper .custom-container .row .right {
     text-align: center; }
-    @media (min-width: 640px) {
+    @media (min-width: 769px) {
       footer #second .wrapper .custom-container .row .right {
         text-align: right; } }
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     footer #second .wrapper .custom-container .row {
       display: flex;
       flex-direction: column-reverse; } }
@@ -854,7 +917,7 @@ main #second .wrapper {
         width: 20px;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
         margin-top: -4px;
-        background-color: #fff;
+        border: 6px solid #fff;
         cursor: ew-resize;
         cursor: ew-resize;
         pointer-events: all;

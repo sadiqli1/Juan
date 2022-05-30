@@ -147,9 +147,9 @@ function cancel() {
     overlay.classList.remove("offcanvas-overlay-activ");
 };
 
-if(window.screen.width < 1007){
+if (window.screen.width < 1007) {
     const bag = document.querySelector(".bag button");
-    bag.addEventListener("click", () =>{
+    bag.addEventListener("click", () => {
         document.location.href = "http://127.0.0.1:5500/cart.html";
     })
 }
@@ -220,21 +220,21 @@ $('.custom-owl-2').owlCarousel({
 
 
 $('.owl-carousel-3').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
         },
-        576:{
-            items:1
+        576: {
+            items: 1
         },
-        992:{
-            items:1
+        992: {
+            items: 1
         },
-        1200:{
-            items:2
+        1200: {
+            items: 2
         }
     }
 })
@@ -248,11 +248,11 @@ const offcanvasOverlayMenubar = document.querySelector(".offcanvas-overlay-menub
 let i = 0;
 menu.addEventListener("click", (e) => {
     e.stopPropagation();
-    const menuBar = document.querySelector("#second > .wrapper > #menu-bar");
+    const menuBar = document.querySelector("#second > #menu-bar");
     const body = document.querySelector("body");
-    const cancel = document.querySelector("#second > .wrapper > #menu-bar > .menu-bar-wrapper .cancel button");
+    const cancel = document.querySelector("#second > #menu-bar > .menu-bar-wrapper .cancel button");
     if (i % 2 === 0) {
-        menuBar.style.width = "300px";
+        menuBar.style.width = "80%";
         // body.style.filter = "brightness(0.8)";
         menuBar.style.opacity = "1";
         menuBar.style.visibility = "visible";
@@ -290,6 +290,44 @@ window.addEventListener("scroll", (e) => {
         header.classList.remove("wrapper-hide");
     }
 })
+
+// let f = 0;
+// function dropdown() {
+//     const dropdown = document.querySelector(".cus-dropdown");
+//     const plus = document.querySelector(".asdf");
+//     if (f % 2 === 0) {
+//         dropdown.classList.add("cus-dropdown-activ");
+//         plus.classList.add("minus");
+//     }else{
+//         dropdown.classList.remove("cus-dropdown-activ");
+//         plus.classList.remove("minus");
+//     }
+//     f++;
+// }
+
+let f = 0;
+const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+const dropdown = document.querySelectorAll(".cus-dropdown");
+const plus = document.querySelectorAll(".drop-plus");
+for (i = 0; i < dropdownBtn.length; i++) {
+    dropdownBtn[i].addEventListener("click", (e) => {
+        if (f % 2 === 0) {
+            for(j = 0; j < dropdown.length; j++){
+                dropdown[j].classList.remove("cus-dropdown-activ");
+            }
+            for(y = 0; y < plus.length; y++){
+                plus[y].classList.remove("minus");
+            }
+            e.target.parentElement.parentElement.nextElementSibling.classList.add("cus-dropdown-activ");
+            e.target.previousElementSibling.classList.add("minus");
+        } else {
+            e.target.parentElement.parentElement.nextElementSibling.classList.remove("cus-dropdown-activ");
+            e.target.previousElementSibling.classList.remove("minus");
+        }
+        f++;
+    });
+
+}
 
 // Menu Bar End
 

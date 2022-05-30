@@ -67,9 +67,9 @@ footer #second .wrapper {
       color: #e3a51e; }
     footer #second .wrapper .custom-container .row .col-lg-6 p i {
       color: red; }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       footer #second .wrapper .custom-container .row .col-lg-6 p {
-        width: 345px; } }
+        text-align: center; } }
   footer #second .wrapper .custom-container .row .col-lg-6 a {
     text-decoration: none;
     color: #666666;
@@ -81,10 +81,10 @@ footer #second .wrapper {
       font-size: 16px; }
   footer #second .wrapper .custom-container .row .right {
     text-align: center; }
-    @media (min-width: 640px) {
+    @media (min-width: 769px) {
       footer #second .wrapper .custom-container .row .right {
         text-align: right; } }
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     footer #second .wrapper .custom-container .row {
       display: flex;
       flex-direction: column-reverse; } }

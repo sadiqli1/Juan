@@ -19,7 +19,7 @@
     transition: 300ms all ease-in;
 }
 
-.backtotop-activ{
+.backtotop-activ {
     opacity: 1;
     transform: translateY(0);
 }
@@ -70,11 +70,13 @@
                 position: absolute;
                 top: 0;
                 left: -50px;
-                i{
+
+                i {
                     transition: 300ms all ease-in;
                 }
+
                 &:hover {
-                    i{
+                    i {
                         transform: rotate(180deg);
                     }
                 }
@@ -236,7 +238,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    z-index: 9999;
+    z-index: 99;
     display: none;
     cursor: url(https://htmldemo.net/juan/juan/assets/img/icon/cancel.png), auto;
 }
@@ -457,6 +459,10 @@ header {
                                                 text-transform: capitalize;
                                                 transition: 300ms all ease-in;
                                                 @include flex(center, space-between);
+
+                                                i {
+                                                    padding: 0;
+                                                }
                                             }
 
                                             :hover {
@@ -637,181 +643,356 @@ header {
 
             }
 
-            #menu-bar {
-                position: fixed;
-                top: 0;
-                z-index: 99999;
-                width: 0;
-                height: 100vh;
-                background-color: #fff;
-                padding: 20px;
-                opacity: 0;
-                visibility: hidden;
-                transition: 300ms all ease-in;
-                filter: brightness(1) !important;
-
-                .cancel {
-                    position: absolute;
-                    top: 0;
-                    right: -40px;
-
-                    button {
-                        width: 40px;
-                        height: 40px;
-                        background-color: $mainColor;
-                        border: 0;
-                        color: #fff;
-                        i{
-                            transition: 300ms all ease-in;
-                        }
-                        &:hover{
-                            i{
-                                transform: rotate(180deg);
-                            }
-                        }
-                    }
-                }
-
-                .menu-bar-wrapper {
-                    .search {
-                        position: relative;
-
-                        input {
-                            border: 0;
-                            background-color: $inputColor;
-                            width: 100%;
-                            height: 40px;
-                            padding: 0 40px 0 10px;
-                            font-size: 13px;
-                            color: #666;
-                            outline: none;
-                            // filter: brightness(0.8);
-                        }
-
-                        button {
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            height: 40px;
-                            width: 40px;
-                            border: 0;
-                        }
-                    }
-
-                    .links {
-
-                        .accordion {
-                            padding: 30px 0 15px 0;
-
-                            .accordion-item {
-                                border: 0;
-
-                                h2 {
-                                    border-color: transparent;
-
-                                    button {
-                                        padding: 10px 0;
-                                        background-color: transparent;
-                                        color: $black;
-                                        border: 0;
-                                    }
-
-                                    >a {
-                                        text-decoration: none;
-                                        color: $black;
-                                        font-size: 16px;
-                                    }
-                                }
-
-                                >.accordion-collapse {
-                                    >.accordion-body {
-                                        ul {
-                                            padding: 0;
-
-                                            li {
-                                                margin-bottom: 10px;
-
-                                                a {
-                                                    text-decoration: none;
-                                                    color: $black;
-                                                    width: 100%;
-                                                    @include flex(center, space-between);
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .accordion-button:not(.collapsed)::after {
-                            background-image: url("data:image/svg+xml,...");
-                            font-family: 'FontAwesome';
-                            content: "\f068";
-                        }
-
-                        .accordion-button::after {
-                            background-image: url("data:image/svg+xml,...");
-                            font-family: 'FontAwesome';
-                            content: "\f067";
-
-                        }
-                    }
-
-                    .account {
-                        border-top: 1px solid black;
-
-                        ul {
-                            padding: 15px 0 0 0;
-
-                            li {
-                                a {
-                                    text-decoration: none;
-                                    font-size: 14px;
-                                    text-transform: capitalize;
-                                    color: $black2;
-                                    transition: 300ms all ease-in;
-
-                                    i {
-                                        font-size: 12px;
-                                    }
-                                }
-
-                                > :hover {
-                                    color: $mainColor;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                @media (max-width:640px) {
-                    width: 260px;
-                }
+            @media (max-width:1007px) {
+                padding: 10px 0;
             }
+
         }
+
         .wrapper-activ {
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
+            z-index: 90;
             opacity: 1;
             visibility: visible;
             background-color: #fff;
             box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
             transition: 300ms all ease-in;
         }
-    
+
         .wrapper-hide {
             opacity: 0;
             visibility: hidden;
         }
 
+        #menu-bar {
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            width: 0;
+            height: 100vh;
+            background-color: #fff;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms all ease-in;
+            filter: brightness(1) !important;
 
-        @media (max-width:1007px) {
-            padding: 10px 0;
+            .cancel {
+                position: absolute;
+                top: 0;
+                right: -40px;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $mainColor;
+                    border: 0;
+                    color: #fff;
+
+                    i {
+                        transition: 300ms all ease-in;
+                    }
+
+                    &:hover {
+                        i {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+
+            .menu-bar-wrapper {
+                .search {
+                    position: relative;
+
+                    input {
+                        border: 0;
+                        background-color: $inputColor;
+                        width: 100%;
+                        height: 40px;
+                        padding: 0 40px 0 10px;
+                        font-size: 13px;
+                        color: #666;
+                        outline: none;
+                        // filter: brightness(0.8);
+                    }
+
+                    button {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 40px;
+                        width: 40px;
+                        border: 0;
+                    }
+                }
+
+                .links {
+                    border-bottom: 1px solid $black2;
+                    overflow: scroll;
+                    max-height: 250px;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    // > ul{
+                    //     padding: 30px 10px 0 0;
+                    //     overflow: auto;
+                    //     > li{
+                    //         padding: 10px 0;
+                    //         > div{
+                    //             @include flex(center, space-between);
+                    //             > a{
+                    //                 text-decoration: none;
+                    //                 color: $black;
+                    //                 font-size: 15px;
+                    //                 transition: 300ms all  ease-in;
+                    //             }
+                    //             > button{
+                    //                 position: relative;
+                    //                 border: 0;
+                    //                 background-color: transparent;
+                    //                 > span{
+                    //                     position: absolute;
+                    //                     right: 0;
+                    //                     width: 10px;
+                    //                     height: 1px;
+                    //                     background-color: black;
+                    //                     transition: 300ms all  ease-in;
+                    //                 }
+                    //                 > .first{
+                    //                     transform: rotate(90deg);
+                    //                     transition: 300ms all ease-in;
+                    //                 }
+                    //                 .minus{
+                    //                     transform: rotate(0);
+                    //                 }
+                    //             }
+                    //             &:hover{
+                    //                 a{
+                    //                     color: $mainColor;
+                    //                 }
+                    //                 button{
+                    //                     span{
+                    //                         background-color: $mainColor;
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //         > .cus-dropdown{
+                    //             height: 0;
+                    //             opacity: 0;
+                    //             visibility: hidden;
+                    //             transition: 300ms all linear;
+                    //             ul{
+                    //                 margin: 0;
+                    //                 padding: 0;
+                    //                 li{
+                    //                     padding: 8px 0 8px 15px;
+                    //                     a{
+                    //                         text-decoration: none;
+                    //                         color: $black;
+                    //                         text-transform: capitalize;
+                    //                         font-size: 14px;
+                    //                         transition: 300ms all ease-in;
+                    //                         &:hover{
+                    //                             color: $mainColor;
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //         .cus-dropdown-activ{
+                    //             height: 100%;
+                    //             opacity: 1;
+                    //             visibility: visible;
+                    //             transition: 300ms all linear;
+                    //         }
+                    //     }
+                    // }
+                    .accordion {
+                        padding: 30px 0 15px 0;
+                        // overflow: scroll;
+
+                        .accordion-item {
+                            border: 0;
+
+                            h2 {
+                                border-color: transparent;
+
+                                button {
+                                    padding: 10px 0;
+                                    background-color: transparent;
+                                    color: $black;
+                                    border: 0;
+                                }
+
+                                >a {
+                                    text-decoration: none;
+                                    color: $black;
+                                    font-size: 16px;
+                                }
+                            }
+
+                            >.accordion-collapse {
+                                >.accordion-body {
+                                    ul {
+                                        padding: 0;
+
+                                        li {
+                                            margin-bottom: 10px;
+
+                                            a {
+                                                text-decoration: none;
+                                                color: $black;
+                                                width: 100%;
+                                                @include flex(center, space-between);
+                                            }
+                                        }
+
+                                        >li {
+                                            padding: 10px 0;
+
+                                            >div {
+                                                @include flex(center, space-between);
+
+                                                >a {
+                                                    text-decoration: none;
+                                                    color: $black;
+                                                    font-size: 15px;
+                                                    transition: 300ms all ease-in;
+                                                }
+
+                                                >button {
+                                                    position: relative;
+                                                    border: 0;
+                                                    background-color: transparent;
+
+                                                    >span {
+                                                        position: absolute;
+                                                        right: 0;
+                                                        width: 10px;
+                                                        height: 1px;
+                                                        background-color: black;
+                                                        transition: 300ms all ease-in;
+                                                    }
+
+                                                    >.first {
+                                                        transform: rotate(90deg);
+                                                        transition: 300ms all ease-in;
+                                                    }
+
+                                                    .minus {
+                                                        transform: rotate(0);
+                                                    }
+                                                }
+
+                                                &:hover {
+                                                    a {
+                                                        color: $mainColor;
+                                                    }
+
+                                                    button {
+                                                        span {
+                                                            background-color: $mainColor;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            >.cus-dropdown {
+                                                height: 0;
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: 300ms all linear;
+
+                                                ul {
+                                                    margin: 0;
+                                                    padding: 0;
+
+                                                    li {
+                                                        padding: 8px 0 8px 15px;
+
+                                                        a {
+                                                            text-decoration: none;
+                                                            color: $black;
+                                                            text-transform: capitalize;
+                                                            font-size: 14px;
+                                                            transition: 300ms all ease-in;
+
+                                                            &:hover {
+                                                                color: $mainColor;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .cus-dropdown-activ {
+                                                height: 100%;
+                                                opacity: 1;
+                                                visibility: visible;
+                                                transition: 300ms all linear;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .accordion-button:not(.collapsed)::after {
+                        background-image: url("data:image/svg+xml,...");
+                        font-family: 'FontAwesome';
+                        content: "\f068";
+                    }
+
+                    .accordion-button::after {
+                        background-image: url("data:image/svg+xml,...");
+                        font-family: 'FontAwesome';
+                        content: "\f067";
+
+                    }
+
+                    .accordion-button:focus {
+                        box-shadow: none;
+                        border-color: rgba(0, 0, 0, .125);
+                    }
+                }
+
+                .account {
+                    ul {
+                        padding: 15px 0 0 0;
+
+                        li {
+                            a {
+                                text-decoration: none;
+                                font-size: 14px;
+                                text-transform: capitalize;
+                                color: $black2;
+                                transition: 300ms all ease-in;
+
+                                i {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            > :hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width:640px) {
+                width: 260px;
+            }
         }
     }
 }
